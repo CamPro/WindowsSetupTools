@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD79BCB4-5D84-48AD-9249-7AE5299FA3D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsSetupTools</RootNamespace>
+    <AssemblyName>WindowsSetupTools</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon-windows.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-office.png" />
+    <None Include="Resources\icon-trash.png" />
+    <None Include="Resources\icon-time.png" />
+    <None Include="Resources\icon-folder-temp.png" />
+    <None Include="Resources\icon-folder-startup.png" />
+    <None Include="Resources\icon-folder-roaming.png" />
+    <None Include="Resources\icon-folder-local.png" />
+    <None Include="Resources\icon-wifi-hexagonal.png" />
+    <None Include="Resources\icon-office-tool-plus.png" />
+    <None Include="Resources\icon-rufus.png" />
+    <None Include="Resources\icon-microsoft-activation-scripts.png" />
+    <None Include="Resources\icon-terminal.png" />
+    <None Include="Resources\icon-nirsoft-wireless-network-watcher.png" />
+    <None Include="Resources\icon-nirsoft-wireless-key-view.png" />
+    <None Include="Resources\icon-nirsoft-web-browser-password.png" />
+    <None Include="Resources\icon-nirsoft-password-remote-desktop.png" />
+    <None Include="Resources\icon-nirsoft-password-firefox.png" />
+    <None Include="Resources\icon-nirsoft-ie-passwords.png" />
+    <None Include="Resources\icon-nirsoft-chrome-password.png" />
+    <None Include="Resources\icon-wan-driver.png" />
+    <None Include="Resources\icon-vlc.png" />
+    <None Include="Resources\icon-share-x.png" />
+    <None Include="Resources\icon-obs-studio.png" />
+    <None Include="Resources\icon-foxit-reader.png" />
+    <None Include="Resources\icon-faststone-capture.png" />
+    <None Include="Resources\icon-pot-player.png" />
+    <None Include="Resources\icon-zalo.png" />
+    <None Include="Resources\icon-vmware.png" />
+    <None Include="Resources\icon-visual-studio.png" />
+    <None Include="Resources\icon-telegram.png" />
+    <None Include="Resources\icon-sumatra-pdf.png" />
+    <None Include="Resources\icon-sublime-text.png" />
+    <None Include="Resources\icon-lightshot.png" />
+    <None Include="Resources\icon-image-glass.png" />
+    <None Include="Resources\icon-idman.png" />
+    <None Include="Resources\icon-google-drive.png" />
+    <None Include="Resources\icon-everything.png" />
+    <None Include="Resources\icon-ccleaner.png" />
+    <None Include="Resources\icon-office2.png" />
+    <None Include="Resources\icon-office1.png" />
+    <None Include="Resources\icon-ultraviewer.png" />
+    <None Include="Resources\icon-teamviewer.png" />
+    <None Include="Resources\icon-anydesk.png" />
+    <None Include="Resources\icon-folder2.png" />
+    <None Include="Resources\icon-evkey.png" />
+    <None Include="Resources\icon-unikey.png" />
+    <None Include="Resources\icon-remote-desktop.png" />
+    <None Include="Resources\icon-coccoc.png" />
+    <None Include="Resources\icon-chrome.png" />
+    <None Include="Resources\icon-tlcdtest.png" />
+    <None Include="Resources\icon-speccy.png" />
+    <None Include="Resources\icon-keyboard-test.png" />
+    <None Include="Resources\icon-ismylcdok.png" />
+    <None Include="Resources\icon-hwinfo.png" />
+    <None Include="Resources\icon-gpu-z.png" />
+    <None Include="Resources\icon-crystal-disk-info.png" />
+    <None Include="Resources\icon-cpu-z.png" />
+    <None Include="Resources\icon-sordum-windows-update-blocker.png" />
+    <None Include="Resources\icon-sordum-win11-classic-context-menu.png" />
+    <None Include="Resources\icon-sordum-update-time.png" />
+    <None Include="Resources\icon-sordum-temp-cleaner.png" />
+    <None Include="Resources\icon-sordum-store-apps-tool.png" />
+    <None Include="Resources\icon-sordum-restart-explorer.png" />
+    <None Include="Resources\icon-sordum-easy-service-optimizer.png" />
+    <None Include="Resources\icon-sordum-easy-context-menu.png" />
+    <None Include="Resources\icon-sordum-dns-jumper.png" />
+    <None Include="Resources\icon-sordum-defender-control.png" />
+    <None Include="Resources\icon-sordum-bluelife-host-editor.png" />
+    <None Include="Resources\icon-glary-uninstaler.png" />
+    <None Include="Resources\icon-glary-tracks-eraser.png" />
+    <None Include="Resources\icon-glary-sysinfo.png" />
+    <None Include="Resources\icon-glary-startup-manager.png" />
+    <None Include="Resources\icon-glary-software-update.png" />
+    <None Include="Resources\icon-glary-shredder.png" />
+    <None Include="Resources\icon-glary-shortcut-fixer.png" />
+    <None Include="Resources\icon-glary-restore-center.png" />
+    <None Include="Resources\icon-glary-registry-cleaner.png" />
+    <None Include="Resources\icon-glary-reg-defrag.png" />
+    <None Include="Resources\icon-glary-quick-search.png" />
+    <None Include="Resources\icon-glary-proc-mgr.png" />
+    <None Include="Resources\icon-glary-mem-defrag.png" />
+    <None Include="Resources\icon-glary-join-exe.png" />
+    <None Include="Resources\icon-glary-ie-helper.png" />
+    <None Include="Resources\icon-glary-file-undelete.png" />
+    <None Include="Resources\icon-glary-file-splitter.png" />
+    <None Include="Resources\icon-glary-file-encrypt.png" />
+    <None Include="Resources\icon-glary-encrypt-exe.png" />
+    <None Include="Resources\icon-glary-empty-folder-finder.png" />
+    <None Include="Resources\icon-glary-dupefinder.png" />
+    <None Include="Resources\icon-glary-driver-backup.png" />
+    <None Include="Resources\icon-glary-disk-defrag.png" />
+    <None Include="Resources\icon-glary-disk-cleaner.png" />
+    <None Include="Resources\icon-glary-disk-analysis.png" />
+    <None Include="Resources\icon-glary-cmm.png" />
+    <None Include="Resources\icon-glary-check-disk.png" />
+    <None Include="Resources\icon-ipconfig.png" />
+    <None Include="Resources\icon-check.png" />
+    <None Include="Resources\icon-winver.png" />
+    <None Include="Resources\icon-tpm.png" />
+    <None Include="Resources\icon-sysdm.png" />
+    <None Include="Resources\icon-netplwiz.png" />
+    <None Include="Resources\icon-powercfg.png" />
+    <None Include="Resources\icon-iobit-win-fix.png" />
+    <None Include="Resources\icon-iobit-undelete.png" />
+    <None Include="Resources\icon-iobit-system-information.png" />
+    <None Include="Resources\icon-iobit-system-control.png" />
+    <None Include="Resources\icon-iobit-smart-ram.png" />
+    <None Include="Resources\icon-iobit-shortcut-fixer.png" />
+    <None Include="Resources\icon-iobit-screen-shot.png" />
+    <None Include="Resources\icon-iobit-rescue-center.png" />
+    <None Include="Resources\icon-iobit-reinforce.png" />
+    <None Include="Resources\icon-iobit-registry-defrag.png" />
+    <None Include="Resources\icon-iobit-registry-cleaner.png" />
+    <None Include="Resources\icon-iobit-program-deactivator.png" />
+    <None Include="Resources\icon-iobit-process-manager.png" />
+    <None Include="Resources\icon-iobit-my-win10.png" />
+    <None Include="Resources\icon-iobit-monitor.png" />
+    <None Include="Resources\icon-iobit-large-file-finder.png" />
+    <None Include="Resources\icon-iobit-internet-booster.png" />
+    <None Include="Resources\icon-iobit-ie-helper.png" />
+    <None Include="Resources\icon-iobit-file-shredder.png" />
+    <None Include="Resources\icon-iobit-empty-folder-scanner.png" />
+    <None Include="Resources\icon-iobit-duplicate-file-finder.png" />
+    <None Include="Resources\icon-iobit-driver-manager.png" />
+    <None Include="Resources\icon-iobit-disk-explorer.png" />
+    <None Include="Resources\icon-iobit-disk-doctor.png" />
+    <None Include="Resources\icon-iobit-disk-cleaner.png" />
+    <None Include="Resources\icon-iobit-context-menu-manager.png" />
+    <None Include="Resources\icon-iobit-cloned-files-scanner.png" />
+    <None Include="Resources\icon-iobit-default-program.png" />
+    <None Include="Resources\icon-iobit-startup-manager.png" />
+    <None Include="Resources\icon-recuva.png" />
+    <None Include="Resources\icon-bkav-show-hidden-files.png" />
+    <None Include="Resources\icon-registry-workshop.png" />
+    <None Include="Resources\icon-7z.png" />
+    <None Include="Resources\icon-winrar.png" />
+    <None Include="Resources\icon-windows-security-off.png" />
+    <None Include="Resources\icon-restart.png" />
+    <None Include="Resources\icon-shutdown.png" />
+    <None Include="Resources\icon-folder.png" />
+    <None Include="Resources\icon-regedit.png" />
+    <None Include="Resources\icon-msinfo32.png" />
+    <None Include="Resources\icon-dxdiag.png" />
+    <None Include="Resources\icon-devmgmt.png" />
+    <None Include="Resources\icon-diskmgmt.png" />
+    <None Include="Resources\icon-windows-defender.png" />
+    <None Include="Resources\icon-windows_firewall.png" />
+    <None Include="Resources\icon-task-scheduler.png" />
+    <None Include="Resources\icon-task-manager.png" />
+    <None Include="Resources\icon-settings.png" />
+    <None Include="Resources\icon-programs-and-features.png" />
+    <None Include="Resources\icon-powershell.png" />
+    <None Include="Resources\icon-network-connections.png" />
+    <None Include="Resources\icon-explorer.png" />
+    <None Include="Resources\icon-control-panel.png" />
+    <None Include="Resources\icon-command-prompt.png" />
+    <None Include="Resources\icon-apps-and-features.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

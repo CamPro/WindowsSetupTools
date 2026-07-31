@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icon_7z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-7z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_anydesk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-anydesk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_apps_and_features" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-apps-and-features.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_bkav_show_hidden_files" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-bkav-show-hidden-files.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ccleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ccleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-chrome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_coccoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-coccoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_command_prompt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-command-prompt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_control_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-control-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_cpu_z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-cpu-z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_crystal_disk_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-crystal-disk-info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_devmgmt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-devmgmt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_diskmgmt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-diskmgmt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_dxdiag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-dxdiag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_everything" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-everything.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_evkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-evkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_explorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-explorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_faststone_capture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-faststone-capture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder_local" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder-local.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder_roaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder-roaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder_startup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder-startup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder_temp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-folder-temp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_foxit_reader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-foxit-reader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_check_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-check-disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_cmm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-cmm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_disk_analysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-disk-analysis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_disk_cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-disk-cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_disk_defrag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-disk-defrag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_driver_backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-driver-backup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_dupefinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-dupefinder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_empty_folder_finder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-empty-folder-finder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_encrypt_exe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-encrypt-exe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_file_encrypt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-file-encrypt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_file_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-file-splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_file_undelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-file-undelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_ie_helper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-ie-helper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_join_exe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-join-exe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_mem_defrag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-mem-defrag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_proc_mgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-proc-mgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_quick_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-quick-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_registry_cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-registry-cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_reg_defrag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-reg-defrag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_restore_center" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-restore-center.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_shortcut_fixer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-shortcut-fixer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_shredder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-shredder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_software_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-software-update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_startup_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-startup-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_sysinfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-sysinfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_tracks_eraser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-tracks-eraser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_glary_uninstaler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-glary-uninstaler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_google_drive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-google-drive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_gpu_z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-gpu-z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_hwinfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-hwinfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_idman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-idman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_image_glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-image-glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_cloned_files_scanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-cloned-files-scanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_context_menu_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-context-menu-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_default_program" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-default-program.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_disk_cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-disk-cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_disk_doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-disk-doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_disk_explorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-disk-explorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_driver_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-driver-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_duplicate_file_finder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-duplicate-file-finder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_empty_folder_scanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-empty-folder-scanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_file_shredder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-file-shredder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_ie_helper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-ie-helper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_internet_booster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-internet-booster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_large_file_finder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-large-file-finder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_my_win10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-my-win10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_process_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-process-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_program_deactivator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-program-deactivator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_registry_cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-registry-cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_registry_defrag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-registry-defrag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_reinforce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-reinforce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_rescue_center" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-rescue-center.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_screen_shot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-screen-shot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_shortcut_fixer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-shortcut-fixer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_smart_ram" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-smart-ram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_startup_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-startup-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_system_control" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-system-control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_system_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-system-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_undelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-undelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_iobit_win_fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-iobit-win-fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ipconfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ipconfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ismylcdok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ismylcdok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_keyboard_test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-keyboard-test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_lightshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-lightshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_microsoft_activation_scripts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-microsoft-activation-scripts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_msinfo32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-msinfo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_netplwiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-netplwiz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_network_connections" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-network-connections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_chrome_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-chrome-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_ie_passwords" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-ie-passwords.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_password_firefox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-password-firefox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_password_remote_desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-password-remote-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_web_browser_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-web-browser-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_wireless_key_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-wireless-key-view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nirsoft_wireless_network_watcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-nirsoft-wireless-network-watcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_obs_studio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-obs-studio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_office" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-office.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_office1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-office1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_office2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-office2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_office_tool_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-office-tool-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pot_player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-pot-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_powercfg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-powercfg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_powershell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-powershell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_programs_and_features" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-programs-and-features.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_recuva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-recuva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_regedit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-regedit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_registry_workshop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-registry-workshop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_remote_desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-remote-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_rufus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-rufus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_share_x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-share-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_bluelife_host_editor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-bluelife-host-editor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_defender_control" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-defender-control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_dns_jumper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-dns-jumper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_easy_context_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-easy-context-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_easy_service_optimizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-easy-service-optimizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_restart_explorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-restart-explorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_store_apps_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-store-apps-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_temp_cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-temp-cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_update_time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-update-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_win11_classic_context_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-win11-classic-context-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sordum_windows_update_blocker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sordum-windows-update-blocker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_speccy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-speccy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sublime_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sublime-text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sumatra_pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sumatra-pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sysdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-sysdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_task_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-task-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_task_scheduler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-task-scheduler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_teamviewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-teamviewer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_telegram" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-telegram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-terminal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tlcdtest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-tlcdtest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tpm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-tpm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ultraviewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ultraviewer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_unikey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-unikey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_visual_studio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-visual-studio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_vlc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-vlc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_vmware" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-vmware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_wan_driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-wan-driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_wifi_hexagonal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-wifi-hexagonal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_windows_defender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-windows-defender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_windows_firewall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-windows_firewall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_windows_security_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-windows-security-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_winrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-winrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_winver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-winver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_zalo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-zalo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
