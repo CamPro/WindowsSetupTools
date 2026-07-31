@@ -4,6 +4,12 @@
 
 ---
 
+## ✨ Tải xuống
+
+<a href="https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe">WindowsSetupTools.exe</a>
+
+---
+
 ## ✨ Tính năng
 
 * ✅ Cài đặt phần mềm
@@ -23,13 +29,12 @@
 
 ## 📸 Ảnh minh họa
 
-```markdown
 ![Demo](screenshot/image1.png)
 ![Demo](screenshot/image2.png)
 ![Demo](screenshot/image3.png)
 ![Demo](screenshot/image4.png)
 ![Demo](screenshot/image5.png)
-```
+
 
 ---
 
