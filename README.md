@@ -4,9 +4,9 @@
 
 ---
 
-## ✨ Tải xuống
+## 📥 Tải xuống
 
-<a href="https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe">WindowsSetupTools.exe</a>
+<a href="https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.zip">WindowsSetupTools.zip</a>
 
 ---
 
@@ -20,11 +20,9 @@
 
 ---
 
-## 🚀 Bắt đầu
-
 ### Yêu cầu
 
-* Máy tính có NET Framework
+* Máy tính có .NET Framework
 * Kết nối internet
 
 ## 📸 Ảnh minh họa
