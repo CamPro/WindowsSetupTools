@@ -58,6 +58,7 @@ namespace WindowsSetupTools
             buttonChangeUser.Enabled = false;
             buttonChangePort.Enabled = false;
 
+            GetCurrentTimezone();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -831,6 +832,9 @@ namespace WindowsSetupTools
             {
                 WriteMessage("WinRAR is not installed");
             }
+            if (tabControlGlobal.SelectedTab == tabPageCaiDatNhanh)
+            {
+            }
         }
 
         public async Task DownloadFileWithProgressAsync(string url, string destinationPath, IProgress<double> progress)
@@ -1084,6 +1088,21 @@ namespace WindowsSetupTools
             }
         }
 
+        public void GetCurrentTimezone()
+        {
+            Task onetask = new Task(() =>
+            {
+                string utcStr = cmd("systeminfo | findstr /C:\"Time Zone\"").Replace("Time Zone:", "").Trim();
+                string tzStr = cmd("tzutil /g");
+                this.Invoke(new Action(() =>
+                {
+                    labelTimezoneUtc.Text = utcStr;
+                    labelTimezone.Text = tzStr;
+                }));
+            });
+            onetask.Start();
+        }
+
         #region GLOBAL
 
         private void buttonOpenFolder_Click(object sender, EventArgs e)
@@ -1282,6 +1301,26 @@ namespace WindowsSetupTools
         {
             shutdown("/s /t 0");
             Application.Exit();
+        }
+
+        public string cmd(string arg)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = $"/c {arg}",
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+            var process = Process.Start(psi);
+
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+            process.Dispose();
+            return output;
         }
 
         public void net(string arg)
@@ -1998,47 +2037,56 @@ namespace WindowsSetupTools
 
         private void buttonChangeTimezone_Click(object sender, EventArgs e)
         {
-            string country = "";
-            string state = "";
-            string city = "";
-            string ip = "";
-            string timezone = "";
-            string dataJson = new System.Net.WebClient().DownloadString("http://ip-api.com/json");
-            string[] array = dataJson.Replace("{", "").Replace("}", "").Replace(",", "|").Split('|');
-            foreach (var item in array)
+            try
             {
-                string[] values = item.Trim().Replace("\"", "").Split(':');
-                if (values[0] == "country")
+                labelTimezone.Text = "...";
+                labelTimezoneUtc.Text = "...";
+
+                string country = "";
+                string state = "";
+                string city = "";
+                string ip = "";
+                string timezone = "";
+                string dataJson = new System.Net.WebClient().DownloadString("http://ip-api.com/json");
+                string[] array = dataJson.Replace("{", "").Replace("}", "").Replace(",", "|").Split('|');
+                foreach (var item in array)
                 {
-                    country = values[1];
+                    string[] values = item.Trim().Replace("\"", "").Split(':');
+                    if (values[0] == "country")
+                    {
+                        country = values[1];
+                    }
+                    if (values[0] == "regionName")
+                    {
+                        state = values[1];
+                    }
+                    if (values[0] == "city")
+                    {
+                        city = values[1];
+                    }
+                    if (values[0] == "timezone")
+                    {
+                        timezone = values[1];
+                    }
+                    if (values[0] == "query")
+                    {
+                        ip = values[1];
+                    }
                 }
-                if (values[0] == "regionName")
+                foreach (var localize in timeZones)
                 {
-                    state = values[1];
+                    if (localize[2] == timezone)
+                    {
+                        tzutil(localize[0]); // change timezone
+                        break;
+                    }
                 }
-                if (values[0] == "city")
-                {
-                    city = values[1];
-                }
-                if (values[0] == "timezone")
-                {
-                    timezone = values[1];
-                }
-                if (values[0] == "query")
-                {
-                    ip = values[1];
-                }
+                GetCurrentTimezone();
             }
-            foreach (var localize in timeZones)
+            catch (Exception ex)
             {
-                if (localize[2] == timezone)
-                {
-                    tzutil(localize[0]); // change timezone
-                    break;
-                }
+                WriteMessage(ex.Message);
             }
-            buttonChangeTimezone.ForeColor = Color.Blue;
-            buttonChangeTimezone.Text = timezone;
         }
 
         private void checkActivePowerHighPerformance_CheckedChanged(object sender, EventArgs e)

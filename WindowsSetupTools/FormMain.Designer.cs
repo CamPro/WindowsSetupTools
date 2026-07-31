@@ -108,6 +108,8 @@
             this.buttonSetupFramework35Iso = new System.Windows.Forms.Button();
             this.buttonAddCmdRightMouse = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.labelTimezone = new System.Windows.Forms.Label();
+            this.labelTimezoneUtc = new System.Windows.Forms.Label();
             this.buttonChangeTimezone = new System.Windows.Forms.Button();
             this.buttonChangePort = new System.Windows.Forms.Button();
             this.buttonChangeUser = new System.Windows.Forms.Button();
@@ -243,6 +245,7 @@
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -268,6 +271,7 @@
             this.tabPageCongCu.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox61.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOpenFolder
@@ -948,6 +952,7 @@
             // 
             // tabPageCaiDatNhanh
             // 
+            this.tabPageCaiDatNhanh.Controls.Add(this.groupBox13);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox14);
             this.tabPageCaiDatNhanh.Controls.Add(this.buttonSearchWifiDriver);
             this.tabPageCaiDatNhanh.Controls.Add(this.buttonSetupFramework35Iso);
@@ -1139,7 +1144,6 @@
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.buttonChangeTimezone);
             this.groupBox21.Controls.Add(this.buttonChangePort);
             this.groupBox21.Controls.Add(this.buttonChangeUser);
             this.groupBox21.Controls.Add(this.buttonChangePass);
@@ -1148,17 +1152,35 @@
             this.groupBox21.Controls.Add(this.textChangePass);
             this.groupBox21.Location = new System.Drawing.Point(878, 10);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(350, 475);
+            this.groupBox21.Size = new System.Drawing.Size(350, 291);
             this.groupBox21.TabIndex = 11;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "VPS";
             // 
+            // labelTimezone
+            // 
+            this.labelTimezone.AutoSize = true;
+            this.labelTimezone.Location = new System.Drawing.Point(10, 73);
+            this.labelTimezone.Name = "labelTimezone";
+            this.labelTimezone.Size = new System.Drawing.Size(74, 17);
+            this.labelTimezone.TabIndex = 1;
+            this.labelTimezone.Text = "Timezone:";
+            // 
+            // labelTimezoneUtc
+            // 
+            this.labelTimezoneUtc.AutoSize = true;
+            this.labelTimezoneUtc.Location = new System.Drawing.Point(10, 33);
+            this.labelTimezoneUtc.Name = "labelTimezoneUtc";
+            this.labelTimezoneUtc.Size = new System.Drawing.Size(40, 17);
+            this.labelTimezoneUtc.TabIndex = 0;
+            this.labelTimezoneUtc.Text = "UTC:";
+            // 
             // buttonChangeTimezone
             // 
-            this.buttonChangeTimezone.Location = new System.Drawing.Point(10, 149);
+            this.buttonChangeTimezone.Location = new System.Drawing.Point(10, 113);
             this.buttonChangeTimezone.Name = "buttonChangeTimezone";
             this.buttonChangeTimezone.Size = new System.Drawing.Size(330, 38);
-            this.buttonChangeTimezone.TabIndex = 26;
+            this.buttonChangeTimezone.TabIndex = 2;
             this.buttonChangeTimezone.Text = "Thiếp lập Timezone theo IP";
             this.buttonChangeTimezone.UseVisualStyleBackColor = true;
             this.buttonChangeTimezone.Click += new System.EventHandler(this.buttonChangeTimezone_Click);
@@ -2833,6 +2855,18 @@
             this.labelMsg.TabIndex = 110;
             this.labelMsg.Text = ".";
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.labelTimezone);
+            this.groupBox13.Controls.Add(this.labelTimezoneUtc);
+            this.groupBox13.Controls.Add(this.buttonChangeTimezone);
+            this.groupBox13.Location = new System.Drawing.Point(876, 307);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(356, 178);
+            this.groupBox13.TabIndex = 12;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Time Zone";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2914,6 +2948,8 @@
             this.groupBox62.PerformLayout();
             this.groupBox61.ResumeLayout(false);
             this.groupBox61.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3133,6 +3169,9 @@
         private System.Windows.Forms.Label labelMsg;
         private System.Windows.Forms.Button buttonWindowsActivateForVPS;
         private System.Windows.Forms.Button buttonActivateAIOTools;
+        private System.Windows.Forms.Label labelTimezone;
+        private System.Windows.Forms.Label labelTimezoneUtc;
+        private System.Windows.Forms.GroupBox groupBox13;
     }
 }
 
