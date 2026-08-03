@@ -483,7 +483,7 @@
             this.buttonSetupGoogleDrive.Name = "buttonSetupGoogleDrive";
             this.buttonSetupGoogleDrive.Size = new System.Drawing.Size(140, 38);
             this.buttonSetupGoogleDrive.TabIndex = 2;
-            this.buttonSetupGoogleDrive.Text = "Google Drive";
+            this.buttonSetupGoogleDrive.Text = "Google Drive*";
             this.buttonSetupGoogleDrive.UseVisualStyleBackColor = true;
             this.buttonSetupGoogleDrive.Click += new System.EventHandler(this.buttonSetupGoogleDrive_Click);
             // 
@@ -492,7 +492,7 @@
             this.buttonSetupVMwareWorkstation.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonSetupVMwareWorkstation.Location = new System.Drawing.Point(10, 80);
             this.buttonSetupVMwareWorkstation.Name = "buttonSetupVMwareWorkstation";
-            this.buttonSetupVMwareWorkstation.Size = new System.Drawing.Size(270, 38);
+            this.buttonSetupVMwareWorkstation.Size = new System.Drawing.Size(276, 38);
             this.buttonSetupVMwareWorkstation.TabIndex = 1;
             this.buttonSetupVMwareWorkstation.Text = "VMware Workstation*";
             this.buttonSetupVMwareWorkstation.UseVisualStyleBackColor = true;
@@ -572,7 +572,7 @@
             this.buttonSetupShareX.Name = "buttonSetupShareX";
             this.buttonSetupShareX.Size = new System.Drawing.Size(130, 38);
             this.buttonSetupShareX.TabIndex = 1;
-            this.buttonSetupShareX.Text = "ShareX";
+            this.buttonSetupShareX.Text = "ShareX*";
             this.buttonSetupShareX.UseVisualStyleBackColor = true;
             this.buttonSetupShareX.Click += new System.EventHandler(this.buttonSetupShareX_Click);
             // 
@@ -592,7 +592,7 @@
             this.buttonSetupOBSStudio.Name = "buttonSetupOBSStudio";
             this.buttonSetupOBSStudio.Size = new System.Drawing.Size(130, 38);
             this.buttonSetupOBSStudio.TabIndex = 0;
-            this.buttonSetupOBSStudio.Text = "OBS Studio";
+            this.buttonSetupOBSStudio.Text = "OBS Studio*";
             this.buttonSetupOBSStudio.UseVisualStyleBackColor = true;
             this.buttonSetupOBSStudio.Click += new System.EventHandler(this.buttonSetupOBSStudio_Click);
             // 
@@ -668,7 +668,7 @@
             this.buttonSetupVisualStudioCommunity.Name = "buttonSetupVisualStudioCommunity";
             this.buttonSetupVisualStudioCommunity.Size = new System.Drawing.Size(270, 38);
             this.buttonSetupVisualStudioCommunity.TabIndex = 0;
-            this.buttonSetupVisualStudioCommunity.Text = "Visual Studio Community";
+            this.buttonSetupVisualStudioCommunity.Text = "Visual Studio Community*";
             this.buttonSetupVisualStudioCommunity.UseVisualStyleBackColor = true;
             this.buttonSetupVisualStudioCommunity.Click += new System.EventHandler(this.buttonSetupVisualStudioCommunity_Click);
             // 
@@ -686,31 +686,31 @@
             // 
             // buttonSetupUltraViewer
             // 
-            this.buttonSetupUltraViewer.Location = new System.Drawing.Point(10, 80);
+            this.buttonSetupUltraViewer.Location = new System.Drawing.Point(146, 25);
             this.buttonSetupUltraViewer.Name = "buttonSetupUltraViewer";
             this.buttonSetupUltraViewer.Size = new System.Drawing.Size(130, 38);
-            this.buttonSetupUltraViewer.TabIndex = 2;
+            this.buttonSetupUltraViewer.TabIndex = 1;
             this.buttonSetupUltraViewer.Text = "UltraViewer";
             this.buttonSetupUltraViewer.UseVisualStyleBackColor = true;
             this.buttonSetupUltraViewer.Click += new System.EventHandler(this.buttonSetupUltraViewer_Click);
             // 
             // buttonSetupAnyDesk
             // 
-            this.buttonSetupAnyDesk.Location = new System.Drawing.Point(150, 25);
+            this.buttonSetupAnyDesk.Location = new System.Drawing.Point(10, 25);
             this.buttonSetupAnyDesk.Name = "buttonSetupAnyDesk";
             this.buttonSetupAnyDesk.Size = new System.Drawing.Size(130, 38);
-            this.buttonSetupAnyDesk.TabIndex = 1;
+            this.buttonSetupAnyDesk.TabIndex = 0;
             this.buttonSetupAnyDesk.Text = "AnyDesk";
             this.buttonSetupAnyDesk.UseVisualStyleBackColor = true;
             this.buttonSetupAnyDesk.Click += new System.EventHandler(this.buttonSetupAnyDesk_Click);
             // 
             // buttonSetupTeamViewer
             // 
-            this.buttonSetupTeamViewer.Location = new System.Drawing.Point(10, 25);
+            this.buttonSetupTeamViewer.Location = new System.Drawing.Point(10, 80);
             this.buttonSetupTeamViewer.Name = "buttonSetupTeamViewer";
-            this.buttonSetupTeamViewer.Size = new System.Drawing.Size(130, 38);
-            this.buttonSetupTeamViewer.TabIndex = 0;
-            this.buttonSetupTeamViewer.Text = "TeamViewer";
+            this.buttonSetupTeamViewer.Size = new System.Drawing.Size(266, 38);
+            this.buttonSetupTeamViewer.TabIndex = 2;
+            this.buttonSetupTeamViewer.Text = "TeamViewer*";
             this.buttonSetupTeamViewer.UseVisualStyleBackColor = true;
             this.buttonSetupTeamViewer.Click += new System.EventHandler(this.buttonSetupTeamViewer_Click);
             // 
@@ -732,7 +732,7 @@
             this.buttonSetupVLC.Name = "buttonSetupVLC";
             this.buttonSetupVLC.Size = new System.Drawing.Size(130, 38);
             this.buttonSetupVLC.TabIndex = 1;
-            this.buttonSetupVLC.Text = "VLC";
+            this.buttonSetupVLC.Text = "VLC*";
             this.buttonSetupVLC.UseVisualStyleBackColor = true;
             this.buttonSetupVLC.Click += new System.EventHandler(this.buttonSetupVLC_Click);
             // 
@@ -742,7 +742,7 @@
             this.buttonSetupImageGlass.Name = "buttonSetupImageGlass";
             this.buttonSetupImageGlass.Size = new System.Drawing.Size(130, 38);
             this.buttonSetupImageGlass.TabIndex = 2;
-            this.buttonSetupImageGlass.Text = "ImageGlass";
+            this.buttonSetupImageGlass.Text = "ImageGlass*";
             this.buttonSetupImageGlass.UseVisualStyleBackColor = true;
             this.buttonSetupImageGlass.Click += new System.EventHandler(this.buttonSetupImageGlass_Click);
             // 
@@ -752,7 +752,7 @@
             this.buttonSetupPotPlayer.Name = "buttonSetupPotPlayer";
             this.buttonSetupPotPlayer.Size = new System.Drawing.Size(130, 38);
             this.buttonSetupPotPlayer.TabIndex = 0;
-            this.buttonSetupPotPlayer.Text = "PotPlayer";
+            this.buttonSetupPotPlayer.Text = "PotPlayer*";
             this.buttonSetupPotPlayer.UseVisualStyleBackColor = true;
             this.buttonSetupPotPlayer.Click += new System.EventHandler(this.buttonSetupPotPlayer_Click);
             // 
@@ -1871,7 +1871,7 @@
             this.linkGlaryFileUndelete.TabIndex = 26;
             this.linkGlaryFileUndelete.TabStop = true;
             this.linkGlaryFileUndelete.Text = "File Undelete";
-            this.linkGlaryFileUndelete.Click += new System.EventHandler(this.linkGlaryFileUndelete_Click);
+            this.linkGlaryFileUndelete.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryFileUndelete_Click);
             // 
             // linkGlaryUninstaler
             // 
@@ -1885,7 +1885,7 @@
             this.linkGlaryUninstaler.TabIndex = 25;
             this.linkGlaryUninstaler.TabStop = true;
             this.linkGlaryUninstaler.Text = "Uninstaler";
-            this.linkGlaryUninstaler.Click += new System.EventHandler(this.linkGlaryUninstaler_Click);
+            this.linkGlaryUninstaler.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryUninstaler_Click);
             // 
             // linkGlaryTracksEraser
             // 
@@ -1899,7 +1899,7 @@
             this.linkGlaryTracksEraser.TabIndex = 24;
             this.linkGlaryTracksEraser.TabStop = true;
             this.linkGlaryTracksEraser.Text = "Tracks Eraser";
-            this.linkGlaryTracksEraser.Click += new System.EventHandler(this.linkGlaryTracksEraser_Click);
+            this.linkGlaryTracksEraser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryTracksEraser_Click);
             // 
             // linkGlarySystemInformation
             // 
@@ -1913,7 +1913,7 @@
             this.linkGlarySystemInformation.TabIndex = 23;
             this.linkGlarySystemInformation.TabStop = true;
             this.linkGlarySystemInformation.Text = "System Information";
-            this.linkGlarySystemInformation.Click += new System.EventHandler(this.linkGlarySystemInformation_Click);
+            this.linkGlarySystemInformation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlarySystemInformation_Click);
             // 
             // linkGlaryStartupManager
             // 
@@ -1927,7 +1927,7 @@
             this.linkGlaryStartupManager.TabIndex = 22;
             this.linkGlaryStartupManager.TabStop = true;
             this.linkGlaryStartupManager.Text = "Startup Manager";
-            this.linkGlaryStartupManager.Click += new System.EventHandler(this.linkGlaryStartupManager_Click);
+            this.linkGlaryStartupManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryStartupManager_Click);
             // 
             // linkGlarySoftwareUpdate
             // 
@@ -1941,7 +1941,7 @@
             this.linkGlarySoftwareUpdate.TabIndex = 21;
             this.linkGlarySoftwareUpdate.TabStop = true;
             this.linkGlarySoftwareUpdate.Text = "Software Update";
-            this.linkGlarySoftwareUpdate.Click += new System.EventHandler(this.linkGlarySoftwareUpdate_Click);
+            this.linkGlarySoftwareUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlarySoftwareUpdate_Click);
             // 
             // linkGlaryFileShredder
             // 
@@ -1955,7 +1955,7 @@
             this.linkGlaryFileShredder.TabIndex = 20;
             this.linkGlaryFileShredder.TabStop = true;
             this.linkGlaryFileShredder.Text = "File Shredder";
-            this.linkGlaryFileShredder.Click += new System.EventHandler(this.linkGlaryFileShredder_Click);
+            this.linkGlaryFileShredder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryFileShredder_Click);
             // 
             // linkGlaryShortcutFixer
             // 
@@ -1969,7 +1969,7 @@
             this.linkGlaryShortcutFixer.TabIndex = 19;
             this.linkGlaryShortcutFixer.TabStop = true;
             this.linkGlaryShortcutFixer.Text = "Shortcut Fixer";
-            this.linkGlaryShortcutFixer.Click += new System.EventHandler(this.linkGlaryShortcutFixer_Click);
+            this.linkGlaryShortcutFixer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryShortcutFixer_Click);
             // 
             // linkGlaryRestoreCenter
             // 
@@ -1983,7 +1983,7 @@
             this.linkGlaryRestoreCenter.TabIndex = 18;
             this.linkGlaryRestoreCenter.TabStop = true;
             this.linkGlaryRestoreCenter.Text = "Restore Center";
-            this.linkGlaryRestoreCenter.Click += new System.EventHandler(this.linkGlaryRestoreCenter_Click);
+            this.linkGlaryRestoreCenter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryRestoreCenter_Click);
             // 
             // linkGlaryRegistryCleaner
             // 
@@ -1997,7 +1997,7 @@
             this.linkGlaryRegistryCleaner.TabIndex = 17;
             this.linkGlaryRegistryCleaner.TabStop = true;
             this.linkGlaryRegistryCleaner.Text = "Registry Cleaner";
-            this.linkGlaryRegistryCleaner.Click += new System.EventHandler(this.linkGlaryRegistryCleaner_Click);
+            this.linkGlaryRegistryCleaner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryRegistryCleaner_Click);
             // 
             // linkGlaryRegistryDefrag
             // 
@@ -2011,7 +2011,7 @@
             this.linkGlaryRegistryDefrag.TabIndex = 16;
             this.linkGlaryRegistryDefrag.TabStop = true;
             this.linkGlaryRegistryDefrag.Text = "Registry Defrag";
-            this.linkGlaryRegistryDefrag.Click += new System.EventHandler(this.linkGlaryRegistryDefrag_Click);
+            this.linkGlaryRegistryDefrag.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryRegistryDefrag_Click);
             // 
             // linkGlaryQuickSearch
             // 
@@ -2025,7 +2025,7 @@
             this.linkGlaryQuickSearch.TabIndex = 15;
             this.linkGlaryQuickSearch.TabStop = true;
             this.linkGlaryQuickSearch.Text = "Quick Search";
-            this.linkGlaryQuickSearch.Click += new System.EventHandler(this.linkGlaryQuickSearch_Click);
+            this.linkGlaryQuickSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryQuickSearch_Click);
             // 
             // linkGlaryProcessManager
             // 
@@ -2039,7 +2039,7 @@
             this.linkGlaryProcessManager.TabIndex = 14;
             this.linkGlaryProcessManager.TabStop = true;
             this.linkGlaryProcessManager.Text = "Process Manager";
-            this.linkGlaryProcessManager.Click += new System.EventHandler(this.linkGlaryProcessManager_Click);
+            this.linkGlaryProcessManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryProcessManager_Click);
             // 
             // linkGlaryMemoryDefrag
             // 
@@ -2053,7 +2053,7 @@
             this.linkGlaryMemoryDefrag.TabIndex = 13;
             this.linkGlaryMemoryDefrag.TabStop = true;
             this.linkGlaryMemoryDefrag.Text = "Memory Defrag";
-            this.linkGlaryMemoryDefrag.Click += new System.EventHandler(this.linkGlaryMemoryDefrag_Click);
+            this.linkGlaryMemoryDefrag.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryMemoryDefrag_Click);
             // 
             // linkGlaryJoinExe
             // 
@@ -2067,7 +2067,7 @@
             this.linkGlaryJoinExe.TabIndex = 12;
             this.linkGlaryJoinExe.TabStop = true;
             this.linkGlaryJoinExe.Text = "Join Exe";
-            this.linkGlaryJoinExe.Click += new System.EventHandler(this.linkGlaryJoinExe_Click);
+            this.linkGlaryJoinExe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryJoinExe_Click);
             // 
             // linkGlaryIEHelper
             // 
@@ -2081,7 +2081,7 @@
             this.linkGlaryIEHelper.TabIndex = 11;
             this.linkGlaryIEHelper.TabStop = true;
             this.linkGlaryIEHelper.Text = "IE Helper";
-            this.linkGlaryIEHelper.Click += new System.EventHandler(this.linkGlaryIEHelper_Click);
+            this.linkGlaryIEHelper.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryIEHelper_Click);
             // 
             // linkGlaryFileSplitter
             // 
@@ -2095,7 +2095,7 @@
             this.linkGlaryFileSplitter.TabIndex = 10;
             this.linkGlaryFileSplitter.TabStop = true;
             this.linkGlaryFileSplitter.Text = "File Splitter";
-            this.linkGlaryFileSplitter.Click += new System.EventHandler(this.linkGlaryFileSplitter_Click);
+            this.linkGlaryFileSplitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryFileSplitter_Click);
             // 
             // linkGlaryFileEncrypt
             // 
@@ -2109,7 +2109,7 @@
             this.linkGlaryFileEncrypt.TabIndex = 9;
             this.linkGlaryFileEncrypt.TabStop = true;
             this.linkGlaryFileEncrypt.Text = "File Encrypt";
-            this.linkGlaryFileEncrypt.Click += new System.EventHandler(this.linkGlaryFileEncrypt_Click);
+            this.linkGlaryFileEncrypt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryFileEncrypt_Click);
             // 
             // linkGlaryEncryptExe
             // 
@@ -2123,7 +2123,7 @@
             this.linkGlaryEncryptExe.TabIndex = 8;
             this.linkGlaryEncryptExe.TabStop = true;
             this.linkGlaryEncryptExe.Text = "Encrypt Exe";
-            this.linkGlaryEncryptExe.Click += new System.EventHandler(this.linkGlaryEncryptExe_Click);
+            this.linkGlaryEncryptExe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryEncryptExe_Click);
             // 
             // linkGlaryEmptyFolderFinder
             // 
@@ -2137,7 +2137,7 @@
             this.linkGlaryEmptyFolderFinder.TabIndex = 7;
             this.linkGlaryEmptyFolderFinder.TabStop = true;
             this.linkGlaryEmptyFolderFinder.Text = "Empty Folder Finder";
-            this.linkGlaryEmptyFolderFinder.Click += new System.EventHandler(this.linkGlaryEmptyFolderFinder_Click);
+            this.linkGlaryEmptyFolderFinder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryEmptyFolderFinder_Click);
             // 
             // linkGlaryDuplicateFileFinder
             // 
@@ -2151,7 +2151,7 @@
             this.linkGlaryDuplicateFileFinder.TabIndex = 6;
             this.linkGlaryDuplicateFileFinder.TabStop = true;
             this.linkGlaryDuplicateFileFinder.Text = "Duplicate File Finder";
-            this.linkGlaryDuplicateFileFinder.Click += new System.EventHandler(this.linkGlaryDuplicateFileFinder_Click);
+            this.linkGlaryDuplicateFileFinder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryDuplicateFileFinder_Click);
             // 
             // linkGlaryDriverBackup
             // 
@@ -2165,7 +2165,7 @@
             this.linkGlaryDriverBackup.TabIndex = 5;
             this.linkGlaryDriverBackup.TabStop = true;
             this.linkGlaryDriverBackup.Text = "Driver Backup";
-            this.linkGlaryDriverBackup.Click += new System.EventHandler(this.linkGlaryDriverBackup_Click);
+            this.linkGlaryDriverBackup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryDriverBackup_Click);
             // 
             // linkGlaryDiskDefrag
             // 
@@ -2179,7 +2179,7 @@
             this.linkGlaryDiskDefrag.TabIndex = 4;
             this.linkGlaryDiskDefrag.TabStop = true;
             this.linkGlaryDiskDefrag.Text = "Disk Defrag";
-            this.linkGlaryDiskDefrag.Click += new System.EventHandler(this.linkGlaryDiskDefrag_Click);
+            this.linkGlaryDiskDefrag.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryDiskDefrag_Click);
             // 
             // linkGlaryDiskCleaner
             // 
@@ -2193,7 +2193,7 @@
             this.linkGlaryDiskCleaner.TabIndex = 3;
             this.linkGlaryDiskCleaner.TabStop = true;
             this.linkGlaryDiskCleaner.Text = "Disk Cleaner";
-            this.linkGlaryDiskCleaner.Click += new System.EventHandler(this.linkGlaryDiskCleaner_Click);
+            this.linkGlaryDiskCleaner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryDiskCleaner_Click);
             // 
             // linkGlaryDiskAnalysis
             // 
@@ -2207,7 +2207,7 @@
             this.linkGlaryDiskAnalysis.TabIndex = 2;
             this.linkGlaryDiskAnalysis.TabStop = true;
             this.linkGlaryDiskAnalysis.Text = "Disk Analysis";
-            this.linkGlaryDiskAnalysis.Click += new System.EventHandler(this.linkGlaryDiskAnalysis_Click);
+            this.linkGlaryDiskAnalysis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryDiskAnalysis_Click);
             // 
             // linkGlaryContextMenuManager
             // 
@@ -2221,7 +2221,7 @@
             this.linkGlaryContextMenuManager.TabIndex = 1;
             this.linkGlaryContextMenuManager.TabStop = true;
             this.linkGlaryContextMenuManager.Text = "Context Menu Manager";
-            this.linkGlaryContextMenuManager.Click += new System.EventHandler(this.linkGlaryContextMenuManager_Click);
+            this.linkGlaryContextMenuManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryContextMenuManager_Click);
             // 
             // linkGlaryCheckDisk
             // 
@@ -2235,7 +2235,7 @@
             this.linkGlaryCheckDisk.TabIndex = 0;
             this.linkGlaryCheckDisk.TabStop = true;
             this.linkGlaryCheckDisk.Text = "Check Disk";
-            this.linkGlaryCheckDisk.Click += new System.EventHandler(this.linkGlaryCheckDisk_Click);
+            this.linkGlaryCheckDisk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGlaryCheckDisk_Click);
             // 
             // groupBox61
             // 
@@ -2288,7 +2288,7 @@
             this.linkIObitContextMenuManager.TabIndex = 1;
             this.linkIObitContextMenuManager.TabStop = true;
             this.linkIObitContextMenuManager.Text = "Context Menu Manager";
-            this.linkIObitContextMenuManager.Click += new System.EventHandler(this.linkIObitContextMenuManager_Click);
+            this.linkIObitContextMenuManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitContextMenuManager_Click);
             // 
             // linkIObitClonedFilesScanner
             // 
@@ -2302,7 +2302,7 @@
             this.linkIObitClonedFilesScanner.TabIndex = 0;
             this.linkIObitClonedFilesScanner.TabStop = true;
             this.linkIObitClonedFilesScanner.Text = "Cloned Files Scanner";
-            this.linkIObitClonedFilesScanner.Click += new System.EventHandler(this.linkIObitClonedFilesScanner_Click);
+            this.linkIObitClonedFilesScanner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitClonedFilesScanner_Click);
             // 
             // linkIObitWinFix
             // 
@@ -2316,7 +2316,7 @@
             this.linkIObitWinFix.TabIndex = 29;
             this.linkIObitWinFix.TabStop = true;
             this.linkIObitWinFix.Text = "Win Fix";
-            this.linkIObitWinFix.Click += new System.EventHandler(this.linkIObitWinFix_Click);
+            this.linkIObitWinFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitWinFix_Click);
             // 
             // linkIObitUndelete
             // 
@@ -2330,7 +2330,7 @@
             this.linkIObitUndelete.TabIndex = 28;
             this.linkIObitUndelete.TabStop = true;
             this.linkIObitUndelete.Text = "Undelete";
-            this.linkIObitUndelete.Click += new System.EventHandler(this.linkIObitUndelete_Click);
+            this.linkIObitUndelete.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitUndelete_Click);
             // 
             // linkIObitSystemInformation
             // 
@@ -2344,7 +2344,7 @@
             this.linkIObitSystemInformation.TabIndex = 27;
             this.linkIObitSystemInformation.TabStop = true;
             this.linkIObitSystemInformation.Text = "System Information";
-            this.linkIObitSystemInformation.Click += new System.EventHandler(this.linkIObitSystemInformation_Click);
+            this.linkIObitSystemInformation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitSystemInformation_Click);
             // 
             // linkIObitSystemControl
             // 
@@ -2358,7 +2358,7 @@
             this.linkIObitSystemControl.TabIndex = 26;
             this.linkIObitSystemControl.TabStop = true;
             this.linkIObitSystemControl.Text = "System Control";
-            this.linkIObitSystemControl.Click += new System.EventHandler(this.linkIObitSystemControl_Click);
+            this.linkIObitSystemControl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitSystemControl_Click);
             // 
             // linkIObitStartupManager
             // 
@@ -2372,7 +2372,7 @@
             this.linkIObitStartupManager.TabIndex = 25;
             this.linkIObitStartupManager.TabStop = true;
             this.linkIObitStartupManager.Text = "Startup Manager";
-            this.linkIObitStartupManager.Click += new System.EventHandler(this.linkIObitStartupManager_Click);
+            this.linkIObitStartupManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitStartupManager_Click);
             // 
             // linkIObitSmartRAM
             // 
@@ -2386,7 +2386,7 @@
             this.linkIObitSmartRAM.TabIndex = 24;
             this.linkIObitSmartRAM.TabStop = true;
             this.linkIObitSmartRAM.Text = "Smart RAM";
-            this.linkIObitSmartRAM.Click += new System.EventHandler(this.linkIObitSmartRAM_Click);
+            this.linkIObitSmartRAM.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitSmartRAM_Click);
             // 
             // linkIObitShortcutFixer
             // 
@@ -2400,7 +2400,7 @@
             this.linkIObitShortcutFixer.TabIndex = 23;
             this.linkIObitShortcutFixer.TabStop = true;
             this.linkIObitShortcutFixer.Text = "Shortcut Fixer";
-            this.linkIObitShortcutFixer.Click += new System.EventHandler(this.linkIObitShortcutFixer_Click);
+            this.linkIObitShortcutFixer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitShortcutFixer_Click);
             // 
             // linkIObitScreenShot
             // 
@@ -2414,7 +2414,7 @@
             this.linkIObitScreenShot.TabIndex = 22;
             this.linkIObitScreenShot.TabStop = true;
             this.linkIObitScreenShot.Text = "Screen Shot";
-            this.linkIObitScreenShot.Click += new System.EventHandler(this.linkIObitScreenShot_Click);
+            this.linkIObitScreenShot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitScreenShot_Click);
             // 
             // linkIObitRescueCenter
             // 
@@ -2428,7 +2428,7 @@
             this.linkIObitRescueCenter.TabIndex = 21;
             this.linkIObitRescueCenter.TabStop = true;
             this.linkIObitRescueCenter.Text = "Rescue Center";
-            this.linkIObitRescueCenter.Click += new System.EventHandler(this.linkIObitRescueCenter_Click);
+            this.linkIObitRescueCenter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitRescueCenter_Click);
             // 
             // linkIObitReinforce
             // 
@@ -2442,7 +2442,7 @@
             this.linkIObitReinforce.TabIndex = 20;
             this.linkIObitReinforce.TabStop = true;
             this.linkIObitReinforce.Text = "Reinforce";
-            this.linkIObitReinforce.Click += new System.EventHandler(this.linkIObitReinforce_Click);
+            this.linkIObitReinforce.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitReinforce_Click);
             // 
             // linkIObitRegistryDefrag
             // 
@@ -2456,7 +2456,7 @@
             this.linkIObitRegistryDefrag.TabIndex = 19;
             this.linkIObitRegistryDefrag.TabStop = true;
             this.linkIObitRegistryDefrag.Text = "Registry Defrag";
-            this.linkIObitRegistryDefrag.Click += new System.EventHandler(this.linkIObitRegistryDefrag_Click);
+            this.linkIObitRegistryDefrag.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitRegistryDefrag_Click);
             // 
             // linkIObitRegistryCleaner
             // 
@@ -2470,7 +2470,7 @@
             this.linkIObitRegistryCleaner.TabIndex = 18;
             this.linkIObitRegistryCleaner.TabStop = true;
             this.linkIObitRegistryCleaner.Text = "Registry Cleaner";
-            this.linkIObitRegistryCleaner.Click += new System.EventHandler(this.linkIObitRegistryCleaner_Click);
+            this.linkIObitRegistryCleaner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitRegistryCleaner_Click);
             // 
             // linkIObitProgramDeactivator
             // 
@@ -2484,7 +2484,7 @@
             this.linkIObitProgramDeactivator.TabIndex = 17;
             this.linkIObitProgramDeactivator.TabStop = true;
             this.linkIObitProgramDeactivator.Text = "Program Deactivator";
-            this.linkIObitProgramDeactivator.Click += new System.EventHandler(this.linkIObitProgramDeactivator_Click);
+            this.linkIObitProgramDeactivator.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitProgramDeactivator_Click);
             // 
             // linkIObitProcessManager
             // 
@@ -2498,7 +2498,7 @@
             this.linkIObitProcessManager.TabIndex = 16;
             this.linkIObitProcessManager.TabStop = true;
             this.linkIObitProcessManager.Text = "Process Manager";
-            this.linkIObitProcessManager.Click += new System.EventHandler(this.linkIObitProcessManager_Click);
+            this.linkIObitProcessManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitProcessManager_Click);
             // 
             // linkIObitMyWin10
             // 
@@ -2512,7 +2512,7 @@
             this.linkIObitMyWin10.TabIndex = 15;
             this.linkIObitMyWin10.TabStop = true;
             this.linkIObitMyWin10.Text = "My Win10";
-            this.linkIObitMyWin10.Click += new System.EventHandler(this.linkIObitMyWin10_Click);
+            this.linkIObitMyWin10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitMyWin10_Click);
             // 
             // linkIObitMonitor19
             // 
@@ -2526,7 +2526,7 @@
             this.linkIObitMonitor19.TabIndex = 14;
             this.linkIObitMonitor19.TabStop = true;
             this.linkIObitMonitor19.Text = "Monitor 19";
-            this.linkIObitMonitor19.Click += new System.EventHandler(this.linkIObitMonitor19_Click);
+            this.linkIObitMonitor19.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitMonitor19_Click);
             // 
             // linkIObitMonitor8
             // 
@@ -2540,7 +2540,7 @@
             this.linkIObitMonitor8.TabIndex = 13;
             this.linkIObitMonitor8.TabStop = true;
             this.linkIObitMonitor8.Text = "Monitor 8";
-            this.linkIObitMonitor8.Click += new System.EventHandler(this.linkIObitMonitor8_Click);
+            this.linkIObitMonitor8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitMonitor8_Click);
             // 
             // linkIObitLargeFileFinder
             // 
@@ -2554,7 +2554,7 @@
             this.linkIObitLargeFileFinder.TabIndex = 12;
             this.linkIObitLargeFileFinder.TabStop = true;
             this.linkIObitLargeFileFinder.Text = "Large File Finder";
-            this.linkIObitLargeFileFinder.Click += new System.EventHandler(this.linkIObitLargeFileFinder_Click);
+            this.linkIObitLargeFileFinder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitLargeFileFinder_Click);
             // 
             // linkIObitInternetBooster
             // 
@@ -2568,7 +2568,7 @@
             this.linkIObitInternetBooster.TabIndex = 11;
             this.linkIObitInternetBooster.TabStop = true;
             this.linkIObitInternetBooster.Text = "Internet Booster";
-            this.linkIObitInternetBooster.Click += new System.EventHandler(this.linkIObitInternetBooster_Click);
+            this.linkIObitInternetBooster.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitInternetBooster_Click);
             // 
             // linkIObitIEHelper
             // 
@@ -2582,7 +2582,7 @@
             this.linkIObitIEHelper.TabIndex = 10;
             this.linkIObitIEHelper.TabStop = true;
             this.linkIObitIEHelper.Text = "IE Helper";
-            this.linkIObitIEHelper.Click += new System.EventHandler(this.linkIObitIEHelper_Click);
+            this.linkIObitIEHelper.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitIEHelper_Click);
             // 
             // linkIObitFileShredder
             // 
@@ -2596,7 +2596,7 @@
             this.linkIObitFileShredder.TabIndex = 9;
             this.linkIObitFileShredder.TabStop = true;
             this.linkIObitFileShredder.Text = "File Shredder";
-            this.linkIObitFileShredder.Click += new System.EventHandler(this.linkIObitFileShredder_Click);
+            this.linkIObitFileShredder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitFileShredder_Click);
             // 
             // linkIObitEmptyFolderScanner
             // 
@@ -2610,7 +2610,7 @@
             this.linkIObitEmptyFolderScanner.TabIndex = 8;
             this.linkIObitEmptyFolderScanner.TabStop = true;
             this.linkIObitEmptyFolderScanner.Text = "Empty Folder Scanner";
-            this.linkIObitEmptyFolderScanner.Click += new System.EventHandler(this.linkIObitEmptyFolderScanner_Click);
+            this.linkIObitEmptyFolderScanner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitEmptyFolderScanner_Click);
             // 
             // linkIObitDuplicateFileFinder
             // 
@@ -2624,7 +2624,7 @@
             this.linkIObitDuplicateFileFinder.TabIndex = 7;
             this.linkIObitDuplicateFileFinder.TabStop = true;
             this.linkIObitDuplicateFileFinder.Text = "Duplicate File Finder";
-            this.linkIObitDuplicateFileFinder.Click += new System.EventHandler(this.linkIObitDuplicateFileFinder_Click);
+            this.linkIObitDuplicateFileFinder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDuplicateFileFinder_Click);
             // 
             // linkIObitDriverManager
             // 
@@ -2638,7 +2638,7 @@
             this.linkIObitDriverManager.TabIndex = 6;
             this.linkIObitDriverManager.TabStop = true;
             this.linkIObitDriverManager.Text = "Driver Manager";
-            this.linkIObitDriverManager.Click += new System.EventHandler(this.linkIObitDriverManager_Click);
+            this.linkIObitDriverManager.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDriverManager_Click);
             // 
             // linkIObitDiskExplorer
             // 
@@ -2652,7 +2652,7 @@
             this.linkIObitDiskExplorer.TabIndex = 5;
             this.linkIObitDiskExplorer.TabStop = true;
             this.linkIObitDiskExplorer.Text = "Disk Explorer";
-            this.linkIObitDiskExplorer.Click += new System.EventHandler(this.linkIObitDiskExplorer_Click);
+            this.linkIObitDiskExplorer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDiskExplorer_Click);
             // 
             // linkIObitDiskDoctor
             // 
@@ -2666,7 +2666,7 @@
             this.linkIObitDiskDoctor.TabIndex = 4;
             this.linkIObitDiskDoctor.TabStop = true;
             this.linkIObitDiskDoctor.Text = "Disk Doctor";
-            this.linkIObitDiskDoctor.Click += new System.EventHandler(this.linkIObitDiskDoctor_Click);
+            this.linkIObitDiskDoctor.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDiskDoctor_Click);
             // 
             // linkIObitDiskCleaner
             // 
@@ -2680,7 +2680,7 @@
             this.linkIObitDiskCleaner.TabIndex = 3;
             this.linkIObitDiskCleaner.TabStop = true;
             this.linkIObitDiskCleaner.Text = "Disk Cleaner";
-            this.linkIObitDiskCleaner.Click += new System.EventHandler(this.linkIObitDiskCleaner_Click);
+            this.linkIObitDiskCleaner.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDiskCleaner_Click);
             // 
             // linkIObitDefaultProgram
             // 
@@ -2694,7 +2694,7 @@
             this.linkIObitDefaultProgram.TabIndex = 2;
             this.linkIObitDefaultProgram.TabStop = true;
             this.linkIObitDefaultProgram.Text = "Default Program";
-            this.linkIObitDefaultProgram.Click += new System.EventHandler(this.linkIObitDefaultProgram_Click);
+            this.linkIObitDefaultProgram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkIObitDefaultProgram_Click);
             // 
             // buttonRestart
             // 

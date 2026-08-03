@@ -1431,20 +1431,20 @@ namespace WindowsSetupTools
 
         private void buttonSetupChrome_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-vi.7z";
-            DownCompressAndStart((Button)sender, linkDown, "ChromeSetup.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-vi.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "ChromeSetup.exe");
         }
 
         private void buttonSetupChromeEnglish_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-en.7z";
-            DownCompressAndStart((Button)sender, linkDown, "ChromeSetup.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-en.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "ChromeSetup.exe");
         }
 
         private void buttonSetupCocCoc_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/coc-coc.7z";
-            DownCompressAndStart((Button)sender, linkDown, "CocCocSetup.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/coc-coc.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "CocCocSetup.exe");
         }
 
         private void buttonSetupUnikey_Click(object sender, EventArgs e)
@@ -1579,20 +1579,20 @@ namespace WindowsSetupTools
 
         private void buttonSetupTeamViewer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dl.teamviewer.com/download/version_15x/TeamViewer_Setup_x64.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "TeamViewer_Setup_x64.exe");
+            string linkUrl = "https://dl.teamviewer.com/download/version_15x/TeamViewer_Setup_x64.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupAnyDesk_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://download.anydesk.com/AnyDesk.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "AnyDesk.exe");
+            string linkUrl = "https://download.anydesk.com/AnyDesk.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "AnyDesk.exe");
         }
 
         private void buttonSetupUltraViewer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dl2.ultraviewer.net/UltraViewer_setup_6.6.133_vi.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "UltraViewer_setup_6.6.133_vi.exe", "/SILENT /NORESTART");
+            string linkUrl = "https://dl2.ultraviewer.net/UltraViewer_setup_6.6.133_vi.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "UltraViewer_setup_6.6.133_vi.exe", "/SILENT /NORESTART");
         }
 
         private void buttonMicrosoftOfficeOne_Click(object sender, EventArgs e)
@@ -1626,8 +1626,8 @@ namespace WindowsSetupTools
 
         private void buttonSetupSumatraPDF_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "SumatraPDF-3.6.1-64-install.exe", "-install -all-users -with-preview -silent");
+            string linkUrl = "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "SumatraPDF-3.6.1-64-install.exe", "-install -all-users -with-preview -silent");
             Task.Delay(500);
             string testPdf = Path.Combine(Path.GetTempPath(), "test.pdf");
             string blankPdf = "%PDF-1.7\r\n1 0 obj\r\n<</CreationDate(D:20260723114651+07'00')/Title(PDF)/Creator()/Producer()>>\r\nendobj\r\n2 0 obj\r\n<</Type/Catalog/Pages 3 0 R/Metadata 5 0 R>>\r\nendobj\r\n3 0 obj\r\n<</Type/Pages/Count 1/Kids[4 0 R]>>\r\nendobj\r\n4 0 obj\r\n<</Type/Page/MediaBox[0 0 612 792]/Parent 3 0 R/Group<</CS/DeviceRGB/S/Transparency>>>>\r\nendobj\r\n5 0 obj\r\n<</Type/Metadata/Subtype/XML/Length 1405>>\r\nstream\r\nendstream\r\nendobj\r\nxref\r\n0 6\r\n0000000000 65535 f \r\n0000000015 00000 n \r\n0000000160 00000 n \r\n0000000220 00000 n \r\n0000000271 00000 n \r\n0000000374 00000 n \r\ntrailer\r\n<</ID[<8F6B813D76415D4FA6758A585608028C><8F6B813D76415D4FA6758A585608028C>]/Info 1 0 R/Root 2 0 R/Size 6>>\r\nstartxref\r\n1855\r\n%%EOF";
@@ -1637,26 +1637,26 @@ namespace WindowsSetupTools
 
         private void buttonSetupPotPlayer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "PotPlayerSetup64.exe");
+            string linkUrl = "https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupVLC_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "vlc-3.0.23-win64.exe");
+            string linkUrl = "https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupImageGlass_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/d2phap/ImageGlass/releases/download/9.5.0.515/ImageGlass_9.5.0.515_x64.msi";
-            DownExecutableAndStart((Button)sender, linkDown, "ImageGlass_9.5.0.515_x64.msi");
+            string linkUrl = "https://github.com/d2phap/ImageGlass/releases/download/9.5.0.515/ImageGlass_9.5.0.515_x64.msi";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupIDM_Click(object sender, EventArgs e)
         {
             string linkUrl = "https://www.internetdownloadmanager.com/download.html";
-            string linkDown = string.Empty;
+            string fileUrl = string.Empty;
 
             string htmlCode = new System.Net.WebClient().DownloadString(linkUrl);
 
@@ -1664,24 +1664,24 @@ namespace WindowsSetupTools
             {
                 if (item.Contains("https://download.internetdownloadmanager.com"))
                 {
-                    linkDown = item.Replace("href=\"", "|").Replace("\">", "|").Split('|')[1];
+                    fileUrl = item.Replace("href=\"", "|").Replace("\">", "|").Split('|')[1];
                     break;
                 }
             }
-            if (string.IsNullOrEmpty(linkDown))
+            if (string.IsNullOrEmpty(fileUrl))
             {
                 OpenBrowserUrl(linkUrl);
             }
             else
             {
-                DownExecutableAndStart((Button)sender, linkDown, "idm-setup.exe");
+                DownExecutableAndStart((Button)sender, fileUrl, "idm-setup.exe", "/skipdlgs");
             }
         }
 
         private void buttonSetupEverything_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "Everything-1.4.1.1032.x64-Setup.exe");
+            string linkUrl = "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "Everything-1.4.1.1032.x64-Setup.exe");
         }
 
         private void buttonSetupCCleaner_Click(object sender, EventArgs e)
@@ -1693,14 +1693,14 @@ namespace WindowsSetupTools
             string ccConfig = "[Options]\nFirstInstallDate=20260101\nRunICS=0\nBrandover=0\nSkipUAC=1\nLanguage=1066\nDAST=01/01/2026 01:00:00\nHomeScreen=2\nDefaultDetailedView=2\nAlphaLSLUT=1785221007\nAcqSrc=mmm_ccl_oth_007_745_m\nUpdateBackground=0\nDUGuid=f1a28e18-9bce-48dd-ab9e-51e47e4cfd59\nFTU=01/01/2026|4|1\nCookiesToSave=*.avast.com|*.ccleaner.com|*.ccleanercloud.com\nLatestICS=6.41.11567\nLLSR=01/01/2026 01:00:00\nCountryCode=VN\nLastCheckCountry=01/01/2026 01:00:00 PM\nSystemMonitoring=0\nBrowserMonitoring=0\nLNR=01/01/2026 01:00:00\nUpdateKey=01/01/2026 01:00:00 PM\nLastSUScan=01/01/2026 01:00:00\nNumOfOutdatedSoftware=12\nNumOfTotalSoftware=28\nOutdatedSoftwareCache=[]\nUpToDateSoftwareCache=[]\nWipeMFTFreeSpace=0\nAutoClose=1\nLastDriverScan=01/01/2026 01:00:00\nNumOfTotalDrivers=68\nNumOfOutdatedDrivers=17\nOutdatedDriversCache=[]\nUpToDateDriversCache=[]\nBCD=0,2,\nMonitoring=0\nLastPOScan=01/01/2026 01:00:00\nNumOfAwakeSoftware=14\nActiveProgramsToSleepCache=[]\nNumOfTotalPrograms=14\nWINDOW_LEFT=288\nWINDOW_TOP=76\nWINDOW_WIDTH=1024\nWINDOW_HEIGHT=708\nWINDOW_MAX=0\nWipeFreeSpaceDrives=\nUpdateCheck=0\nPrefsPrivacyShowOffers1stParty=0\nHelpImproveCCleaner=0\n(App)Google Chrome - Cookies=False\n(App)Mozilla - Cookies=False\nShowCleanWarning=False\nLastCleaned=01/01/2026 01:00:00\nShowGoogleChromeCleanWarning=False\nSTS=MP3ZI2MWQPQS4CUDPTUYC5UIPF3ZI55URE8VIDIKJTBWUTB7GAGSWVCDKS8YG7BUBWFE2S4WKN8VCP32GW3DENJSHA5A4CUWI3JV4NJSGA3C6QBXBWFFIVUDIN8VIDIKKTHEUS37HE3DEN3VG63DAN3YHA4VIP3ZGW6DAN2PBJKFITUVHW2A4CS\n(App)Windows Event Trace Logs=True\n(App)Windows Event Logs=True\n(App)Edge Chromium - Cookies=False\nDelayTemp=0\nHideWarnings=0\n";
             File.WriteAllText(fileConfig, ccConfig);
 
-            string linkDown = "https://download.ccleaner.com/ccsetup641.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "ccsetup641.exe", "/S /L=1066"); // 1066 = Vietnamese
+            string linkUrl = "https://download.ccleaner.com/ccsetup641.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "ccsetup641.exe", "/S /L=1066"); // 1066 = Vietnamese
         }
 
         private void buttonSetupVisualStudioCommunity_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&passive=false&cid=2500";
-            DownExecutableAndStart((Button)sender, linkDown, "VisualStudio.exe");
+            string linkUrl = "https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&passive=false&cid=2500";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupSublimeText_Click(object sender, EventArgs e)
@@ -1711,26 +1711,26 @@ namespace WindowsSetupTools
 
         private void buttonSetupOBSStudio_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-32.1.2-Windows-x64-Installer.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "OBS-Studio-32.1.2-Windows-x64-Installer.exe");
+            string linkUrl = "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-32.1.2-Windows-x64-Installer.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupShareX_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "ShareX-21.0.0-setup-x64.exe");
+            string linkUrl = "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupLightshot_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://app.prntscr.com/build/setup-lightshot.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "setup-lightshot.exe");
+            string linkUrl = "https://app.prntscr.com/build/setup-lightshot.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "setup-lightshot.exe");
         }
 
         private void buttonSetupFastStoneCapture_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://www.faststonesoft.net/DN/FSCaptureSetup112.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "FSCaptureSetup112.exe");
+            string linkUrl = "https://www.faststonesoft.net/DN/FSCaptureSetup112.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "FSCaptureSetup112.exe");
         }
 
         private void buttonSetupTelegram_Click(object sender, EventArgs e)
@@ -1754,8 +1754,8 @@ namespace WindowsSetupTools
 
         private void buttonSetupGoogleDrive_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "GoogleDriveSetup.exe");
+            string linkUrl = "https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupVMwareWorkstation_Click(object sender, EventArgs e)
@@ -2015,8 +2015,8 @@ namespace WindowsSetupTools
 
         private void buttonCanonLbp2900_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/canon-lbp2900-capt-printer-driver-x64.7z";
-            DownCompressAndStart((Button)sender, linkDown, "Setup.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/canon-lbp2900-capt-printer-driver-x64.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "Setup.exe");
         }
 
         #endregion CAI DAT NHANH
@@ -2026,92 +2026,92 @@ namespace WindowsSetupTools
 
         private void buttonWindowsUpdateBlocker_ClickAsync(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-windows-update-blocker.7z";
-            DownCompressAndStart((Button)sender, linkDown, "Wub.exe", "Wub_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-windows-update-blocker.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "Wub.exe", "Wub_x64.exe");
         }
 
         private void buttonDefenderControl_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-defender-control.7z";
-            DownCompressAndStart((Button)sender, linkDown, "dControl.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-defender-control.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "dControl.exe");
         }
 
         private void buttonDnsJumper_ClickAsync(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-dns-jumper.7z";
-            DownCompressAndStart((Button)sender, linkDown, "DnsJumper.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-dns-jumper.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "DnsJumper.exe");
         }
 
         private void buttonUpdateTime_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-update-time.7z";
-            DownCompressAndStart((Button)sender, linkDown, "UpdateTime.exe", "UpdateTime_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-update-time.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "UpdateTime.exe", "UpdateTime_x64.exe");
         }
 
         private void buttonBlueLifeHostsEditor_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-bluelife-host-editor.7z";
-            DownCompressAndStart((Button)sender, linkDown, "hEdit.exe", "hEdit_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-bluelife-host-editor.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "hEdit.exe", "hEdit_x64.exe");
         }
 
         private void buttonEasyContextMenu_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-context-menu.7z";
-            DownCompressAndStart((Button)sender, linkDown, "EcMenu.exe", "EcMenu_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-context-menu.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "EcMenu.exe", "EcMenu_x64.exe");
         }
 
         private void buttonEasyServiceOptimizer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-service-optimizer.7z";
-            DownCompressAndStart((Button)sender, linkDown, "eso.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-service-optimizer.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "eso.exe");
         }
 
         private void buttonStoreAppsTool_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-store-apps-tool.7z";
-            DownCompressAndStart((Button)sender, linkDown, "StoreAT.exe", "StoreAT_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-store-apps-tool.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "StoreAT.exe", "StoreAT_x64.exe");
         }
 
         private void buttonTempCleaner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-temp-cleaner.7z";
-            DownCompressAndStart((Button)sender, linkDown, "TempCleaner.exe", "TempCleaner_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-temp-cleaner.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "TempCleaner.exe", "TempCleaner_x64.exe");
         }
 
         private void buttonRestartExplorer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-restart-explorer.7z";
-            DownCompressAndStart((Button)sender, linkDown, "Rexplorer.exe", "Rexplorer_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-restart-explorer.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "Rexplorer.exe", "Rexplorer_x64.exe");
         }
 
         private void buttonWin11ClassicContextMenu_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-win11-classic-context-menu.7z";
-            DownCompressAndStart((Button)sender, linkDown, "W11ClassicMenu.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-win11-classic-context-menu.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "W11ClassicMenu.exe");
         }
 
         private void buttonFixPrintSpooler_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-fix-print-spooler.7z";
-            DownCompressAndStart((Button)sender, linkDown, "FixSpooler.exe", "FixSpooler_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/sordum-fix-print-spooler.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "FixSpooler.exe", "FixSpooler_x64.exe");
         }
 
         private void buttonRegistryWorkshop_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/registry-workshop.7z";
-            DownCompressAndStart((Button)sender, linkDown, "RegWorkshop.exe", "RegWorkshopX64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/registry-workshop.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "RegWorkshop.exe", "RegWorkshopX64.exe");
         }
 
         private void buttonBkavShowHiddenFiles_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/bkav-show-hidden-files.7z";
-            DownCompressAndStart((Button)sender, linkDown, "FixAttrb.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/bkav-show-hidden-files.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "FixAttrb.exe");
         }
 
         private void buttonRecuva_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/piriform-recuva.7z";
-            DownCompressAndStart((Button)sender, linkDown, "recuva.exe", "recuva64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/piriform-recuva.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "recuva.exe", "recuva64.exe");
         }
 
         private void buttonFidoScript_Click(object sender, EventArgs e)
@@ -2127,38 +2127,38 @@ namespace WindowsSetupTools
 
         private void buttonRufus_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe";
-            DownExecutableAndStart((Button)sender, linkDown, "rufus-4.15p.exe");
+            string linkUrl = "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe";
+            DownExecutableAndStart((Button)sender, linkUrl, "rufus-4.15p.exe");
         }
 
         private void buttonOfficeToolPlus_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/YerongAI/Office-Tool/releases/download/v11.5.7.0/Office_Tool_with_runtime_v11.5.7.0_x64.7z";
-            DownCompressAndStart((Button)sender, linkDown, @"Office Tool\Office Tool Plus.exe");
+            string linkUrl = "https://github.com/YerongAI/Office-Tool/releases/download/v11.5.7.0/Office_Tool_with_runtime_v11.5.7.0_x64.7z";
+            DownCompressAndStart((Button)sender, linkUrl, @"Office Tool\Office Tool Plus.exe");
         }
 
         private void buttonNetFramework48_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-offline-installer";
-            OpenBrowserUrl(linkDown);
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-offline-installer";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonNetFramework47_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net472-offline-installer";
-            OpenBrowserUrl(linkDown);
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net472-offline-installer";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonNetFramework46_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net462-offline-installer";
-            OpenBrowserUrl(linkDown);
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net462-offline-installer";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonNetFramework35_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net35-sp1-offline-installer";
-            OpenBrowserUrl(linkDown);
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net35-sp1-offline-installer";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonSetupFramework35Iso_Click(object sender, EventArgs e)
@@ -2188,50 +2188,50 @@ namespace WindowsSetupTools
 
         private void buttonCpuZ_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/cpu-z.7z";
-            DownCompressAndStart((Button)sender, linkDown, "cpuz_x32.exe", "cpuz_x64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/cpu-z.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "cpuz_x32.exe", "cpuz_x64.exe");
         }
 
         private void buttonGpuZ_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/gpu-z.7z";
-            DownCompressAndStart((Button)sender, linkDown, "GPU-Z.exe", "", "gpuz.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/gpu-z.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "GPU-Z.exe", "", "gpuz.reg");
         }
 
         private void buttonHWiNFO_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/hwinfo.7z";
-            DownCompressAndStart((Button)sender, linkDown, "HWiNFO32.exe", "HWiNFO64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/hwinfo.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "HWiNFO32.exe", "HWiNFO64.exe");
         }
 
         private void buttonSpeccy_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/piriform-speccy.7z";
-            DownCompressAndStart((Button)sender, linkDown, "Speccy.exe", "Speccy64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/piriform-speccy.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "Speccy.exe", "Speccy64.exe");
         }
 
         private void buttonCrystalDiskInfo_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/crystal-disk-info.7z";
-            DownCompressAndStart((Button)sender, linkDown, "DiskInfo32.exe", "DiskInfo64.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/crystal-disk-info.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "DiskInfo32.exe", "DiskInfo64.exe");
         }
 
         private void buttonKeyboardTest_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/keyboard-test.7z";
-            DownCompressAndStart((Button)sender, linkDown, "KeyboardTest.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/keyboard-test.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "KeyboardTest.exe");
         }
 
         private void buttonIsMyLcdOK_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/is-my-lcd-ok.7z";
-            DownCompressAndStart((Button)sender, linkDown, "IsMyLcdOK.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/is-my-lcd-ok.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "IsMyLcdOK.exe");
         }
 
         private void buttontLCDtest_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/t-lcd-test.7z";
-            DownCompressAndStart((Button)sender, linkDown, "tLCDtest.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/t-lcd-test.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "tLCDtest.exe");
         }
 
         private void buttonMicrosoftActivationScriptsOnline_Click(object sender, EventArgs e)
@@ -2257,8 +2257,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-chrome-password.7z";
-            DownCompressAndStart((Button)sender, linkDown, "ChromePass.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-chrome-password.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "ChromePass.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2269,8 +2269,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-ie-passwords.7z";
-            DownCompressAndStart((Button)sender, linkDown, "iepv.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-ie-passwords.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "iepv.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2281,8 +2281,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-firefox.7z";
-            DownCompressAndStart((Button)sender, linkDown, "PasswordFox.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-firefox.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "PasswordFox.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2293,8 +2293,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-web-browser-password.7z";
-            DownCompressAndStart((Button)sender, linkDown, "WebBrowserPassView.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-web-browser-password.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "WebBrowserPassView.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2305,8 +2305,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-remote-desktop.7z";
-            DownCompressAndStart((Button)sender, linkDown, "rdpv.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-remote-desktop.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "rdpv.exe");
         }
 
         private void buttonNirsoftWirelessKeyView_Click(object sender, EventArgs e)
@@ -2316,26 +2316,26 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-key-view.7z";
-            DownCompressAndStart((Button)sender, linkDown, "WirelessKeyView.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-key-view.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "WirelessKeyView.exe");
         }
 
         private void buttonNirsoftWirelessNetworkWatcher_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-network-watcher.7z";
-            DownCompressAndStart((Button)sender, linkDown, "WNetWatcher.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-network-watcher.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "WNetWatcher.exe");
         }
 
         private void buttonActivateAIOTools_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/activate-aio-tools-by-savio.7z";
-            DownCompressAndStart((Button)sender, linkDown, "Activate-AIO-Tools-v3.1.3-by-Savio.bat");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/activate-aio-tools-by-savio.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "Activate-AIO-Tools-v3.1.3-by-Savio.bat");
         }
 
         private void buttonWindowsActivateForVPS_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/windows-activate.7z";
-            DownCompressAndStart((Button)sender, linkDown, "WindowsActivate.bat");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/windows-activate.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "WindowsActivate.bat");
         }
 
         private void timerNirsoftStart_Tick(object sender, EventArgs e)
@@ -2386,344 +2386,344 @@ namespace WindowsSetupTools
 
         private void linkIObitClonedFilesScanner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-cloned-files-scanner.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ClonedFilesScanner.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-cloned-files-scanner.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ClonedFilesScanner.exe");
         }
 
         private void linkIObitContextMenuManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-context-menu-manager.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ContextMenuManager.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-context-menu-manager.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ContextMenuManager.exe");
         }
 
         private void linkIObitDefaultProgram_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-default-program.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DefaultProgram.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-default-program.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DefaultProgram.exe");
         }
 
         private void linkIObitDiskCleaner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-cleaner.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskCleaner.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-cleaner.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskCleaner.exe");
         }
 
         private void linkIObitDiskDoctor_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-doctor.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskDoctor.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-doctor.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskDoctor.exe");
         }
 
         private void linkIObitDiskExplorer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-explorer.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskExplorer.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-explorer.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskExplorer.exe");
         }
 
         private void linkIObitDriverManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-driver-manager.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DriverManager.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-driver-manager.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DriverManager.exe");
         }
 
         private void linkIObitDuplicateFileFinder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-duplicate-file-finder.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DuplicateFileFinder.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-duplicate-file-finder.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DuplicateFileFinder.exe");
         }
 
         private void linkIObitEmptyFolderScanner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-empty-folder-scanner.7z";
-            DownCompressAndStart((Label)sender, linkDown, "EmptyFolderScanner.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-empty-folder-scanner.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "EmptyFolderScanner.exe");
         }
 
         private void linkIObitFileShredder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-file-shredder.7z";
-            DownCompressAndStart((Label)sender, linkDown, "FileShredder.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-file-shredder.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "FileShredder.exe");
         }
 
         private void linkIObitIEHelper_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-ie-helper.7z";
-            DownCompressAndStart((Label)sender, linkDown, "IEHelper.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-ie-helper.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "IEHelper.exe");
         }
 
         private void linkIObitInternetBooster_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-internet-booster.7z";
-            DownCompressAndStart((Label)sender, linkDown, "InternetBooster.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-internet-booster.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "InternetBooster.exe");
         }
 
         private void linkIObitLargeFileFinder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-large-file-finder.7z";
-            DownCompressAndStart((Label)sender, linkDown, "LargeFileFinder.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-large-file-finder.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "LargeFileFinder.exe");
         }
 
         private void linkIObitMonitor8_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-8.7z";
-            DownCompressAndStart((Label)sender, linkDown, "Monitor.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-8.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "Monitor.exe");
         }
 
         private void linkIObitMonitor19_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-19.7z";
-            DownCompressAndStart((Label)sender, linkDown, "Monitor.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-19.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "Monitor.exe");
         }
 
         private void linkIObitMyWin10_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-my-win10.7z";
-            DownCompressAndStart((Label)sender, linkDown, "MyWin10.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-my-win10.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "MyWin10.exe");
         }
 
         private void linkIObitProcessManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-process-manager.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ProcessManager.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-process-manager.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ProcessManager.exe");
         }
 
         private void linkIObitProgramDeactivator_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-program-deactivator.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ProgramDeactivator.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-program-deactivator.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ProgramDeactivator.exe");
         }
 
         private void linkIObitRegistryCleaner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-cleaner.7z";
-            DownCompressAndStart((Label)sender, linkDown, "RegistryCleaner.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-cleaner.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "RegistryCleaner.exe");
         }
 
         private void linkIObitRegistryDefrag_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-defrag.7z";
-            DownCompressAndStart((Label)sender, linkDown, "RegistryDefrag.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-defrag.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "RegistryDefrag.exe");
         }
 
         private void linkIObitReinforce_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-reinforce.7z";
-            DownCompressAndStart((Label)sender, linkDown, "Reinforce.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-reinforce.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "Reinforce.exe");
         }
 
         private void linkIObitRescueCenter_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-rescue-center.7z";
-            DownCompressAndStart((Label)sender, linkDown, "RescueCenter.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-rescue-center.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "RescueCenter.exe");
         }
 
         private void linkIObitScreenShot_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-screen-shot.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ScreenShot.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-screen-shot.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ScreenShot.exe");
         }
 
         private void linkIObitShortcutFixer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-shortcut-fixer.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ShortcutFixer.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-shortcut-fixer.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ShortcutFixer.exe");
         }
 
         private void linkIObitSmartRAM_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-smart-ram.7z";
-            DownCompressAndStart((Label)sender, linkDown, "SmartRAM.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-smart-ram.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "SmartRAM.exe");
         }
 
         private void linkIObitStartupManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-startup-manager.7z";
-            DownCompressAndStart((Label)sender, linkDown, "StartupManager.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-startup-manager.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "StartupManager.exe");
         }
 
         private void linkIObitSystemControl_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-control.7z";
-            DownCompressAndStart((Label)sender, linkDown, "SystemControl.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-control.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "SystemControl.exe");
         }
 
         private void linkIObitSystemInformation_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-information.7z";
-            DownCompressAndStart((Label)sender, linkDown, "SystemInformation.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-information.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "SystemInformation.exe");
         }
 
         private void linkIObitUndelete_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-undelete.7z";
-            DownCompressAndStart((Label)sender, linkDown, "Undelete.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-undelete.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "Undelete.exe");
         }
 
         private void linkIObitWinFix_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-win-fix.7z";
-            DownCompressAndStart((Label)sender, linkDown, "WinFix.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-win-fix.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "WinFix.exe");
         }
 
         private void linkGlaryCheckDisk_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "CheckDisk.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "CheckDisk.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryContextMenuManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "cmm.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "cmm.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskAnalysis_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskAnalysis.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskAnalysis.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskCleaner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskCleaner.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskDefrag_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DiskDefrag.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DiskDefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDriverBackup_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "DriverBackup.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "DriverBackup.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDuplicateFileFinder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "dupefinder.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "dupefinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEmptyFolderFinder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "EmptyFolderFinder.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "EmptyFolderFinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEncryptExe_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "EncryptExe.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "EncryptExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileEncrypt_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "fileencrypt.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "fileencrypt.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileSplitter_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "filesplitter.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "filesplitter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileUndelete_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "FileUndelete.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "FileUndelete.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryIEHelper_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "iehelper.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "iehelper.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryJoinExe_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "joinExe.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "joinExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryMemoryDefrag_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "memdefrag.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "memdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryProcessManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "procmgr.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "procmgr.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryQuickSearch_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "QuickSearch.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "QuickSearch.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryDefrag_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "regdefrag.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "regdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryCleaner_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "RegistryCleaner.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "RegistryCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRestoreCenter_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "RestoreCenter.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "RestoreCenter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryShortcutFixer_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "ShortcutFixer.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "ShortcutFixer.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileShredder_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "shredder.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "shredder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySoftwareUpdate_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "SoftwareUpdate.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "SoftwareUpdate.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryStartupManager_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "StartupManager.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "StartupManager.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySystemInformation_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "sysinfo.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "sysinfo.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryTracksEraser_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "TracksEraser.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "TracksEraser.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryUninstaler_Click(object sender, EventArgs e)
         {
-            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, linkDown, "Uninstaler.exe", "", "RegkeyLifetime.reg");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, linkUrl, "Uninstaler.exe", "", "RegkeyLifetime.reg");
         }
 
         #endregion HOP CONG CU
