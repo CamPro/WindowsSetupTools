@@ -6,7 +6,7 @@
 
 ## 📥 Tải xuống
 
-<a href="https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.zip">WindowsSetupTools.zip</a>
+<a href="https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe">WindowsSetupTools.exe</a>
 
 ---
 

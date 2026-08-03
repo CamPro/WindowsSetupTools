@@ -2387,343 +2387,343 @@ namespace WindowsSetupTools
         private void linkIObitClonedFilesScanner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-cloned-files-scanner.7z";
-            DownCompressAndStart((Label)sender, "iobit-cloned-files-scanner", "ClonedFilesScanner.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ClonedFilesScanner.exe");
         }
 
         private void linkIObitContextMenuManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-context-menu-manager.7z";
-            DownCompressAndStart((Label)sender, "iobit-context-menu-manager", "ContextMenuManager.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ContextMenuManager.exe");
         }
 
         private void linkIObitDefaultProgram_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-default-program.7z";
-            DownCompressAndStart((Label)sender, "iobit-default-program", "DefaultProgram.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DefaultProgram.exe");
         }
 
         private void linkIObitDiskCleaner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-cleaner.7z";
-            DownCompressAndStart((Label)sender, "iobit-disk-cleaner", "DiskCleaner.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DiskCleaner.exe");
         }
 
         private void linkIObitDiskDoctor_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-doctor.7z";
-            DownCompressAndStart((Label)sender, "iobit-disk-doctor", "DiskDoctor.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DiskDoctor.exe");
         }
 
         private void linkIObitDiskExplorer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-explorer.7z";
-            DownCompressAndStart((Label)sender, "iobit-disk-explorer", "DiskExplorer.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DiskExplorer.exe");
         }
 
         private void linkIObitDriverManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-driver-manager.7z";
-            DownCompressAndStart((Label)sender, "iobit-driver-manager", "DriverManager.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DriverManager.exe");
         }
 
         private void linkIObitDuplicateFileFinder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-duplicate-file-finder.7z";
-            DownCompressAndStart((Label)sender, "iobit-duplicate-file-finder", "DuplicateFileFinder.exe");
+            DownCompressAndStart((Label)sender, linkDown, "DuplicateFileFinder.exe");
         }
 
         private void linkIObitEmptyFolderScanner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-empty-folder-scanner.7z";
-            DownCompressAndStart((Label)sender, "iobit-empty-folder-scanner", "EmptyFolderScanner.exe");
+            DownCompressAndStart((Label)sender, linkDown, "EmptyFolderScanner.exe");
         }
 
         private void linkIObitFileShredder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-file-shredder.7z";
-            DownCompressAndStart((Label)sender, "iobit-file-shredder", "FileShredder.exe");
+            DownCompressAndStart((Label)sender, linkDown, "FileShredder.exe");
         }
 
         private void linkIObitIEHelper_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-ie-helper.7z";
-            DownCompressAndStart((Label)sender, "iobit-ie-helper", "IEHelper.exe");
+            DownCompressAndStart((Label)sender, linkDown, "IEHelper.exe");
         }
 
         private void linkIObitInternetBooster_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-internet-booster.7z";
-            DownCompressAndStart((Label)sender, "iobit-internet-booster", "InternetBooster.exe");
+            DownCompressAndStart((Label)sender, linkDown, "InternetBooster.exe");
         }
 
         private void linkIObitLargeFileFinder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-large-file-finder.7z";
-            DownCompressAndStart((Label)sender, "iobit-large-file-finder", "LargeFileFinder.exe");
+            DownCompressAndStart((Label)sender, linkDown, "LargeFileFinder.exe");
         }
 
         private void linkIObitMonitor8_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-8.7z";
-            DownCompressAndStart((Label)sender, "iobit-monitor-8", "Monitor.exe");
+            DownCompressAndStart((Label)sender, linkDown, "Monitor.exe");
         }
 
         private void linkIObitMonitor19_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-19.7z";
-            DownCompressAndStart((Label)sender, "iobit-monitor-19", "Monitor.exe");
+            DownCompressAndStart((Label)sender, linkDown, "Monitor.exe");
         }
 
         private void linkIObitMyWin10_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-my-win10.7z";
-            DownCompressAndStart((Label)sender, "iobit-my-win10", "MyWin10.exe");
+            DownCompressAndStart((Label)sender, linkDown, "MyWin10.exe");
         }
 
         private void linkIObitProcessManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-process-manager.7z";
-            DownCompressAndStart((Label)sender, "iobit-process-manager", "ProcessManager.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ProcessManager.exe");
         }
 
         private void linkIObitProgramDeactivator_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-program-deactivator.7z";
-            DownCompressAndStart((Label)sender, "iobit-program-deactivator", "ProgramDeactivator.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ProgramDeactivator.exe");
         }
 
         private void linkIObitRegistryCleaner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-cleaner.7z";
-            DownCompressAndStart((Label)sender, "iobit-registry-cleaner", "RegistryCleaner.exe");
+            DownCompressAndStart((Label)sender, linkDown, "RegistryCleaner.exe");
         }
 
         private void linkIObitRegistryDefrag_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-defrag.7z";
-            DownCompressAndStart((Label)sender, "iobit-registry-defrag", "RegistryDefrag.exe");
+            DownCompressAndStart((Label)sender, linkDown, "RegistryDefrag.exe");
         }
 
         private void linkIObitReinforce_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-reinforce.7z";
-            DownCompressAndStart((Label)sender, "iobit-reinforce", "Reinforce.exe");
+            DownCompressAndStart((Label)sender, linkDown, "Reinforce.exe");
         }
 
         private void linkIObitRescueCenter_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-rescue-center.7z";
-            DownCompressAndStart((Label)sender, "iobit-rescue-center", "RescueCenter.exe");
+            DownCompressAndStart((Label)sender, linkDown, "RescueCenter.exe");
         }
 
         private void linkIObitScreenShot_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-screen-shot.7z";
-            DownCompressAndStart((Label)sender, "iobit-screen-shot", "ScreenShot.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ScreenShot.exe");
         }
 
         private void linkIObitShortcutFixer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-shortcut-fixer.7z";
-            DownCompressAndStart((Label)sender, "iobit-shortcut-fixer", "ShortcutFixer.exe");
+            DownCompressAndStart((Label)sender, linkDown, "ShortcutFixer.exe");
         }
 
         private void linkIObitSmartRAM_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-smart-ram.7z";
-            DownCompressAndStart((Label)sender, "iobit-smart-ram", "SmartRAM.exe");
+            DownCompressAndStart((Label)sender, linkDown, "SmartRAM.exe");
         }
 
         private void linkIObitStartupManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-startup-manager.7z";
-            DownCompressAndStart((Label)sender, "iobit-startup-manager", "StartupManager.exe");
+            DownCompressAndStart((Label)sender, linkDown, "StartupManager.exe");
         }
 
         private void linkIObitSystemControl_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-control.7z";
-            DownCompressAndStart((Label)sender, "iobit-system-control", "SystemControl.exe");
+            DownCompressAndStart((Label)sender, linkDown, "SystemControl.exe");
         }
 
         private void linkIObitSystemInformation_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-information.7z";
-            DownCompressAndStart((Label)sender, "iobit-system-information", "SystemInformation.exe");
+            DownCompressAndStart((Label)sender, linkDown, "SystemInformation.exe");
         }
 
         private void linkIObitUndelete_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-undelete.7z";
-            DownCompressAndStart((Label)sender, "iobit-undelete", "Undelete.exe");
+            DownCompressAndStart((Label)sender, linkDown, "Undelete.exe");
         }
 
         private void linkIObitWinFix_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-win-fix.7z";
-            DownCompressAndStart((Label)sender, "iobit-win-fix", "WinFix.exe");
+            DownCompressAndStart((Label)sender, linkDown, "WinFix.exe");
         }
 
         private void linkGlaryCheckDisk_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "CheckDisk.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "CheckDisk.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryContextMenuManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "cmm.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "cmm.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskAnalysis_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "DiskAnalysis.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "DiskAnalysis.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskCleaner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "DiskCleaner.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "DiskCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskDefrag_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "DiskDefrag.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "DiskDefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDriverBackup_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "DriverBackup.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "DriverBackup.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDuplicateFileFinder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "dupefinder.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "dupefinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEmptyFolderFinder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "EmptyFolderFinder.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "EmptyFolderFinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEncryptExe_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "EncryptExe.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "EncryptExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileEncrypt_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "fileencrypt.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "fileencrypt.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileSplitter_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "filesplitter.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "filesplitter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileUndelete_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "FileUndelete.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "FileUndelete.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryIEHelper_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "iehelper.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "iehelper.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryJoinExe_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "joinExe.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "joinExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryMemoryDefrag_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "memdefrag.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "memdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryProcessManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "procmgr.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "procmgr.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryQuickSearch_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "QuickSearch.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "QuickSearch.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryDefrag_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "regdefrag.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "regdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryCleaner_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "RegistryCleaner.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "RegistryCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRestoreCenter_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "RestoreCenter.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "RestoreCenter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryShortcutFixer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "ShortcutFixer.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "ShortcutFixer.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileShredder_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "shredder.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "shredder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySoftwareUpdate_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "SoftwareUpdate.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "SoftwareUpdate.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryStartupManager_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "StartupManager.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "StartupManager.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySystemInformation_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "sysinfo.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "sysinfo.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryTracksEraser_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "TracksEraser.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "TracksEraser.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryUninstaler_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
-            DownCompressAndStart((Label)sender, "glary-utilities", "Uninstaler.exe", "", "RegkeyLifetime.reg");
+            DownCompressAndStart((Label)sender, linkDown, "Uninstaler.exe", "", "RegkeyLifetime.reg");
         }
 
         #endregion HOP CONG CU
