@@ -10,6 +10,7 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsSetupTools
 {
@@ -354,15 +355,15 @@ namespace WindowsSetupTools
             buttonAddCmdRightMouse.ImageAlign = ContentAlignment.MiddleLeft;
             buttonAddCmdRightMouse.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttonSetupFramework35Iso.Image = Properties.Resources.icon_terminal;
-            buttonSetupFramework35Iso.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonSetupFramework35Iso.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetupFramework35Iso.TextAlign = ContentAlignment.MiddleCenter;
-
             buttonSearchWifiDriver.Image = Properties.Resources.icon_wifi_hexagonal;
             buttonSearchWifiDriver.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonSearchWifiDriver.ImageAlign = ContentAlignment.MiddleLeft;
             buttonSearchWifiDriver.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonCanonLbp2900.Image = Properties.Resources.icon_print;
+            buttonCanonLbp2900.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonCanonLbp2900.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCanonLbp2900.TextAlign = ContentAlignment.MiddleCenter;
 
         }
 
@@ -423,6 +424,11 @@ namespace WindowsSetupTools
             buttonWin11ClassicContextMenu.ImageAlign = ContentAlignment.MiddleLeft;
             buttonWin11ClassicContextMenu.TextAlign = ContentAlignment.MiddleCenter;
 
+            buttonFixPrintSpooler.Image = Properties.Resources.icon_sordum_fix_print_spooler;
+            buttonFixPrintSpooler.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonFixPrintSpooler.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonFixPrintSpooler.TextAlign = ContentAlignment.MiddleCenter;
+
             buttonRegistryWorkshop.Image = Properties.Resources.icon_registry_workshop;
             buttonRegistryWorkshop.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonRegistryWorkshop.ImageAlign = ContentAlignment.MiddleLeft;
@@ -452,6 +458,31 @@ namespace WindowsSetupTools
             buttonOfficeToolPlus.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonOfficeToolPlus.ImageAlign = ContentAlignment.MiddleLeft;
             buttonOfficeToolPlus.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework48.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework48.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework48.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework48.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework47.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework47.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework47.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework47.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework46.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework46.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework46.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework46.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework35.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework35.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework35.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework35.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonSetupFramework35Iso.Image = Properties.Resources.icon_terminal;
+            buttonSetupFramework35Iso.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonSetupFramework35Iso.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSetupFramework35Iso.TextAlign = ContentAlignment.MiddleCenter;
 
         }
 
@@ -870,10 +901,18 @@ namespace WindowsSetupTools
             progress?.Report(100);
         }
 
-        public async void DownGitlabZipStartButton(Button buttonClick, string zipName, string exeRun32, string exeRun64 = "", string regfile = "")
+        public async void DownCompressAndStart(Control controlClick, string fileUrl, string exeRun32, string exeRun64 = "", string regfile = "")
         {
-            string buttext = buttonClick.Text;
-            string fileUrl = $"https://gitlab.com/wintools/software/-/raw/main/{zipName}.zip";
+            string buttext = controlClick.Text;
+            string zipName = fileUrl.Split('/').Last();
+            if (zipName.ToLower().EndsWith(".zip") || zipName.ToLower().EndsWith(".rar"))
+            {
+                zipName = zipName.Substring(0, zipName.Length - 4);
+            }
+            if (zipName.ToLower().EndsWith(".7z"))
+            {
+                zipName = zipName.Substring(0, zipName.Length - 3);
+            }
             string localPath = Path.Combine(Path.GetTempPath(), $"{zipName}.zip");
             string outputFolder = Path.Combine(Path.GetTempPath(), zipName);
             string execute = Path.Combine(outputFolder, (Environment.Is64BitOperatingSystem && !string.IsNullOrEmpty(exeRun64)) ? exeRun64 : exeRun32);
@@ -887,11 +926,11 @@ namespace WindowsSetupTools
                     {
                         if (percent < 100)
                         {
-                            buttonClick.Text = $"{percent:F2}%";
+                            controlClick.Text = $"{percent:F2}%";
                         }
                         else
                         {
-                            buttonClick.Text = buttext;
+                            controlClick.Text = buttext;
                         }
                     });
                     await DownloadFileWithProgressAsync(fileUrl, localPath, progress);
@@ -925,115 +964,7 @@ namespace WindowsSetupTools
             if (File.Exists(execute)) Process.Start(execute);
         }
 
-        public async void DownGitlabZipStartLabel(Label buttonLabel, string zipname, string exename, string regname = "")
-        {
-            string buttext = buttonLabel.Text;
-            string fileUrl = $"https://gitlab.com/wintools/software/-/raw/main/{zipname}.zip";
-            string localPath = Path.Combine(Path.GetTempPath(), $"{zipname}.zip");
-            string outputFolder = Path.Combine(Path.GetTempPath(), $"{zipname}");
-            string execute = Path.Combine(outputFolder, exename.EndsWith(".exe") ? exename : $"{exename}.exe");
-            string regkey = Path.Combine(outputFolder, regname);
-
-            if (!File.Exists(execute))
-            {
-                if (!File.Exists(localPath))
-                {
-                    var progress = new Progress<double>(percent =>
-                    {
-                        if (percent < 100)
-                        {
-                            buttonLabel.Text = $"{percent:F2}%";
-                        }
-                        else
-                        {
-                            buttonLabel.Text = buttext;
-                        }
-                    });
-                    await DownloadFileWithProgressAsync(fileUrl, localPath, progress);
-                }
-
-                if (!File.Exists(winrar)) WriteMessage("WinRAR is not installed");
-
-                if (File.Exists(winrar) && File.Exists(localPath))
-                {
-                    if (!Directory.Exists(outputFolder)) Directory.CreateDirectory(outputFolder);
-
-                    Process extract = new Process();
-                    extract.StartInfo.FileName = winrar;
-                    extract.StartInfo.Arguments = $"x -o+ \"{localPath}\" \"{outputFolder}";
-                    extract.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    extract.StartInfo.CreateNoWindow = true;
-                    extract.Start();
-                    extract.WaitForExit();
-                    File.Delete(localPath);
-                }
-            }
-            if (!string.IsNullOrEmpty(regname) && File.Exists(regkey))
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = "reg.exe";
-                process.StartInfo.Arguments = $"IMPORT \"{regkey}\"";
-                process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                process.Start();
-                process.WaitForExit();
-            }
-            if (File.Exists(execute)) Process.Start(execute);
-        }
-
-        public async void DownLinkCompressionStartButton(Button buttonClick, string linkUrl, string exename)
-        {
-            string buttext = buttonClick.Text;
-            string zipName = linkUrl.Split('/').Last();
-            if (zipName.ToLower().EndsWith(".zip") || zipName.ToLower().EndsWith(".rar"))
-            {
-                zipName = zipName.Substring(0, zipName.Length - 4);
-            }
-            if (zipName.ToLower().EndsWith(".7z"))
-            {
-                zipName = zipName.Substring(0, zipName.Length - 3);
-            }
-            string localPath = Path.Combine(Path.GetTempPath(), $"{zipName}.zip");
-            string outputFolder = Path.Combine(Path.GetTempPath(), zipName);
-            string execute = Path.Combine(outputFolder, exename);
-
-            if (!File.Exists(execute))
-            {
-                if (!File.Exists(localPath))
-                {
-                    var progress = new Progress<double>(percent =>
-                    {
-                        if (percent < 100)
-                        {
-                            buttonClick.Text = $"{percent:F2}%";
-                        }
-                        else
-                        {
-                            buttonClick.Text = buttext;
-                        }
-                    });
-                    await DownloadFileWithProgressAsync(linkUrl, localPath, progress);
-                }
-
-                if (!File.Exists(winrar)) WriteMessage("WinRAR is not installed");
-
-                if (File.Exists(winrar) && File.Exists(localPath))
-                {
-                    if (!Directory.Exists(outputFolder)) Directory.CreateDirectory(outputFolder);
-
-                    Process extract = new Process();
-                    extract.StartInfo.FileName = winrar;
-                    extract.StartInfo.Arguments = $"x -o+ \"{localPath}\" \"{outputFolder}";
-                    extract.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    extract.StartInfo.CreateNoWindow = true;
-                    extract.Start();
-                    extract.WaitForExit();
-                    File.Delete(localPath);
-                }
-            }
-            if (File.Exists(execute)) Process.Start(execute);
-        }
-
-        public async void DownLinkEXEStartButton(Button buttonClick, string linkUrl, string exename, string arguments = "")
+        public async void DownExecutableAndStart(Control buttonClick, string linkUrl, string exename, string arguments = "")
         {
             string buttext = buttonClick.Text;
             string localPath = Path.Combine(Path.GetTempPath(), exename);
@@ -1056,22 +987,6 @@ namespace WindowsSetupTools
             if (File.Exists(localPath)) Process.Start(localPath, arguments);
         }
 
-        public void WriteMessage(string message)
-        {
-            labelMsg.ForeColor = Color.Red;
-            labelMsg.Text = message;
-            Task onetask = new Task(() =>
-            {
-                Thread.Sleep(3000);
-
-                this.Invoke(new Action(() =>
-                {
-                    labelMsg.Text = "";
-                }));
-            });
-            onetask.Start();
-        }
-
         public void OpenBrowserUrl(string linkUrl)
         {
             if (File.Exists(chromeApp))
@@ -1086,6 +1001,22 @@ namespace WindowsSetupTools
             {
                 Process.Start(linkUrl);
             }
+        }
+
+        public void WriteMessage(string message)
+        {
+            labelMsg.ForeColor = Color.Red;
+            labelMsg.Text = message;
+            Task onetask = new Task(() =>
+            {
+                Thread.Sleep(3000);
+
+                this.Invoke(new Action(() =>
+                {
+                    labelMsg.Text = "";
+                }));
+            });
+            onetask.Start();
         }
 
         public void GetCurrentTimezone()
@@ -1401,7 +1332,7 @@ namespace WindowsSetupTools
 
         #region CAI DAT PHAN MEM
 
-        public async void SetupWinRAR(Button buttonClick, string lang = "")
+        public async void SetupWinRAR(Control buttonClick, string lang = "")
         {
             string fileUrl = string.Empty;
             string localPath = string.Empty;
@@ -1500,17 +1431,20 @@ namespace WindowsSetupTools
 
         private void buttonSetupChrome_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "chrome-setup-vi", "ChromeSetup.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-vi.7z";
+            DownCompressAndStart((Button)sender, linkDown, "ChromeSetup.exe");
         }
 
         private void buttonSetupChromeEnglish_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "chrome-setup-en", "ChromeSetup.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/google-chrome-en.7z";
+            DownCompressAndStart((Button)sender, linkDown, "ChromeSetup.exe");
         }
 
         private void buttonSetupCocCoc_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "coc-coc", "CocCocSetup.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/coc-coc.7z";
+            DownCompressAndStart((Button)sender, linkDown, "CocCocSetup.exe");
         }
 
         private void buttonSetupUnikey_Click(object sender, EventArgs e)
@@ -1646,19 +1580,19 @@ namespace WindowsSetupTools
         private void buttonSetupTeamViewer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://dl.teamviewer.com/download/version_15x/TeamViewer_Setup_x64.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "TeamViewer_Setup_x64.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "TeamViewer_Setup_x64.exe");
         }
 
         private void buttonSetupAnyDesk_Click(object sender, EventArgs e)
         {
             string linkDown = "https://download.anydesk.com/AnyDesk.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "AnyDesk.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "AnyDesk.exe");
         }
 
         private void buttonSetupUltraViewer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://dl2.ultraviewer.net/UltraViewer_setup_6.6.133_vi.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "UltraViewer_setup_6.6.133_vi.exe", "/SILENT /NORESTART");
+            DownExecutableAndStart((Button)sender, linkDown, "UltraViewer_setup_6.6.133_vi.exe", "/SILENT /NORESTART");
         }
 
         private void buttonMicrosoftOfficeOne_Click(object sender, EventArgs e)
@@ -1693,7 +1627,7 @@ namespace WindowsSetupTools
         private void buttonSetupSumatraPDF_Click(object sender, EventArgs e)
         {
             string linkDown = "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "SumatraPDF-3.6.1-64-install.exe", "-install -all-users -with-preview -silent");
+            DownExecutableAndStart((Button)sender, linkDown, "SumatraPDF-3.6.1-64-install.exe", "-install -all-users -with-preview -silent");
             Task.Delay(500);
             string testPdf = Path.Combine(Path.GetTempPath(), "test.pdf");
             string blankPdf = "%PDF-1.7\r\n1 0 obj\r\n<</CreationDate(D:20260723114651+07'00')/Title(PDF)/Creator()/Producer()>>\r\nendobj\r\n2 0 obj\r\n<</Type/Catalog/Pages 3 0 R/Metadata 5 0 R>>\r\nendobj\r\n3 0 obj\r\n<</Type/Pages/Count 1/Kids[4 0 R]>>\r\nendobj\r\n4 0 obj\r\n<</Type/Page/MediaBox[0 0 612 792]/Parent 3 0 R/Group<</CS/DeviceRGB/S/Transparency>>>>\r\nendobj\r\n5 0 obj\r\n<</Type/Metadata/Subtype/XML/Length 1405>>\r\nstream\r\nendstream\r\nendobj\r\nxref\r\n0 6\r\n0000000000 65535 f \r\n0000000015 00000 n \r\n0000000160 00000 n \r\n0000000220 00000 n \r\n0000000271 00000 n \r\n0000000374 00000 n \r\ntrailer\r\n<</ID[<8F6B813D76415D4FA6758A585608028C><8F6B813D76415D4FA6758A585608028C>]/Info 1 0 R/Root 2 0 R/Size 6>>\r\nstartxref\r\n1855\r\n%%EOF";
@@ -1704,19 +1638,19 @@ namespace WindowsSetupTools
         private void buttonSetupPotPlayer_Click(object sender, EventArgs e)
         {
             string linkDown = "https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "PotPlayerSetup64.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "PotPlayerSetup64.exe");
         }
 
         private void buttonSetupVLC_Click(object sender, EventArgs e)
         {
             string linkDown = "https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "vlc-3.0.23-win64.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "vlc-3.0.23-win64.exe");
         }
 
         private void buttonSetupImageGlass_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/d2phap/ImageGlass/releases/download/9.5.0.515/ImageGlass_9.5.0.515_x64.msi";
-            DownLinkEXEStartButton((Button)sender, linkDown, "ImageGlass_9.5.0.515_x64.msi");
+            DownExecutableAndStart((Button)sender, linkDown, "ImageGlass_9.5.0.515_x64.msi");
         }
 
         private void buttonSetupIDM_Click(object sender, EventArgs e)
@@ -1740,14 +1674,14 @@ namespace WindowsSetupTools
             }
             else
             {
-                DownLinkEXEStartButton((Button)sender, linkDown, "idm-setup.exe");
+                DownExecutableAndStart((Button)sender, linkDown, "idm-setup.exe");
             }
         }
 
         private void buttonSetupEverything_Click(object sender, EventArgs e)
         {
             string linkDown = "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "Everything-1.4.1.1032.x64-Setup.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "Everything-1.4.1.1032.x64-Setup.exe");
         }
 
         private void buttonSetupCCleaner_Click(object sender, EventArgs e)
@@ -1760,13 +1694,13 @@ namespace WindowsSetupTools
             File.WriteAllText(fileConfig, ccConfig);
 
             string linkDown = "https://download.ccleaner.com/ccsetup641.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "ccsetup641.exe", "/S /L=1066"); // 1066 = Vietnamese
+            DownExecutableAndStart((Button)sender, linkDown, "ccsetup641.exe", "/S /L=1066"); // 1066 = Vietnamese
         }
 
         private void buttonSetupVisualStudioCommunity_Click(object sender, EventArgs e)
         {
             string linkDown = "https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&passive=false&cid=2500";
-            DownLinkEXEStartButton((Button)sender, linkDown, "VisualStudio.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "VisualStudio.exe");
         }
 
         private void buttonSetupSublimeText_Click(object sender, EventArgs e)
@@ -1778,25 +1712,25 @@ namespace WindowsSetupTools
         private void buttonSetupOBSStudio_Click(object sender, EventArgs e)
         {
             string linkDown = "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-32.1.2-Windows-x64-Installer.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "OBS-Studio-32.1.2-Windows-x64-Installer.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "OBS-Studio-32.1.2-Windows-x64-Installer.exe");
         }
 
         private void buttonSetupShareX_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "ShareX-21.0.0-setup-x64.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "ShareX-21.0.0-setup-x64.exe");
         }
 
         private void buttonSetupLightshot_Click(object sender, EventArgs e)
         {
             string linkDown = "https://app.prntscr.com/build/setup-lightshot.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "setup-lightshot.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "setup-lightshot.exe");
         }
 
         private void buttonSetupFastStoneCapture_Click(object sender, EventArgs e)
         {
             string linkDown = "https://www.faststonesoft.net/DN/FSCaptureSetup112.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "FSCaptureSetup112.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "FSCaptureSetup112.exe");
         }
 
         private void buttonSetupTelegram_Click(object sender, EventArgs e)
@@ -1821,7 +1755,7 @@ namespace WindowsSetupTools
         private void buttonSetupGoogleDrive_Click(object sender, EventArgs e)
         {
             string linkDown = "https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "GoogleDriveSetup.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "GoogleDriveSetup.exe");
         }
 
         private void buttonSetupVMwareWorkstation_Click(object sender, EventArgs e)
@@ -1865,26 +1799,6 @@ namespace WindowsSetupTools
             process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             process.Start();
             process.WaitForExit();
-        }
-
-        private void buttonSetupFramework35Iso_Click(object sender, EventArgs e)
-        {
-            string[] disks = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-            string diskIso = string.Empty;
-
-            foreach (string disk in disks)
-            {
-                string folderIso = $@"{disk}:\sources\sxs";
-                if (Directory.Exists(folderIso))
-                {
-                    diskIso = disk;
-                    break;
-                }
-            }
-            if (!string.IsNullOrEmpty(diskIso))
-            {
-                Process.Start("dism.exe", $@"/online /enable-feature /featurename:NetFX3 /All /Source:{diskIso}:\sources\sxs /LimitAccess");
-            }
         }
 
         private void buttonSearchWifiDriver_Click(object sender, EventArgs e)
@@ -2099,6 +2013,12 @@ namespace WindowsSetupTools
             }
         }
 
+        private void buttonCanonLbp2900_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/canon-lbp2900-capt-printer-driver-x64.7z";
+            DownCompressAndStart((Button)sender, linkDown, "Setup.exe");
+        }
+
         #endregion CAI DAT NHANH
 
 
@@ -2106,72 +2026,92 @@ namespace WindowsSetupTools
 
         private void buttonWindowsUpdateBlocker_ClickAsync(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "windows-update-blocker", "Wub.exe", "Wub_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-windows-update-blocker.7z";
+            DownCompressAndStart((Button)sender, linkDown, "Wub.exe", "Wub_x64.exe");
         }
 
         private void buttonDefenderControl_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "defender-control", "dControl.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-defender-control.7z";
+            DownCompressAndStart((Button)sender, linkDown, "dControl.exe");
         }
 
         private void buttonDnsJumper_ClickAsync(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "dns-jumper", "DnsJumper.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-dns-jumper.7z";
+            DownCompressAndStart((Button)sender, linkDown, "DnsJumper.exe");
         }
 
         private void buttonUpdateTime_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "update-time", "UpdateTime.exe", "UpdateTime_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-update-time.7z";
+            DownCompressAndStart((Button)sender, linkDown, "UpdateTime.exe", "UpdateTime_x64.exe");
         }
 
         private void buttonBlueLifeHostsEditor_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "bluelife-host-editor", "hEdit.exe", "hEdit_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-bluelife-host-editor.7z";
+            DownCompressAndStart((Button)sender, linkDown, "hEdit.exe", "hEdit_x64.exe");
         }
 
         private void buttonEasyContextMenu_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "easy-context-menu", "EcMenu.exe", "EcMenu_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-context-menu.7z";
+            DownCompressAndStart((Button)sender, linkDown, "EcMenu.exe", "EcMenu_x64.exe");
         }
 
         private void buttonEasyServiceOptimizer_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "easy-service-optimizer", "eso.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-easy-service-optimizer.7z";
+            DownCompressAndStart((Button)sender, linkDown, "eso.exe");
         }
 
         private void buttonStoreAppsTool_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "store-apps-tool", "StoreAT.exe", "StoreAT_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-store-apps-tool.7z";
+            DownCompressAndStart((Button)sender, linkDown, "StoreAT.exe", "StoreAT_x64.exe");
         }
 
         private void buttonTempCleaner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "temp-cleaner", "TempCleaner.exe", "TempCleaner_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-temp-cleaner.7z";
+            DownCompressAndStart((Button)sender, linkDown, "TempCleaner.exe", "TempCleaner_x64.exe");
         }
 
         private void buttonRestartExplorer_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "restart-explorer", "Rexplorer.exe", "Rexplorer_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-restart-explorer.7z";
+            DownCompressAndStart((Button)sender, linkDown, "Rexplorer.exe", "Rexplorer_x64.exe");
         }
 
         private void buttonWin11ClassicContextMenu_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "win11-classic-context-menu", "W11ClassicMenu.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-win11-classic-context-menu.7z";
+            DownCompressAndStart((Button)sender, linkDown, "W11ClassicMenu.exe");
+        }
+
+        private void buttonFixPrintSpooler_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/sordum-fix-print-spooler.7z";
+            DownCompressAndStart((Button)sender, linkDown, "FixSpooler.exe", "FixSpooler_x64.exe");
         }
 
         private void buttonRegistryWorkshop_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "registry-workshop", "RegWorkshop.exe", "RegWorkshopX64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/registry-workshop.7z";
+            DownCompressAndStart((Button)sender, linkDown, "RegWorkshop.exe", "RegWorkshopX64.exe");
         }
 
         private void buttonBkavShowHiddenFiles_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "bkav-show-hidden-files", "FixAttrb.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/bkav-show-hidden-files.7z";
+            DownCompressAndStart((Button)sender, linkDown, "FixAttrb.exe");
         }
 
         private void buttonRecuva_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "ccleaner-recuva", "recuva.exe", "recuva64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/piriform-recuva.7z";
+            DownCompressAndStart((Button)sender, linkDown, "recuva.exe", "recuva64.exe");
         }
 
         private void buttonFidoScript_Click(object sender, EventArgs e)
@@ -2188,13 +2128,57 @@ namespace WindowsSetupTools
         private void buttonRufus_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe";
-            DownLinkEXEStartButton((Button)sender, linkDown, "rufus-4.15p.exe");
+            DownExecutableAndStart((Button)sender, linkDown, "rufus-4.15p.exe");
         }
 
         private void buttonOfficeToolPlus_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/YerongAI/Office-Tool/releases/download/v11.5.7.0/Office_Tool_with_runtime_v11.5.7.0_x64.7z";
-            DownLinkCompressionStartButton((Button)sender, linkDown, @"Office Tool\Office Tool Plus.exe");
+            DownCompressAndStart((Button)sender, linkDown, @"Office Tool\Office Tool Plus.exe");
+        }
+
+        private void buttonNetFramework48_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-offline-installer";
+            OpenBrowserUrl(linkDown);
+        }
+
+        private void buttonNetFramework47_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net472-offline-installer";
+            OpenBrowserUrl(linkDown);
+        }
+
+        private void buttonNetFramework46_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net462-offline-installer";
+            OpenBrowserUrl(linkDown);
+        }
+
+        private void buttonNetFramework35_Click(object sender, EventArgs e)
+        {
+            string linkDown = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net35-sp1-offline-installer";
+            OpenBrowserUrl(linkDown);
+        }
+
+        private void buttonSetupFramework35Iso_Click(object sender, EventArgs e)
+        {
+            string[] disks = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+            string diskIso = string.Empty;
+
+            foreach (string disk in disks)
+            {
+                string folderIso = $@"{disk}:\sources\sxs";
+                if (Directory.Exists(folderIso))
+                {
+                    diskIso = disk;
+                    break;
+                }
+            }
+            if (!string.IsNullOrEmpty(diskIso))
+            {
+                Process.Start("dism.exe", $@"/online /enable-feature /featurename:NetFX3 /All /Source:{diskIso}:\sources\sxs /LimitAccess");
+            }
         }
 
         #endregion CONG CU TIEN ICH
@@ -2204,42 +2188,50 @@ namespace WindowsSetupTools
 
         private void buttonCpuZ_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "cpu-z", "cpuz_x32.exe", "cpuz_x64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/cpu-z.7z";
+            DownCompressAndStart((Button)sender, linkDown, "cpuz_x32.exe", "cpuz_x64.exe");
         }
 
         private void buttonGpuZ_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "gpu-z", "GPU-Z.exe", "", "gpuz.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/gpu-z.7z";
+            DownCompressAndStart((Button)sender, linkDown, "GPU-Z.exe", "", "gpuz.reg");
         }
 
         private void buttonHWiNFO_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "hwinfo", "HWiNFO32.exe", "HWiNFO64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/hwinfo.7z";
+            DownCompressAndStart((Button)sender, linkDown, "HWiNFO32.exe", "HWiNFO64.exe");
         }
 
         private void buttonSpeccy_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "speccy", "Speccy.exe", "Speccy64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/piriform-speccy.7z";
+            DownCompressAndStart((Button)sender, linkDown, "Speccy.exe", "Speccy64.exe");
         }
 
         private void buttonCrystalDiskInfo_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "crystal-disk-info", "DiskInfo32.exe", "DiskInfo64.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/crystal-disk-info.7z";
+            DownCompressAndStart((Button)sender, linkDown, "DiskInfo32.exe", "DiskInfo64.exe");
         }
 
         private void buttonKeyboardTest_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "keyboard-test", "KeyboardTest.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/keyboard-test.7z";
+            DownCompressAndStart((Button)sender, linkDown, "KeyboardTest.exe");
         }
 
         private void buttonIsMyLcdOK_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "is-my-lcd-ok", "IsMyLcdOK.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/is-my-lcd-ok.7z";
+            DownCompressAndStart((Button)sender, linkDown, "IsMyLcdOK.exe");
         }
 
         private void buttontLCDtest_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "t-lcd-test", "tLCDtest.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/t-lcd-test.7z";
+            DownCompressAndStart((Button)sender, linkDown, "tLCDtest.exe");
         }
 
         private void buttonMicrosoftActivationScriptsOnline_Click(object sender, EventArgs e)
@@ -2265,7 +2257,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-chrome-password", "ChromePass.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-chrome-password.7z";
+            DownCompressAndStart((Button)sender, linkDown, "ChromePass.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2276,7 +2269,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-ie-passwords", "iepv.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-ie-passwords.7z";
+            DownCompressAndStart((Button)sender, linkDown, "iepv.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2287,7 +2281,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-password-firefox", "PasswordFox.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-firefox.7z";
+            DownCompressAndStart((Button)sender, linkDown, "PasswordFox.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2298,7 +2293,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-web-browser-password", "WebBrowserPassView.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-web-browser-password.7z";
+            DownCompressAndStart((Button)sender, linkDown, "WebBrowserPassView.exe");
             timerNirsoftStart.Enabled = true;
         }
 
@@ -2309,7 +2305,8 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-password-remote-desktop", "rdpv.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-password-remote-desktop.7z";
+            DownCompressAndStart((Button)sender, linkDown, "rdpv.exe");
         }
 
         private void buttonNirsoftWirelessKeyView_Click(object sender, EventArgs e)
@@ -2319,24 +2316,26 @@ namespace WindowsSetupTools
                 WriteMessage("Real-time Protection");
                 return;
             }
-            DownGitlabZipStartButton((Button)sender, "nirsoft-wireless-key-view", "WirelessKeyView.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-key-view.7z";
+            DownCompressAndStart((Button)sender, linkDown, "WirelessKeyView.exe");
         }
 
         private void buttonNirsoftWirelessNetworkWatcher_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartButton((Button)sender, "nirsoft-wireless-network-watcher", "WNetWatcher.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-wireless-network-watcher.7z";
+            DownCompressAndStart((Button)sender, linkDown, "WNetWatcher.exe");
         }
 
         private void buttonActivateAIOTools_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/activate-aio-tools-by-savio.7z";
-            DownLinkCompressionStartButton((Button)sender, linkDown, "Activate-AIO-Tools-v3.1.3-by-Savio.bat");
+            DownCompressAndStart((Button)sender, linkDown, "Activate-AIO-Tools-v3.1.3-by-Savio.bat");
         }
 
         private void buttonWindowsActivateForVPS_Click(object sender, EventArgs e)
         {
             string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/windows-activate.7z";
-            DownLinkCompressionStartButton((Button)sender, linkDown, "WindowsActivate.bat");
+            DownCompressAndStart((Button)sender, linkDown, "WindowsActivate.bat");
         }
 
         private void timerNirsoftStart_Tick(object sender, EventArgs e)
@@ -2387,287 +2386,344 @@ namespace WindowsSetupTools
 
         private void linkIObitClonedFilesScanner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-cloned-files-scanner", "ClonedFilesScanner.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-cloned-files-scanner.7z";
+            DownCompressAndStart((Label)sender, "iobit-cloned-files-scanner", "ClonedFilesScanner.exe");
         }
 
         private void linkIObitContextMenuManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-context-menu-manager", "ContextMenuManager.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-context-menu-manager.7z";
+            DownCompressAndStart((Label)sender, "iobit-context-menu-manager", "ContextMenuManager.exe");
         }
 
         private void linkIObitDefaultProgram_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-default-program", "DefaultProgram.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-default-program.7z";
+            DownCompressAndStart((Label)sender, "iobit-default-program", "DefaultProgram.exe");
         }
 
         private void linkIObitDiskCleaner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-disk-cleaner", "DiskCleaner.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-cleaner.7z";
+            DownCompressAndStart((Label)sender, "iobit-disk-cleaner", "DiskCleaner.exe");
         }
 
         private void linkIObitDiskDoctor_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-disk-doctor", "DiskDoctor.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-doctor.7z";
+            DownCompressAndStart((Label)sender, "iobit-disk-doctor", "DiskDoctor.exe");
         }
 
         private void linkIObitDiskExplorer_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-disk-explorer", "DiskExplorer.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-disk-explorer.7z";
+            DownCompressAndStart((Label)sender, "iobit-disk-explorer", "DiskExplorer.exe");
         }
 
         private void linkIObitDriverManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-driver-manager", "DriverManager.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-driver-manager.7z";
+            DownCompressAndStart((Label)sender, "iobit-driver-manager", "DriverManager.exe");
         }
 
         private void linkIObitDuplicateFileFinder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-duplicate-file-finder", "DuplicateFileFinder.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-duplicate-file-finder.7z";
+            DownCompressAndStart((Label)sender, "iobit-duplicate-file-finder", "DuplicateFileFinder.exe");
         }
 
         private void linkIObitEmptyFolderScanner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-empty-folder-scanner", "EmptyFolderScanner.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-empty-folder-scanner.7z";
+            DownCompressAndStart((Label)sender, "iobit-empty-folder-scanner", "EmptyFolderScanner.exe");
         }
 
         private void linkIObitFileShredder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-file-shredder", "FileShredder.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-file-shredder.7z";
+            DownCompressAndStart((Label)sender, "iobit-file-shredder", "FileShredder.exe");
         }
 
         private void linkIObitIEHelper_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-ie-helper", "IEHelper.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-ie-helper.7z";
+            DownCompressAndStart((Label)sender, "iobit-ie-helper", "IEHelper.exe");
         }
 
         private void linkIObitInternetBooster_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-internet-booster", "InternetBooster.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-internet-booster.7z";
+            DownCompressAndStart((Label)sender, "iobit-internet-booster", "InternetBooster.exe");
         }
 
         private void linkIObitLargeFileFinder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-large-file-finder", "LargeFileFinder.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-large-file-finder.7z";
+            DownCompressAndStart((Label)sender, "iobit-large-file-finder", "LargeFileFinder.exe");
         }
 
         private void linkIObitMonitor8_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-monitor-8", "Monitor.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-8.7z";
+            DownCompressAndStart((Label)sender, "iobit-monitor-8", "Monitor.exe");
         }
 
         private void linkIObitMonitor19_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-monitor-19", "Monitor.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-monitor-19.7z";
+            DownCompressAndStart((Label)sender, "iobit-monitor-19", "Monitor.exe");
         }
 
         private void linkIObitMyWin10_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-my-win10", "MyWin10.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-my-win10.7z";
+            DownCompressAndStart((Label)sender, "iobit-my-win10", "MyWin10.exe");
         }
 
         private void linkIObitProcessManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-process-manager", "ProcessManager.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-process-manager.7z";
+            DownCompressAndStart((Label)sender, "iobit-process-manager", "ProcessManager.exe");
         }
 
         private void linkIObitProgramDeactivator_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-program-deactivator", "ProgramDeactivator.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-program-deactivator.7z";
+            DownCompressAndStart((Label)sender, "iobit-program-deactivator", "ProgramDeactivator.exe");
         }
 
         private void linkIObitRegistryCleaner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-registry-cleaner", "RegistryCleaner.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-cleaner.7z";
+            DownCompressAndStart((Label)sender, "iobit-registry-cleaner", "RegistryCleaner.exe");
         }
 
         private void linkIObitRegistryDefrag_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-registry-defrag", "RegistryDefrag.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-registry-defrag.7z";
+            DownCompressAndStart((Label)sender, "iobit-registry-defrag", "RegistryDefrag.exe");
         }
 
         private void linkIObitReinforce_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-reinforce", "Reinforce.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-reinforce.7z";
+            DownCompressAndStart((Label)sender, "iobit-reinforce", "Reinforce.exe");
         }
 
         private void linkIObitRescueCenter_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-rescue-center", "RescueCenter.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-rescue-center.7z";
+            DownCompressAndStart((Label)sender, "iobit-rescue-center", "RescueCenter.exe");
         }
 
         private void linkIObitScreenShot_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-screen-shot", "ScreenShot.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-screen-shot.7z";
+            DownCompressAndStart((Label)sender, "iobit-screen-shot", "ScreenShot.exe");
         }
 
         private void linkIObitShortcutFixer_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-shortcut-fixer", "ShortcutFixer.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-shortcut-fixer.7z";
+            DownCompressAndStart((Label)sender, "iobit-shortcut-fixer", "ShortcutFixer.exe");
         }
 
         private void linkIObitSmartRAM_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-smart-ram", "SmartRAM.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-smart-ram.7z";
+            DownCompressAndStart((Label)sender, "iobit-smart-ram", "SmartRAM.exe");
         }
 
         private void linkIObitStartupManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-startup-manager", "StartupManager.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-startup-manager.7z";
+            DownCompressAndStart((Label)sender, "iobit-startup-manager", "StartupManager.exe");
         }
 
         private void linkIObitSystemControl_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-system-control", "SystemControl.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-control.7z";
+            DownCompressAndStart((Label)sender, "iobit-system-control", "SystemControl.exe");
         }
 
         private void linkIObitSystemInformation_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-system-information", "SystemInformation.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-system-information.7z";
+            DownCompressAndStart((Label)sender, "iobit-system-information", "SystemInformation.exe");
         }
 
         private void linkIObitUndelete_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-undelete", "Undelete.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-undelete.7z";
+            DownCompressAndStart((Label)sender, "iobit-undelete", "Undelete.exe");
         }
 
         private void linkIObitWinFix_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "iobit-win-fix", "WinFix.exe");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/iobit-win-fix.7z";
+            DownCompressAndStart((Label)sender, "iobit-win-fix", "WinFix.exe");
         }
 
         private void linkGlaryCheckDisk_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "CheckDisk.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "CheckDisk.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryContextMenuManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "cmm.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "cmm.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskAnalysis_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "DiskAnalysis.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "DiskAnalysis.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskCleaner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "DiskCleaner.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "DiskCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDiskDefrag_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "DiskDefrag.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "DiskDefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDriverBackup_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "DriverBackup.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "DriverBackup.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryDuplicateFileFinder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "dupefinder.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "dupefinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEmptyFolderFinder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "EmptyFolderFinder.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "EmptyFolderFinder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryEncryptExe_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "EncryptExe.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "EncryptExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileEncrypt_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "fileencrypt.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "fileencrypt.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileSplitter_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "filesplitter.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "filesplitter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileUndelete_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "FileUndelete.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "FileUndelete.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryIEHelper_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "iehelper.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "iehelper.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryJoinExe_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "joinExe.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "joinExe.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryMemoryDefrag_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "memdefrag.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "memdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryProcessManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "procmgr.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "procmgr.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryQuickSearch_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "QuickSearch.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "QuickSearch.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryDefrag_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "regdefrag.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "regdefrag.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRegistryCleaner_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "RegistryCleaner.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "RegistryCleaner.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryRestoreCenter_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "RestoreCenter.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "RestoreCenter.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryShortcutFixer_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "ShortcutFixer.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "ShortcutFixer.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryFileShredder_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "shredder.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "shredder.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySoftwareUpdate_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "SoftwareUpdate.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "SoftwareUpdate.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryStartupManager_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "StartupManager.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "StartupManager.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlarySystemInformation_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "sysinfo.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "sysinfo.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryTracksEraser_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "TracksEraser.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "TracksEraser.exe", "", "RegkeyLifetime.reg");
         }
 
         private void linkGlaryUninstaler_Click(object sender, EventArgs e)
         {
-            DownGitlabZipStartLabel((Label)sender, "glary-utilities", "Uninstaler.exe", "RegkeyLifetime.reg");
+            string linkDown = "https://github.com/disksave/software/raw/refs/heads/main/glary-utilities.7z";
+            DownCompressAndStart((Label)sender, "glary-utilities", "Uninstaler.exe", "", "RegkeyLifetime.reg");
         }
 
         #endregion HOP CONG CU

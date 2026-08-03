@@ -92,6 +92,12 @@
             this.buttonSetupSevenZip = new System.Windows.Forms.Button();
             this.buttonSetupWinRAR = new System.Windows.Forms.Button();
             this.tabPageCaiDatNhanh = new System.Windows.Forms.TabPage();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.buttonCanonLbp2900 = new System.Windows.Forms.Button();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.labelTimezone = new System.Windows.Forms.Label();
+            this.labelTimezoneUtc = new System.Windows.Forms.Label();
+            this.buttonChangeTimezone = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.checkDisableOneDrive = new System.Windows.Forms.CheckBox();
             this.checkConfigExplorerAndQuickAccess = new System.Windows.Forms.CheckBox();
@@ -105,12 +111,8 @@
             this.buttonApplyFavoriteSettings = new System.Windows.Forms.Button();
             this.checkDisableSleepWhilePluggedIn = new System.Windows.Forms.CheckBox();
             this.buttonSearchWifiDriver = new System.Windows.Forms.Button();
-            this.buttonSetupFramework35Iso = new System.Windows.Forms.Button();
             this.buttonAddCmdRightMouse = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.labelTimezone = new System.Windows.Forms.Label();
-            this.labelTimezoneUtc = new System.Windows.Forms.Label();
-            this.buttonChangeTimezone = new System.Windows.Forms.Button();
             this.buttonChangePort = new System.Windows.Forms.Button();
             this.buttonChangeUser = new System.Windows.Forms.Button();
             this.buttonChangePass = new System.Windows.Forms.Button();
@@ -119,6 +121,13 @@
             this.textChangePass = new System.Windows.Forms.TextBox();
             this.buttonOffRealTimeProtection = new System.Windows.Forms.Button();
             this.tabPageTienIch = new System.Windows.Forms.TabPage();
+            this.buttonFixPrintSpooler = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.buttonSetupFramework35Iso = new System.Windows.Forms.Button();
+            this.buttonNetFramework35 = new System.Windows.Forms.Button();
+            this.buttonNetFramework46 = new System.Windows.Forms.Button();
+            this.buttonNetFramework47 = new System.Windows.Forms.Button();
+            this.buttonNetFramework48 = new System.Windows.Forms.Button();
             this.buttonOfficeToolPlus = new System.Windows.Forms.Button();
             this.buttonRufus = new System.Windows.Forms.Button();
             this.buttonFidoScript = new System.Windows.Forms.Button();
@@ -245,7 +254,6 @@
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -261,9 +269,12 @@
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageCaiDatNhanh.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.tabPageTienIch.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.tabPageChuyenDung.SuspendLayout();
             this.groupBox55.SuspendLayout();
             this.groupBox54.SuspendLayout();
@@ -271,7 +282,6 @@
             this.tabPageCongCu.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox61.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOpenFolder
@@ -952,10 +962,10 @@
             // 
             // tabPageCaiDatNhanh
             // 
+            this.tabPageCaiDatNhanh.Controls.Add(this.groupBox16);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox13);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox14);
             this.tabPageCaiDatNhanh.Controls.Add(this.buttonSearchWifiDriver);
-            this.tabPageCaiDatNhanh.Controls.Add(this.buttonSetupFramework35Iso);
             this.tabPageCaiDatNhanh.Controls.Add(this.buttonAddCmdRightMouse);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox21);
             this.tabPageCaiDatNhanh.Controls.Add(this.buttonOffRealTimeProtection);
@@ -966,6 +976,66 @@
             this.tabPageCaiDatNhanh.TabIndex = 1;
             this.tabPageCaiDatNhanh.Text = "Cài đặt nhanh";
             this.tabPageCaiDatNhanh.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.buttonCanonLbp2900);
+            this.groupBox16.Location = new System.Drawing.Point(6, 321);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(508, 164);
+            this.groupBox16.TabIndex = 14;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Máy in";
+            // 
+            // buttonCanonLbp2900
+            // 
+            this.buttonCanonLbp2900.Location = new System.Drawing.Point(15, 30);
+            this.buttonCanonLbp2900.Name = "buttonCanonLbp2900";
+            this.buttonCanonLbp2900.Size = new System.Drawing.Size(250, 38);
+            this.buttonCanonLbp2900.TabIndex = 0;
+            this.buttonCanonLbp2900.Text = "Canon LBP 2900 x64";
+            this.buttonCanonLbp2900.UseVisualStyleBackColor = true;
+            this.buttonCanonLbp2900.Click += new System.EventHandler(this.buttonCanonLbp2900_Click);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.labelTimezone);
+            this.groupBox13.Controls.Add(this.labelTimezoneUtc);
+            this.groupBox13.Controls.Add(this.buttonChangeTimezone);
+            this.groupBox13.Location = new System.Drawing.Point(876, 307);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(356, 178);
+            this.groupBox13.TabIndex = 12;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Time Zone";
+            // 
+            // labelTimezone
+            // 
+            this.labelTimezone.AutoSize = true;
+            this.labelTimezone.Location = new System.Drawing.Point(10, 73);
+            this.labelTimezone.Name = "labelTimezone";
+            this.labelTimezone.Size = new System.Drawing.Size(74, 17);
+            this.labelTimezone.TabIndex = 1;
+            this.labelTimezone.Text = "Timezone:";
+            // 
+            // labelTimezoneUtc
+            // 
+            this.labelTimezoneUtc.AutoSize = true;
+            this.labelTimezoneUtc.Location = new System.Drawing.Point(10, 33);
+            this.labelTimezoneUtc.Name = "labelTimezoneUtc";
+            this.labelTimezoneUtc.Size = new System.Drawing.Size(40, 17);
+            this.labelTimezoneUtc.TabIndex = 0;
+            this.labelTimezoneUtc.Text = "UTC:";
+            // 
+            // buttonChangeTimezone
+            // 
+            this.buttonChangeTimezone.Location = new System.Drawing.Point(10, 113);
+            this.buttonChangeTimezone.Name = "buttonChangeTimezone";
+            this.buttonChangeTimezone.Size = new System.Drawing.Size(330, 38);
+            this.buttonChangeTimezone.TabIndex = 2;
+            this.buttonChangeTimezone.Text = "Thiếp lập Timezone theo IP";
+            this.buttonChangeTimezone.UseVisualStyleBackColor = true;
+            this.buttonChangeTimezone.Click += new System.EventHandler(this.buttonChangeTimezone_Click);
             // 
             // groupBox14
             // 
@@ -1122,16 +1192,6 @@
             this.buttonSearchWifiDriver.UseVisualStyleBackColor = true;
             this.buttonSearchWifiDriver.Click += new System.EventHandler(this.buttonSearchWifiDriver_Click);
             // 
-            // buttonSetupFramework35Iso
-            // 
-            this.buttonSetupFramework35Iso.Location = new System.Drawing.Point(20, 70);
-            this.buttonSetupFramework35Iso.Name = "buttonSetupFramework35Iso";
-            this.buttonSetupFramework35Iso.Size = new System.Drawing.Size(300, 38);
-            this.buttonSetupFramework35Iso.TabIndex = 2;
-            this.buttonSetupFramework35Iso.Text = "MS.NET Framework 3.5 mount ISO";
-            this.buttonSetupFramework35Iso.UseVisualStyleBackColor = true;
-            this.buttonSetupFramework35Iso.Click += new System.EventHandler(this.buttonSetupFramework35Iso_Click);
-            // 
             // buttonAddCmdRightMouse
             // 
             this.buttonAddCmdRightMouse.Location = new System.Drawing.Point(20, 120);
@@ -1156,34 +1216,6 @@
             this.groupBox21.TabIndex = 11;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "VPS";
-            // 
-            // labelTimezone
-            // 
-            this.labelTimezone.AutoSize = true;
-            this.labelTimezone.Location = new System.Drawing.Point(10, 73);
-            this.labelTimezone.Name = "labelTimezone";
-            this.labelTimezone.Size = new System.Drawing.Size(74, 17);
-            this.labelTimezone.TabIndex = 1;
-            this.labelTimezone.Text = "Timezone:";
-            // 
-            // labelTimezoneUtc
-            // 
-            this.labelTimezoneUtc.AutoSize = true;
-            this.labelTimezoneUtc.Location = new System.Drawing.Point(10, 33);
-            this.labelTimezoneUtc.Name = "labelTimezoneUtc";
-            this.labelTimezoneUtc.Size = new System.Drawing.Size(40, 17);
-            this.labelTimezoneUtc.TabIndex = 0;
-            this.labelTimezoneUtc.Text = "UTC:";
-            // 
-            // buttonChangeTimezone
-            // 
-            this.buttonChangeTimezone.Location = new System.Drawing.Point(10, 113);
-            this.buttonChangeTimezone.Name = "buttonChangeTimezone";
-            this.buttonChangeTimezone.Size = new System.Drawing.Size(330, 38);
-            this.buttonChangeTimezone.TabIndex = 2;
-            this.buttonChangeTimezone.Text = "Thiếp lập Timezone theo IP";
-            this.buttonChangeTimezone.UseVisualStyleBackColor = true;
-            this.buttonChangeTimezone.Click += new System.EventHandler(this.buttonChangeTimezone_Click);
             // 
             // buttonChangePort
             // 
@@ -1247,16 +1279,18 @@
             // 
             // buttonOffRealTimeProtection
             // 
-            this.buttonOffRealTimeProtection.Location = new System.Drawing.Point(20, 170);
+            this.buttonOffRealTimeProtection.Location = new System.Drawing.Point(20, 70);
             this.buttonOffRealTimeProtection.Name = "buttonOffRealTimeProtection";
             this.buttonOffRealTimeProtection.Size = new System.Drawing.Size(300, 38);
-            this.buttonOffRealTimeProtection.TabIndex = 4;
+            this.buttonOffRealTimeProtection.TabIndex = 2;
             this.buttonOffRealTimeProtection.Text = "Tắt bảo vệ thời gian thực";
             this.buttonOffRealTimeProtection.UseVisualStyleBackColor = true;
             this.buttonOffRealTimeProtection.Click += new System.EventHandler(this.buttonOffRealTimeProtection_Click);
             // 
             // tabPageTienIch
             // 
+            this.tabPageTienIch.Controls.Add(this.buttonFixPrintSpooler);
+            this.tabPageTienIch.Controls.Add(this.groupBox15);
             this.tabPageTienIch.Controls.Add(this.buttonOfficeToolPlus);
             this.tabPageTienIch.Controls.Add(this.buttonRufus);
             this.tabPageTienIch.Controls.Add(this.buttonFidoScript);
@@ -1282,9 +1316,83 @@
             this.tabPageTienIch.Text = "Công cụ tiện ích";
             this.tabPageTienIch.UseVisualStyleBackColor = true;
             // 
+            // buttonFixPrintSpooler
+            // 
+            this.buttonFixPrintSpooler.Location = new System.Drawing.Point(300, 200);
+            this.buttonFixPrintSpooler.Name = "buttonFixPrintSpooler";
+            this.buttonFixPrintSpooler.Size = new System.Drawing.Size(250, 38);
+            this.buttonFixPrintSpooler.TabIndex = 11;
+            this.buttonFixPrintSpooler.Text = "Fix Print Spooler";
+            this.buttonFixPrintSpooler.UseVisualStyleBackColor = true;
+            this.buttonFixPrintSpooler.Click += new System.EventHandler(this.buttonFixPrintSpooler_Click);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.buttonSetupFramework35Iso);
+            this.groupBox15.Controls.Add(this.buttonNetFramework35);
+            this.groupBox15.Controls.Add(this.buttonNetFramework46);
+            this.groupBox15.Controls.Add(this.buttonNetFramework47);
+            this.groupBox15.Controls.Add(this.buttonNetFramework48);
+            this.groupBox15.Location = new System.Drawing.Point(960, 6);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(272, 461);
+            this.groupBox15.TabIndex = 40;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = ".NET Framework";
+            // 
+            // buttonSetupFramework35Iso
+            // 
+            this.buttonSetupFramework35Iso.Location = new System.Drawing.Point(10, 230);
+            this.buttonSetupFramework35Iso.Name = "buttonSetupFramework35Iso";
+            this.buttonSetupFramework35Iso.Size = new System.Drawing.Size(250, 38);
+            this.buttonSetupFramework35Iso.TabIndex = 6;
+            this.buttonSetupFramework35Iso.Text = ".NET 3.5 mount ISO";
+            this.buttonSetupFramework35Iso.UseVisualStyleBackColor = true;
+            this.buttonSetupFramework35Iso.Click += new System.EventHandler(this.buttonSetupFramework35Iso_Click);
+            // 
+            // buttonNetFramework35
+            // 
+            this.buttonNetFramework35.Location = new System.Drawing.Point(10, 180);
+            this.buttonNetFramework35.Name = "buttonNetFramework35";
+            this.buttonNetFramework35.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetFramework35.TabIndex = 5;
+            this.buttonNetFramework35.Text = ".NET Framework 3.5 SP1*";
+            this.buttonNetFramework35.UseVisualStyleBackColor = true;
+            this.buttonNetFramework35.Click += new System.EventHandler(this.buttonNetFramework35_Click);
+            // 
+            // buttonNetFramework46
+            // 
+            this.buttonNetFramework46.Location = new System.Drawing.Point(10, 130);
+            this.buttonNetFramework46.Name = "buttonNetFramework46";
+            this.buttonNetFramework46.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetFramework46.TabIndex = 4;
+            this.buttonNetFramework46.Text = ".NET Framework 4.6.2*";
+            this.buttonNetFramework46.UseVisualStyleBackColor = true;
+            this.buttonNetFramework46.Click += new System.EventHandler(this.buttonNetFramework46_Click);
+            // 
+            // buttonNetFramework47
+            // 
+            this.buttonNetFramework47.Location = new System.Drawing.Point(10, 80);
+            this.buttonNetFramework47.Name = "buttonNetFramework47";
+            this.buttonNetFramework47.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetFramework47.TabIndex = 3;
+            this.buttonNetFramework47.Text = ".NET Framework 4.7.2*";
+            this.buttonNetFramework47.UseVisualStyleBackColor = true;
+            this.buttonNetFramework47.Click += new System.EventHandler(this.buttonNetFramework47_Click);
+            // 
+            // buttonNetFramework48
+            // 
+            this.buttonNetFramework48.Location = new System.Drawing.Point(10, 30);
+            this.buttonNetFramework48.Name = "buttonNetFramework48";
+            this.buttonNetFramework48.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetFramework48.TabIndex = 2;
+            this.buttonNetFramework48.Text = ".NET Framework 4.8.1*";
+            this.buttonNetFramework48.UseVisualStyleBackColor = true;
+            this.buttonNetFramework48.Click += new System.EventHandler(this.buttonNetFramework48_Click);
+            // 
             // buttonOfficeToolPlus
             // 
-            this.buttonOfficeToolPlus.Location = new System.Drawing.Point(640, 320);
+            this.buttonOfficeToolPlus.Location = new System.Drawing.Point(580, 320);
             this.buttonOfficeToolPlus.Name = "buttonOfficeToolPlus";
             this.buttonOfficeToolPlus.Size = new System.Drawing.Size(250, 38);
             this.buttonOfficeToolPlus.TabIndex = 25;
@@ -1295,7 +1403,7 @@
             // 
             // buttonRufus
             // 
-            this.buttonRufus.Location = new System.Drawing.Point(640, 260);
+            this.buttonRufus.Location = new System.Drawing.Point(580, 260);
             this.buttonRufus.Name = "buttonRufus";
             this.buttonRufus.Size = new System.Drawing.Size(250, 38);
             this.buttonRufus.TabIndex = 24;
@@ -1305,7 +1413,7 @@
             // 
             // buttonFidoScript
             // 
-            this.buttonFidoScript.Location = new System.Drawing.Point(640, 200);
+            this.buttonFidoScript.Location = new System.Drawing.Point(580, 200);
             this.buttonFidoScript.Name = "buttonFidoScript";
             this.buttonFidoScript.Size = new System.Drawing.Size(250, 38);
             this.buttonFidoScript.TabIndex = 23;
@@ -1315,7 +1423,7 @@
             // 
             // buttonRecuva
             // 
-            this.buttonRecuva.Location = new System.Drawing.Point(640, 140);
+            this.buttonRecuva.Location = new System.Drawing.Point(580, 140);
             this.buttonRecuva.Name = "buttonRecuva";
             this.buttonRecuva.Size = new System.Drawing.Size(250, 38);
             this.buttonRecuva.TabIndex = 22;
@@ -1326,7 +1434,7 @@
             // 
             // buttonBkavShowHiddenFiles
             // 
-            this.buttonBkavShowHiddenFiles.Location = new System.Drawing.Point(640, 80);
+            this.buttonBkavShowHiddenFiles.Location = new System.Drawing.Point(580, 80);
             this.buttonBkavShowHiddenFiles.Name = "buttonBkavShowHiddenFiles";
             this.buttonBkavShowHiddenFiles.Size = new System.Drawing.Size(250, 38);
             this.buttonBkavShowHiddenFiles.TabIndex = 21;
@@ -1336,7 +1444,7 @@
             // 
             // buttonRegistryWorkshop
             // 
-            this.buttonRegistryWorkshop.Location = new System.Drawing.Point(640, 20);
+            this.buttonRegistryWorkshop.Location = new System.Drawing.Point(580, 20);
             this.buttonRegistryWorkshop.Name = "buttonRegistryWorkshop";
             this.buttonRegistryWorkshop.Size = new System.Drawing.Size(250, 38);
             this.buttonRegistryWorkshop.TabIndex = 20;
@@ -1346,7 +1454,7 @@
             // 
             // buttonWin11ClassicContextMenu
             // 
-            this.buttonWin11ClassicContextMenu.Location = new System.Drawing.Point(330, 140);
+            this.buttonWin11ClassicContextMenu.Location = new System.Drawing.Point(300, 140);
             this.buttonWin11ClassicContextMenu.Name = "buttonWin11ClassicContextMenu";
             this.buttonWin11ClassicContextMenu.Size = new System.Drawing.Size(250, 38);
             this.buttonWin11ClassicContextMenu.TabIndex = 10;
@@ -1356,7 +1464,7 @@
             // 
             // buttonRestartExplorer
             // 
-            this.buttonRestartExplorer.Location = new System.Drawing.Point(330, 80);
+            this.buttonRestartExplorer.Location = new System.Drawing.Point(300, 80);
             this.buttonRestartExplorer.Name = "buttonRestartExplorer";
             this.buttonRestartExplorer.Size = new System.Drawing.Size(250, 38);
             this.buttonRestartExplorer.TabIndex = 9;
@@ -1366,7 +1474,7 @@
             // 
             // buttonTempCleaner
             // 
-            this.buttonTempCleaner.Location = new System.Drawing.Point(330, 20);
+            this.buttonTempCleaner.Location = new System.Drawing.Point(300, 20);
             this.buttonTempCleaner.Name = "buttonTempCleaner";
             this.buttonTempCleaner.Size = new System.Drawing.Size(250, 38);
             this.buttonTempCleaner.TabIndex = 8;
@@ -2855,18 +2963,6 @@
             this.labelMsg.TabIndex = 110;
             this.labelMsg.Text = ".";
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.labelTimezone);
-            this.groupBox13.Controls.Add(this.labelTimezoneUtc);
-            this.groupBox13.Controls.Add(this.buttonChangeTimezone);
-            this.groupBox13.Location = new System.Drawing.Point(876, 307);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(356, 178);
-            this.groupBox13.TabIndex = 12;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Time Zone";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2934,11 +3030,15 @@
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tabPageCaiDatNhanh.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
             this.tabPageTienIch.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
             this.tabPageChuyenDung.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
             this.groupBox54.ResumeLayout(false);
@@ -2948,8 +3048,6 @@
             this.groupBox62.PerformLayout();
             this.groupBox61.ResumeLayout(false);
             this.groupBox61.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3131,7 +3229,6 @@
         private System.Windows.Forms.Button buttonNirsoftPasswordFirefox;
         private System.Windows.Forms.Button buttonNirsoftIEPasswords;
         private System.Windows.Forms.Button buttonSetupWinRARVi;
-        private System.Windows.Forms.Button buttonSetupFramework35Iso;
         private System.Windows.Forms.Button buttonMicrosoftActivationScriptsOnline;
         private System.Windows.Forms.Button buttonMicrosoftActivationScriptsOffline;
         private System.Windows.Forms.Button buttonFidoScript;
@@ -3172,6 +3269,15 @@
         private System.Windows.Forms.Label labelTimezone;
         private System.Windows.Forms.Label labelTimezoneUtc;
         private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button buttonCanonLbp2900;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button buttonNetFramework35;
+        private System.Windows.Forms.Button buttonNetFramework46;
+        private System.Windows.Forms.Button buttonNetFramework47;
+        private System.Windows.Forms.Button buttonNetFramework48;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.Button buttonFixPrintSpooler;
+        private System.Windows.Forms.Button buttonSetupFramework35Iso;
     }
 }
 

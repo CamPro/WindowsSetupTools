@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-net-framework.png" />
+    <None Include="Resources\icon-sordum-fix-print-spooler.png" />
+    <None Include="Resources\icon-print.png" />
     <None Include="Resources\icon-office.png" />
     <None Include="Resources\icon-trash.png" />
     <None Include="Resources\icon-time.png" />

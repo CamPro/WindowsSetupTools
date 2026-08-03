@@ -993,6 +993,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_net_framework {
+            get {
+                object obj = ResourceManager.GetObject("icon_net_framework", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_netplwiz {
             get {
                 object obj = ResourceManager.GetObject("icon_netplwiz", resourceCulture);
@@ -1163,6 +1173,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_print {
+            get {
+                object obj = ResourceManager.GetObject("icon_print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_programs_and_features {
             get {
                 object obj = ResourceManager.GetObject("icon_programs_and_features", resourceCulture);
@@ -1306,6 +1326,16 @@ namespace WindowsSetupTools.Properties {
         internal static System.Drawing.Bitmap icon_sordum_easy_service_optimizer {
             get {
                 object obj = ResourceManager.GetObject("icon_sordum_easy_service_optimizer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_sordum_fix_print_spooler {
+            get {
+                object obj = ResourceManager.GetObject("icon_sordum_fix_print_spooler", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
