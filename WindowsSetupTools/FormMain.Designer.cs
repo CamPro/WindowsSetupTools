@@ -254,6 +254,7 @@
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
+            this.buttonSelfUpdate = new System.Windows.Forms.Button();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -2963,11 +2964,22 @@
             this.labelMsg.TabIndex = 110;
             this.labelMsg.Text = ".";
             // 
+            // buttonSelfUpdate
+            // 
+            this.buttonSelfUpdate.Location = new System.Drawing.Point(192, 635);
+            this.buttonSelfUpdate.Name = "buttonSelfUpdate";
+            this.buttonSelfUpdate.Size = new System.Drawing.Size(120, 40);
+            this.buttonSelfUpdate.TabIndex = 103;
+            this.buttonSelfUpdate.Text = "Cập nhật";
+            this.buttonSelfUpdate.UseVisualStyleBackColor = true;
+            this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.buttonSelfUpdate);
             this.Controls.Add(this.labelMsg);
             this.Controls.Add(this.buttonAutoSelfDelete);
             this.Controls.Add(this.checkAutoStartup);
@@ -3278,6 +3290,7 @@
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Button buttonFixPrintSpooler;
         private System.Windows.Forms.Button buttonSetupFramework35Iso;
+        private System.Windows.Forms.Button buttonSelfUpdate;
     }
 }
 

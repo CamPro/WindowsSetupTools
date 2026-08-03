@@ -20,6 +20,8 @@ namespace WindowsSetupTools
 
         readonly string winrar = @"C:\Program Files\WinRAR\WinRAR.exe";
 
+        readonly string appUrl = "https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe";
+
         string chromeApp = string.Empty;
         string edgeApp = string.Empty;
 
@@ -172,6 +174,11 @@ namespace WindowsSetupTools
 
             buttonRestart.Image = Properties.Resources.icon_restart;
             buttonRestart.Text = "";
+
+            buttonSelfUpdate.Image = Properties.Resources.icon_download;
+            buttonSelfUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonSelfUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSelfUpdate.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         public void SetupUITabCaiDatPhanMem()
@@ -1231,6 +1238,23 @@ namespace WindowsSetupTools
         private void buttonShutdown_Click(object sender, EventArgs e)
         {
             shutdown("/s /t 0");
+            Application.Exit();
+        }
+
+        private void buttonSelfUpdate_Click(object sender, EventArgs e)
+        {
+            string linkUrl = appUrl;
+            string tempFile = Path.GetTempFileName();
+            new System.Net.WebClient().DownloadFile(linkUrl, tempFile);
+
+            string batchFile = Path.Combine(Path.GetTempPath(), "self-update.bat");
+            string script = $"TIMEOUT /T 2 /NOBREAK & COPY /Y \"{tempFile}\" \"{Application.ExecutablePath}\" & DEL /F /S /Q \"{tempFile}\" & DEL /F /S /Q \"{batchFile}\" & START \"\" \"{Application.ExecutablePath}\"";
+            File.WriteAllText(batchFile, script);
+            Process process = new Process();
+            process.StartInfo.FileName = batchFile;
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            process.Start();
             Application.Exit();
         }
 
