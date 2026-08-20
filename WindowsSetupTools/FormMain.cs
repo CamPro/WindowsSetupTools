@@ -2111,26 +2111,23 @@ namespace WindowsSetupTools
             {
                 if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                 {
-                    if (adapter.Name.StartsWith("Wi-Fi") || adapter.Name.StartsWith("Ethernet"))
-                    {
-                        interfaceName = adapter.Name;
+                    interfaceName = adapter.Name;
 
-                        IPInterfaceProperties properties = adapter.GetIPProperties();
-                        // Subnet Mask (IPv4)
-                        foreach (UnicastIPAddressInformation ip in properties.UnicastAddresses)
+                    IPInterfaceProperties properties = adapter.GetIPProperties();
+                    // Subnet Mask (IPv4)
+                    foreach (UnicastIPAddressInformation ip in properties.UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
                         {
-                            if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
-                            {
-                                subnetMask = ip.IPv4Mask.ToString();
-                            }
+                            subnetMask = ip.IPv4Mask.ToString();
                         }
-                        // Default Gateway (IPv4)
-                        foreach (GatewayIPAddressInformation gateway in properties.GatewayAddresses)
+                    }
+                    // Default Gateway (IPv4)
+                    foreach (GatewayIPAddressInformation gateway in properties.GatewayAddresses)
+                    {
+                        if (gateway.Address.AddressFamily == AddressFamily.InterNetwork)
                         {
-                            if (gateway.Address.AddressFamily == AddressFamily.InterNetwork)
-                            {
-                                gatewayAddress = gateway.Address.ToString();
-                            }
+                            gatewayAddress = gateway.Address.ToString();
                         }
                     }
                 }
@@ -2140,13 +2137,14 @@ namespace WindowsSetupTools
             
             if (!string.IsNullOrEmpty(interfaceName) && isStrictIPv4 && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
             {
-                string arguments = $"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}";
-                netsh(arguments);
+                netsh($"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}");
+
+                netsh($"interface ip set dns name=\"{interfaceName}\" static 8.8.8.8");
+                netsh($"interface ip add dns name=\"{interfaceName}\" 8.8.4.4 index=2");
+
                 buttonStaticLanIP.Text = "Thành công";
                 shutdown("/r /t 1800");
             }
-
-            buttonSetGoogleDNS_Click(null, null);
         }
 
         private void buttonChangeTimezone_Click(object sender, EventArgs e)
