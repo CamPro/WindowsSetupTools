@@ -92,6 +92,7 @@
             this.buttonSetupSevenZip = new System.Windows.Forms.Button();
             this.buttonSetupWinRAR = new System.Windows.Forms.Button();
             this.tabPageCaiDatNhanh = new System.Windows.Forms.TabPage();
+            this.buttonSetGoogleDNS = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.buttonCanonLbp2900 = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -259,11 +260,11 @@
             this.linkInfoLanIP = new System.Windows.Forms.LinkLabel();
             this.linkInfoCpu = new System.Windows.Forms.LinkLabel();
             this.linkInfoRam = new System.Windows.Forms.LinkLabel();
+            this.linkInfoUser = new System.Windows.Forms.LinkLabel();
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
-            this.buttonSetGoogleDNS = new System.Windows.Forms.Button();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -988,6 +989,16 @@
             this.tabPageCaiDatNhanh.Text = "Cài đặt nhanh";
             this.tabPageCaiDatNhanh.UseVisualStyleBackColor = true;
             // 
+            // buttonSetGoogleDNS
+            // 
+            this.buttonSetGoogleDNS.Location = new System.Drawing.Point(20, 170);
+            this.buttonSetGoogleDNS.Name = "buttonSetGoogleDNS";
+            this.buttonSetGoogleDNS.Size = new System.Drawing.Size(300, 38);
+            this.buttonSetGoogleDNS.TabIndex = 15;
+            this.buttonSetGoogleDNS.Text = "Cài đặt Google DNS";
+            this.buttonSetGoogleDNS.UseVisualStyleBackColor = true;
+            this.buttonSetGoogleDNS.Click += new System.EventHandler(this.buttonSetGoogleDNS_Click);
+            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.buttonCanonLbp2900);
@@ -1254,7 +1265,6 @@
             // 
             // buttonStaticLanIP
             // 
-            this.buttonStaticLanIP.Enabled = false;
             this.buttonStaticLanIP.Location = new System.Drawing.Point(220, 243);
             this.buttonStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStaticLanIP.Name = "buttonStaticLanIP";
@@ -3002,7 +3012,7 @@
             this.linkInfoComputerName.Location = new System.Drawing.Point(950, 10);
             this.linkInfoComputerName.Name = "linkInfoComputerName";
             this.linkInfoComputerName.Size = new System.Drawing.Size(106, 17);
-            this.linkInfoComputerName.TabIndex = 111;
+            this.linkInfoComputerName.TabIndex = 35;
             this.linkInfoComputerName.TabStop = true;
             this.linkInfoComputerName.Text = "computer name";
             this.toolTipSetup.SetToolTip(this.linkInfoComputerName, "Click to Copy");
@@ -3013,10 +3023,10 @@
             this.linkInfoLanIP.AutoSize = true;
             this.linkInfoLanIP.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkInfoLanIP.LinkColor = System.Drawing.Color.Black;
-            this.linkInfoLanIP.Location = new System.Drawing.Point(950, 40);
+            this.linkInfoLanIP.Location = new System.Drawing.Point(950, 45);
             this.linkInfoLanIP.Name = "linkInfoLanIP";
             this.linkInfoLanIP.Size = new System.Drawing.Size(42, 17);
-            this.linkInfoLanIP.TabIndex = 112;
+            this.linkInfoLanIP.TabIndex = 37;
             this.linkInfoLanIP.TabStop = true;
             this.linkInfoLanIP.Text = "ip lan";
             this.toolTipSetup.SetToolTip(this.linkInfoLanIP, "Click to Copy");
@@ -3027,10 +3037,10 @@
             this.linkInfoCpu.AutoSize = true;
             this.linkInfoCpu.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkInfoCpu.LinkColor = System.Drawing.Color.Black;
-            this.linkInfoCpu.Location = new System.Drawing.Point(950, 70);
+            this.linkInfoCpu.Location = new System.Drawing.Point(950, 80);
             this.linkInfoCpu.Name = "linkInfoCpu";
             this.linkInfoCpu.Size = new System.Drawing.Size(31, 17);
-            this.linkInfoCpu.TabIndex = 113;
+            this.linkInfoCpu.TabIndex = 38;
             this.linkInfoCpu.TabStop = true;
             this.linkInfoCpu.Text = "cpu";
             this.toolTipSetup.SetToolTip(this.linkInfoCpu, "Click to Copy");
@@ -3041,14 +3051,28 @@
             this.linkInfoRam.AutoSize = true;
             this.linkInfoRam.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkInfoRam.LinkColor = System.Drawing.Color.Black;
-            this.linkInfoRam.Location = new System.Drawing.Point(1150, 10);
+            this.linkInfoRam.Location = new System.Drawing.Point(1150, 45);
             this.linkInfoRam.Name = "linkInfoRam";
             this.linkInfoRam.Size = new System.Drawing.Size(32, 17);
-            this.linkInfoRam.TabIndex = 114;
+            this.linkInfoRam.TabIndex = 39;
             this.linkInfoRam.TabStop = true;
             this.linkInfoRam.Text = "ram";
             this.toolTipSetup.SetToolTip(this.linkInfoRam, "Click to Copy");
             this.linkInfoRam.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoRam_LinkClicked);
+            // 
+            // linkInfoUser
+            // 
+            this.linkInfoUser.AutoSize = true;
+            this.linkInfoUser.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkInfoUser.LinkColor = System.Drawing.Color.Black;
+            this.linkInfoUser.Location = new System.Drawing.Point(1150, 10);
+            this.linkInfoUser.Name = "linkInfoUser";
+            this.linkInfoUser.Size = new System.Drawing.Size(36, 17);
+            this.linkInfoUser.TabIndex = 36;
+            this.linkInfoUser.TabStop = true;
+            this.linkInfoUser.Text = "user";
+            this.toolTipSetup.SetToolTip(this.linkInfoUser, "Click to Copy");
+            this.linkInfoUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoUser_LinkClicked);
             // 
             // timerNirsoftStart
             // 
@@ -3072,7 +3096,7 @@
             this.labelMsg.Location = new System.Drawing.Point(317, 647);
             this.labelMsg.Name = "labelMsg";
             this.labelMsg.Size = new System.Drawing.Size(34, 17);
-            this.labelMsg.TabIndex = 110;
+            this.labelMsg.TabIndex = 105;
             this.labelMsg.Text = "msg";
             // 
             // buttonSelfUpdate
@@ -3085,21 +3109,12 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
-            // buttonSetGoogleDNS
-            // 
-            this.buttonSetGoogleDNS.Location = new System.Drawing.Point(20, 170);
-            this.buttonSetGoogleDNS.Name = "buttonSetGoogleDNS";
-            this.buttonSetGoogleDNS.Size = new System.Drawing.Size(300, 38);
-            this.buttonSetGoogleDNS.TabIndex = 15;
-            this.buttonSetGoogleDNS.Text = "Cài đặt Google DNS";
-            this.buttonSetGoogleDNS.UseVisualStyleBackColor = true;
-            this.buttonSetGoogleDNS.Click += new System.EventHandler(this.buttonSetGoogleDNS_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.linkInfoUser);
             this.Controls.Add(this.linkInfoRam);
             this.Controls.Add(this.linkInfoCpu);
             this.Controls.Add(this.linkInfoLanIP);
@@ -3425,6 +3440,7 @@
         private System.Windows.Forms.Button buttonStaticLanIP;
         private System.Windows.Forms.TextBox textStaticLanIP;
         private System.Windows.Forms.Button buttonSetGoogleDNS;
+        private System.Windows.Forms.LinkLabel linkInfoUser;
     }
 }
 

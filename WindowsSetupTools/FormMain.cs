@@ -39,8 +39,6 @@ namespace WindowsSetupTools
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            linkInfoComputerName.Text = Environment.MachineName;
-
             client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36");
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
         }
@@ -62,8 +60,6 @@ namespace WindowsSetupTools
             keyReg = Registry.LocalMachine.OpenSubKey(keyPath) ?? Registry.CurrentUser.OpenSubKey(keyPath);
             edgeApp = keyReg?.GetValue("")?.ToString();
 
-            textChangeUser.Text = Environment.UserName;
-            textChangePort.Text = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp").GetValue("PortNumber").ToString();
             buttonChangePass.Enabled = false;
             buttonChangeUser.Enabled = false;
             buttonChangePort.Enabled = false;
@@ -1037,6 +1033,11 @@ namespace WindowsSetupTools
 
         public void GetInfoComputer()
         {
+            linkInfoComputerName.Text = Environment.MachineName;
+            linkInfoUser.Text = Environment.UserName;
+            textChangeUser.Text = Environment.UserName;
+            textChangePort.Text = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp").GetValue("PortNumber").ToString();
+
             // IP lan
             string infoIpLan = string.Empty;
             using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
@@ -1319,6 +1320,11 @@ namespace WindowsSetupTools
         private void linkInfoComputerName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Clipboard.SetText(linkInfoComputerName.Text);
+        }
+
+        private void linkInfoUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText(linkInfoUser.Text);
         }
 
         private void linkInfoLocalIP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
