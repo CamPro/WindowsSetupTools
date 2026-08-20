@@ -64,6 +64,8 @@ namespace WindowsSetupTools
             buttonChangePort.Enabled = false;
 
             GetInfoComputer();
+            GetTimezoneUtc();
+            FirstAutoSetup();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -1030,40 +1032,63 @@ namespace WindowsSetupTools
 
         public void GetInfoComputer()
         {
+            // IP lan
+            string infoIpLan = string.Empty;
+            using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+            {
+                socket.Connect("8.8.8.8", 65530);
+                IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                infoIpLan = endPoint?.Address.ToString();
+            }
+            linkInfoLanIP.Text = infoIpLan;
+            textStaticLanIP.Text = infoIpLan;
+
+            // CPU
+            string infoCpu = string.Empty;
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0"))
+            {
+                infoCpu = key?.GetValue("ProcessorNameString")?.ToString()?.Trim() ?? "Không tìm thấy thông tin CPU";
+            }
+            linkInfoCpu.Text = infoCpu;
+
+            // RAM
+            string totalMemory = string.Empty;
+            MEMORYSTATUSEX memStatus = new MEMORYSTATUSEX();
+            if (GlobalMemoryStatusEx(memStatus))
+            {
+                double totalGb = memStatus.ullTotalPhys / (1024.0 * 1024 * 1024);
+                double availGb = memStatus.ullAvailPhys / (1024.0 * 1024 * 1024);
+                totalMemory = $"{Math.Round(totalGb, 1)}";
+            }
+            linkInfoRam.Text = $"RAM: {totalMemory} GB";
+        }
+
+        public void GetTimezoneUtc()
+        {
             Task onetask = new Task(() =>
             {
-                // IP lan
-                string infoIpLan = string.Empty;
-                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
-                {
-                    socket.Connect("8.8.8.8", 65530);
-                    IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
-                    infoIpLan = endPoint?.Address.ToString();
-                }
-                this.Invoke(new Action(() => { linkInfoLanIP.Text = infoIpLan; textStaticLanIP.Text = infoIpLan; }));
-                // CPU
-                string infoCpu = string.Empty;
-                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0"))
-                {
-                    infoCpu = key?.GetValue("ProcessorNameString")?.ToString()?.Trim() ?? "Không tìm thấy thông tin CPU";
-                }
-                this.Invoke(new Action(() => { linkInfoCpu.Text = infoCpu; }));
-                // RAM
-                string totalMemory = string.Empty;
-                MEMORYSTATUSEX memStatus = new MEMORYSTATUSEX();
-                if (GlobalMemoryStatusEx(memStatus))
-                {
-                    double totalGb = memStatus.ullTotalPhys / (1024.0 * 1024 * 1024);
-                    double availGb = memStatus.ullAvailPhys / (1024.0 * 1024 * 1024);
-                    totalMemory = $"{Math.Round(totalGb, 1)}";
-                }
-                this.Invoke(new Action(() => { linkInfoRam.Text = $"RAM: {totalMemory} GB"; }));
                 // UTC
                 string infoUtc = cmd("systeminfo | findstr /C:\"Time Zone\"").Replace("Time Zone:", "").Trim();
                 this.Invoke(new Action(() => { labelTimezoneUtc.Text = infoUtc; }));
                 // Timezone
                 string infoTz = cmd("tzutil /g");
                 this.Invoke(new Action(() => { labelTimezone.Text = infoTz; }));
+            });
+            onetask.Start();
+        }
+
+        public void FirstAutoSetup()
+        {
+            Task onetask = new Task(() =>
+            {
+                // Nếu Num Lock đang tắt thì mô phỏng thao tác nhấn phím để bật
+                if (!Console.NumberLock)
+                {
+                    keybd_event(VK_NUMLOCK, 0x45, 0, UIntPtr.Zero);                 // Nhấn phím
+                    keybd_event(VK_NUMLOCK, 0x45, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Nhả phím
+
+                    this.Invoke(new Action(() => { labelMsg.Text = "Num Lock is On"; }));
+                }
             });
             onetask.Start();
         }
@@ -2140,7 +2165,7 @@ namespace WindowsSetupTools
                         break;
                     }
                 }
-                GetInfoComputer();
+                GetTimezoneUtc();
             }
             catch (Exception ex)
             {
@@ -2971,5 +2996,11 @@ namespace WindowsSetupTools
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool GlobalMemoryStatusEx([In, Out] MEMORYSTATUSEX lpBuffer);
 
+        // Khai báo hàm Win32 API để gửi sự kiện bàn phím
+        [DllImport("user32.dll")]
+        private static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+
+        private const byte VK_NUMLOCK = 0x90; // Mã phím Num Lock
+        private const uint KEYEVENTF_KEYUP = 0x0002; // Cờ báo nhả phím
     }
 }
