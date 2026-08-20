@@ -99,6 +99,8 @@
             this.labelTimezoneUtc = new System.Windows.Forms.Label();
             this.buttonChangeTimezone = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.checkChangeAll = new System.Windows.Forms.CheckBox();
+            this.checkEnableRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
             this.checkDisableOneDrive = new System.Windows.Forms.CheckBox();
             this.checkConfigExplorerAndQuickAccess = new System.Windows.Forms.CheckBox();
             this.checkShowIconInDesktop = new System.Windows.Forms.CheckBox();
@@ -251,10 +253,16 @@
             this.buttonOpenTempFolder = new System.Windows.Forms.Button();
             this.buttonDateAndTime = new System.Windows.Forms.Button();
             this.buttonAutoSelfDelete = new System.Windows.Forms.Button();
+            this.linkInfoComputerName = new System.Windows.Forms.LinkLabel();
+            this.linkInfoLanIP = new System.Windows.Forms.LinkLabel();
+            this.linkInfoCpu = new System.Windows.Forms.LinkLabel();
+            this.linkInfoRam = new System.Windows.Forms.LinkLabel();
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
+            this.buttonStaticLanIP = new System.Windows.Forms.Button();
+            this.textStaticLanIP = new System.Windows.Forms.TextBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -1040,6 +1048,8 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.checkChangeAll);
+            this.groupBox14.Controls.Add(this.checkEnableRemoteDesktopOnLan);
             this.groupBox14.Controls.Add(this.checkDisableOneDrive);
             this.groupBox14.Controls.Add(this.checkConfigExplorerAndQuickAccess);
             this.groupBox14.Controls.Add(this.checkShowIconInDesktop);
@@ -1058,12 +1068,32 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Cài đặt trải nghiệm";
             // 
+            // checkChangeAll
+            // 
+            this.checkChangeAll.AutoSize = true;
+            this.checkChangeAll.Location = new System.Drawing.Point(323, 21);
+            this.checkChangeAll.Name = "checkChangeAll";
+            this.checkChangeAll.Size = new System.Drawing.Size(15, 14);
+            this.checkChangeAll.TabIndex = 12;
+            this.checkChangeAll.UseVisualStyleBackColor = true;
+            this.checkChangeAll.CheckedChanged += new System.EventHandler(this.checkChangeAll_CheckedChanged);
+            // 
+            // checkEnableRemoteDesktopOnLan
+            // 
+            this.checkEnableRemoteDesktopOnLan.AutoSize = true;
+            this.checkEnableRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 380);
+            this.checkEnableRemoteDesktopOnLan.Name = "checkEnableRemoteDesktopOnLan";
+            this.checkEnableRemoteDesktopOnLan.Size = new System.Drawing.Size(291, 21);
+            this.checkEnableRemoteDesktopOnLan.TabIndex = 11;
+            this.checkEnableRemoteDesktopOnLan.Text = "Bật remote desktop trong LAN (skip pass)";
+            this.checkEnableRemoteDesktopOnLan.UseVisualStyleBackColor = true;
+            // 
             // checkDisableOneDrive
             // 
             this.checkDisableOneDrive.AutoSize = true;
             this.checkDisableOneDrive.Checked = true;
             this.checkDisableOneDrive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisableOneDrive.Location = new System.Drawing.Point(15, 350);
+            this.checkDisableOneDrive.Location = new System.Drawing.Point(15, 310);
             this.checkDisableOneDrive.Name = "checkDisableOneDrive";
             this.checkDisableOneDrive.Size = new System.Drawing.Size(138, 21);
             this.checkDisableOneDrive.TabIndex = 8;
@@ -1075,7 +1105,7 @@
             this.checkConfigExplorerAndQuickAccess.AutoSize = true;
             this.checkConfigExplorerAndQuickAccess.Checked = true;
             this.checkConfigExplorerAndQuickAccess.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkConfigExplorerAndQuickAccess.Location = new System.Drawing.Point(15, 70);
+            this.checkConfigExplorerAndQuickAccess.Location = new System.Drawing.Point(15, 65);
             this.checkConfigExplorerAndQuickAccess.Name = "checkConfigExplorerAndQuickAccess";
             this.checkConfigExplorerAndQuickAccess.Size = new System.Drawing.Size(216, 21);
             this.checkConfigExplorerAndQuickAccess.TabIndex = 1;
@@ -1099,7 +1129,7 @@
             this.checkConfigSearchAndCotana.AutoSize = true;
             this.checkConfigSearchAndCotana.Checked = true;
             this.checkConfigSearchAndCotana.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkConfigSearchAndCotana.Location = new System.Drawing.Point(15, 150);
+            this.checkConfigSearchAndCotana.Location = new System.Drawing.Point(15, 135);
             this.checkConfigSearchAndCotana.Name = "checkConfigSearchAndCotana";
             this.checkConfigSearchAndCotana.Size = new System.Drawing.Size(190, 21);
             this.checkConfigSearchAndCotana.TabIndex = 3;
@@ -1109,7 +1139,7 @@
             // checkActivePowerHighPerformance
             // 
             this.checkActivePowerHighPerformance.AutoSize = true;
-            this.checkActivePowerHighPerformance.Location = new System.Drawing.Point(15, 270);
+            this.checkActivePowerHighPerformance.Location = new System.Drawing.Point(15, 240);
             this.checkActivePowerHighPerformance.Name = "checkActivePowerHighPerformance";
             this.checkActivePowerHighPerformance.Size = new System.Drawing.Size(233, 21);
             this.checkActivePowerHighPerformance.TabIndex = 6;
@@ -1122,7 +1152,7 @@
             this.checkNeverCombineTaskbar.AutoSize = true;
             this.checkNeverCombineTaskbar.Checked = true;
             this.checkNeverCombineTaskbar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkNeverCombineTaskbar.Location = new System.Drawing.Point(15, 110);
+            this.checkNeverCombineTaskbar.Location = new System.Drawing.Point(15, 100);
             this.checkNeverCombineTaskbar.Name = "checkNeverCombineTaskbar";
             this.checkNeverCombineTaskbar.Size = new System.Drawing.Size(175, 21);
             this.checkNeverCombineTaskbar.TabIndex = 2;
@@ -1134,7 +1164,7 @@
             this.checkOffShowSuggestionsInStart.AutoSize = true;
             this.checkOffShowSuggestionsInStart.Checked = true;
             this.checkOffShowSuggestionsInStart.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkOffShowSuggestionsInStart.Location = new System.Drawing.Point(15, 230);
+            this.checkOffShowSuggestionsInStart.Location = new System.Drawing.Point(15, 205);
             this.checkOffShowSuggestionsInStart.Name = "checkOffShowSuggestionsInStart";
             this.checkOffShowSuggestionsInStart.Size = new System.Drawing.Size(213, 21);
             this.checkOffShowSuggestionsInStart.TabIndex = 5;
@@ -1144,7 +1174,7 @@
             // checkDisableUserAccountControl
             // 
             this.checkDisableUserAccountControl.AutoSize = true;
-            this.checkDisableUserAccountControl.Location = new System.Drawing.Point(15, 390);
+            this.checkDisableUserAccountControl.Location = new System.Drawing.Point(15, 345);
             this.checkDisableUserAccountControl.Name = "checkDisableUserAccountControl";
             this.checkDisableUserAccountControl.Size = new System.Drawing.Size(249, 21);
             this.checkDisableUserAccountControl.TabIndex = 9;
@@ -1154,7 +1184,7 @@
             // checkShowAllIconOnTheTray
             // 
             this.checkShowAllIconOnTheTray.AutoSize = true;
-            this.checkShowAllIconOnTheTray.Location = new System.Drawing.Point(15, 190);
+            this.checkShowAllIconOnTheTray.Location = new System.Drawing.Point(15, 170);
             this.checkShowAllIconOnTheTray.Name = "checkShowAllIconOnTheTray";
             this.checkShowAllIconOnTheTray.Size = new System.Drawing.Size(223, 21);
             this.checkShowAllIconOnTheTray.TabIndex = 4;
@@ -1176,7 +1206,7 @@
             this.checkDisableSleepWhilePluggedIn.AutoSize = true;
             this.checkDisableSleepWhilePluggedIn.Checked = true;
             this.checkDisableSleepWhilePluggedIn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisableSleepWhilePluggedIn.Location = new System.Drawing.Point(15, 310);
+            this.checkDisableSleepWhilePluggedIn.Location = new System.Drawing.Point(15, 275);
             this.checkDisableSleepWhilePluggedIn.Name = "checkDisableSleepWhilePluggedIn";
             this.checkDisableSleepWhilePluggedIn.Size = new System.Drawing.Size(242, 21);
             this.checkDisableSleepWhilePluggedIn.TabIndex = 7;
@@ -1205,6 +1235,8 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.buttonStaticLanIP);
+            this.groupBox21.Controls.Add(this.textStaticLanIP);
             this.groupBox21.Controls.Add(this.buttonChangePort);
             this.groupBox21.Controls.Add(this.buttonChangeUser);
             this.groupBox21.Controls.Add(this.buttonChangePass);
@@ -2809,7 +2841,7 @@
             // 
             // buttonTrustedPlatformModule
             // 
-            this.buttonTrustedPlatformModule.Location = new System.Drawing.Point(930, 10);
+            this.buttonTrustedPlatformModule.Location = new System.Drawing.Point(480, 60);
             this.buttonTrustedPlatformModule.Name = "buttonTrustedPlatformModule";
             this.buttonTrustedPlatformModule.Size = new System.Drawing.Size(40, 40);
             this.buttonTrustedPlatformModule.TabIndex = 17;
@@ -2820,7 +2852,7 @@
             // 
             // buttonOpenStartupFolder
             // 
-            this.buttonOpenStartupFolder.Location = new System.Drawing.Point(1080, 60);
+            this.buttonOpenStartupFolder.Location = new System.Drawing.Point(780, 60);
             this.buttonOpenStartupFolder.Name = "buttonOpenStartupFolder";
             this.buttonOpenStartupFolder.Size = new System.Drawing.Size(40, 40);
             this.buttonOpenStartupFolder.TabIndex = 32;
@@ -2831,7 +2863,7 @@
             // 
             // buttonOpenAppDataRoamingFolder
             // 
-            this.buttonOpenAppDataRoamingFolder.Location = new System.Drawing.Point(1030, 60);
+            this.buttonOpenAppDataRoamingFolder.Location = new System.Drawing.Point(730, 60);
             this.buttonOpenAppDataRoamingFolder.Name = "buttonOpenAppDataRoamingFolder";
             this.buttonOpenAppDataRoamingFolder.Size = new System.Drawing.Size(40, 40);
             this.buttonOpenAppDataRoamingFolder.TabIndex = 31;
@@ -2842,7 +2874,7 @@
             // 
             // buttonOpenAppDataLocalFolder
             // 
-            this.buttonOpenAppDataLocalFolder.Location = new System.Drawing.Point(980, 60);
+            this.buttonOpenAppDataLocalFolder.Location = new System.Drawing.Point(680, 60);
             this.buttonOpenAppDataLocalFolder.Name = "buttonOpenAppDataLocalFolder";
             this.buttonOpenAppDataLocalFolder.Size = new System.Drawing.Size(40, 40);
             this.buttonOpenAppDataLocalFolder.TabIndex = 30;
@@ -2864,7 +2896,7 @@
             // 
             // buttonAboutWindows
             // 
-            this.buttonAboutWindows.Location = new System.Drawing.Point(1080, 10);
+            this.buttonAboutWindows.Location = new System.Drawing.Point(630, 60);
             this.buttonAboutWindows.Name = "buttonAboutWindows";
             this.buttonAboutWindows.Size = new System.Drawing.Size(40, 40);
             this.buttonAboutWindows.TabIndex = 20;
@@ -2875,7 +2907,7 @@
             // 
             // buttonCheckActiveWindows
             // 
-            this.buttonCheckActiveWindows.Location = new System.Drawing.Point(1030, 10);
+            this.buttonCheckActiveWindows.Location = new System.Drawing.Point(580, 60);
             this.buttonCheckActiveWindows.Name = "buttonCheckActiveWindows";
             this.buttonCheckActiveWindows.Size = new System.Drawing.Size(40, 40);
             this.buttonCheckActiveWindows.TabIndex = 19;
@@ -2886,7 +2918,7 @@
             // 
             // buttonIPConfigurationUtility
             // 
-            this.buttonIPConfigurationUtility.Location = new System.Drawing.Point(980, 10);
+            this.buttonIPConfigurationUtility.Location = new System.Drawing.Point(530, 60);
             this.buttonIPConfigurationUtility.Name = "buttonIPConfigurationUtility";
             this.buttonIPConfigurationUtility.Size = new System.Drawing.Size(40, 40);
             this.buttonIPConfigurationUtility.TabIndex = 18;
@@ -2897,7 +2929,7 @@
             // 
             // buttonOpenCommonStartupFolder
             // 
-            this.buttonOpenCommonStartupFolder.Location = new System.Drawing.Point(1130, 60);
+            this.buttonOpenCommonStartupFolder.Location = new System.Drawing.Point(830, 60);
             this.buttonOpenCommonStartupFolder.Name = "buttonOpenCommonStartupFolder";
             this.buttonOpenCommonStartupFolder.Size = new System.Drawing.Size(40, 40);
             this.buttonOpenCommonStartupFolder.TabIndex = 33;
@@ -2908,7 +2940,7 @@
             // 
             // buttonOpenTempFolder
             // 
-            this.buttonOpenTempFolder.Location = new System.Drawing.Point(1180, 60);
+            this.buttonOpenTempFolder.Location = new System.Drawing.Point(880, 60);
             this.buttonOpenTempFolder.Name = "buttonOpenTempFolder";
             this.buttonOpenTempFolder.Size = new System.Drawing.Size(40, 40);
             this.buttonOpenTempFolder.TabIndex = 34;
@@ -2939,6 +2971,62 @@
             this.buttonAutoSelfDelete.UseVisualStyleBackColor = true;
             this.buttonAutoSelfDelete.Click += new System.EventHandler(this.buttonAutoSelfDelete_Click);
             // 
+            // linkInfoComputerName
+            // 
+            this.linkInfoComputerName.AutoSize = true;
+            this.linkInfoComputerName.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkInfoComputerName.LinkColor = System.Drawing.Color.Black;
+            this.linkInfoComputerName.Location = new System.Drawing.Point(950, 10);
+            this.linkInfoComputerName.Name = "linkInfoComputerName";
+            this.linkInfoComputerName.Size = new System.Drawing.Size(106, 17);
+            this.linkInfoComputerName.TabIndex = 111;
+            this.linkInfoComputerName.TabStop = true;
+            this.linkInfoComputerName.Text = "computer name";
+            this.toolTipSetup.SetToolTip(this.linkInfoComputerName, "Click to Copy");
+            this.linkInfoComputerName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoComputerName_LinkClicked);
+            // 
+            // linkInfoLanIP
+            // 
+            this.linkInfoLanIP.AutoSize = true;
+            this.linkInfoLanIP.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkInfoLanIP.LinkColor = System.Drawing.Color.Black;
+            this.linkInfoLanIP.Location = new System.Drawing.Point(950, 40);
+            this.linkInfoLanIP.Name = "linkInfoLanIP";
+            this.linkInfoLanIP.Size = new System.Drawing.Size(42, 17);
+            this.linkInfoLanIP.TabIndex = 112;
+            this.linkInfoLanIP.TabStop = true;
+            this.linkInfoLanIP.Text = "ip lan";
+            this.toolTipSetup.SetToolTip(this.linkInfoLanIP, "Click to Copy");
+            this.linkInfoLanIP.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoLocalIP_LinkClicked);
+            // 
+            // linkInfoCpu
+            // 
+            this.linkInfoCpu.AutoSize = true;
+            this.linkInfoCpu.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkInfoCpu.LinkColor = System.Drawing.Color.Black;
+            this.linkInfoCpu.Location = new System.Drawing.Point(950, 70);
+            this.linkInfoCpu.Name = "linkInfoCpu";
+            this.linkInfoCpu.Size = new System.Drawing.Size(31, 17);
+            this.linkInfoCpu.TabIndex = 113;
+            this.linkInfoCpu.TabStop = true;
+            this.linkInfoCpu.Text = "cpu";
+            this.toolTipSetup.SetToolTip(this.linkInfoCpu, "Click to Copy");
+            this.linkInfoCpu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoCpu_LinkClicked);
+            // 
+            // linkInfoRam
+            // 
+            this.linkInfoRam.AutoSize = true;
+            this.linkInfoRam.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkInfoRam.LinkColor = System.Drawing.Color.Black;
+            this.linkInfoRam.Location = new System.Drawing.Point(1150, 10);
+            this.linkInfoRam.Name = "linkInfoRam";
+            this.linkInfoRam.Size = new System.Drawing.Size(32, 17);
+            this.linkInfoRam.TabIndex = 114;
+            this.linkInfoRam.TabStop = true;
+            this.linkInfoRam.Text = "ram";
+            this.toolTipSetup.SetToolTip(this.linkInfoRam, "Click to Copy");
+            this.linkInfoRam.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoRam_LinkClicked);
+            // 
             // timerNirsoftStart
             // 
             this.timerNirsoftStart.Interval = 1000;
@@ -2958,15 +3046,15 @@
             // labelMsg
             // 
             this.labelMsg.AutoSize = true;
-            this.labelMsg.Location = new System.Drawing.Point(200, 647);
+            this.labelMsg.Location = new System.Drawing.Point(317, 647);
             this.labelMsg.Name = "labelMsg";
-            this.labelMsg.Size = new System.Drawing.Size(12, 17);
+            this.labelMsg.Size = new System.Drawing.Size(34, 17);
             this.labelMsg.TabIndex = 110;
-            this.labelMsg.Text = ".";
+            this.labelMsg.Text = "msg";
             // 
             // buttonSelfUpdate
             // 
-            this.buttonSelfUpdate.Location = new System.Drawing.Point(192, 635);
+            this.buttonSelfUpdate.Location = new System.Drawing.Point(190, 635);
             this.buttonSelfUpdate.Name = "buttonSelfUpdate";
             this.buttonSelfUpdate.Size = new System.Drawing.Size(120, 40);
             this.buttonSelfUpdate.TabIndex = 103;
@@ -2974,11 +3062,34 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
+            // buttonStaticLanIP
+            // 
+            this.buttonStaticLanIP.Location = new System.Drawing.Point(220, 243);
+            this.buttonStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStaticLanIP.Name = "buttonStaticLanIP";
+            this.buttonStaticLanIP.Size = new System.Drawing.Size(120, 30);
+            this.buttonStaticLanIP.TabIndex = 27;
+            this.buttonStaticLanIP.Text = "Static LAN IP";
+            this.buttonStaticLanIP.UseVisualStyleBackColor = true;
+            this.buttonStaticLanIP.Click += new System.EventHandler(this.buttonStaticLanIP_Click);
+            // 
+            // textStaticLanIP
+            // 
+            this.textStaticLanIP.Location = new System.Drawing.Point(10, 247);
+            this.textStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
+            this.textStaticLanIP.Name = "textStaticLanIP";
+            this.textStaticLanIP.Size = new System.Drawing.Size(206, 23);
+            this.textStaticLanIP.TabIndex = 26;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.linkInfoRam);
+            this.Controls.Add(this.linkInfoCpu);
+            this.Controls.Add(this.linkInfoLanIP);
+            this.Controls.Add(this.linkInfoComputerName);
             this.Controls.Add(this.buttonSelfUpdate);
             this.Controls.Add(this.labelMsg);
             this.Controls.Add(this.buttonAutoSelfDelete);
@@ -3291,6 +3402,14 @@
         private System.Windows.Forms.Button buttonFixPrintSpooler;
         private System.Windows.Forms.Button buttonSetupFramework35Iso;
         private System.Windows.Forms.Button buttonSelfUpdate;
+        private System.Windows.Forms.CheckBox checkEnableRemoteDesktopOnLan;
+        private System.Windows.Forms.CheckBox checkChangeAll;
+        private System.Windows.Forms.LinkLabel linkInfoComputerName;
+        private System.Windows.Forms.LinkLabel linkInfoLanIP;
+        private System.Windows.Forms.LinkLabel linkInfoCpu;
+        private System.Windows.Forms.LinkLabel linkInfoRam;
+        private System.Windows.Forms.Button buttonStaticLanIP;
+        private System.Windows.Forms.TextBox textStaticLanIP;
     }
 }
 

@@ -5,12 +5,14 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace WindowsSetupTools
 {
@@ -35,7 +37,7 @@ namespace WindowsSetupTools
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.Text += " " + Environment.MachineName;
+            linkInfoComputerName.Text = Environment.MachineName;
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace WindowsSetupTools
             buttonChangeUser.Enabled = false;
             buttonChangePort.Enabled = false;
 
-            GetCurrentTimezone();
+            GetInfoComputer();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -1026,17 +1028,42 @@ namespace WindowsSetupTools
             onetask.Start();
         }
 
-        public void GetCurrentTimezone()
+        public void GetInfoComputer()
         {
             Task onetask = new Task(() =>
             {
-                string utcStr = cmd("systeminfo | findstr /C:\"Time Zone\"").Replace("Time Zone:", "").Trim();
-                string tzStr = cmd("tzutil /g");
-                this.Invoke(new Action(() =>
+                // IP lan
+                string infoIpLan = string.Empty;
+                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
                 {
-                    labelTimezoneUtc.Text = utcStr;
-                    labelTimezone.Text = tzStr;
-                }));
+                    socket.Connect("8.8.8.8", 65530);
+                    IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                    infoIpLan = endPoint?.Address.ToString();
+                }
+                this.Invoke(new Action(() => { linkInfoLanIP.Text = infoIpLan; textStaticLanIP.Text = infoIpLan; }));
+                // CPU
+                string infoCpu = string.Empty;
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0"))
+                {
+                    infoCpu = key?.GetValue("ProcessorNameString")?.ToString()?.Trim() ?? "Không tìm thấy thông tin CPU";
+                }
+                this.Invoke(new Action(() => { linkInfoCpu.Text = infoCpu; }));
+                // RAM
+                string totalMemory = string.Empty;
+                MEMORYSTATUSEX memStatus = new MEMORYSTATUSEX();
+                if (GlobalMemoryStatusEx(memStatus))
+                {
+                    double totalGb = memStatus.ullTotalPhys / (1024.0 * 1024 * 1024);
+                    double availGb = memStatus.ullAvailPhys / (1024.0 * 1024 * 1024);
+                    totalMemory = $"{Math.Round(totalGb, 1)}";
+                }
+                this.Invoke(new Action(() => { linkInfoRam.Text = $"RAM: {totalMemory} GB"; }));
+                // UTC
+                string infoUtc = cmd("systeminfo | findstr /C:\"Time Zone\"").Replace("Time Zone:", "").Trim();
+                this.Invoke(new Action(() => { labelTimezoneUtc.Text = infoUtc; }));
+                // Timezone
+                string infoTz = cmd("tzutil /g");
+                this.Invoke(new Action(() => { labelTimezone.Text = infoTz; }));
             });
             onetask.Start();
         }
@@ -1256,6 +1283,26 @@ namespace WindowsSetupTools
             process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             process.Start();
             Application.Exit();
+        }
+
+        private void linkInfoComputerName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText(linkInfoComputerName.Text);
+        }
+
+        private void linkInfoLocalIP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText(linkInfoLanIP.Text);
+        }
+
+        private void linkInfoCpu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText(linkInfoCpu.Text);
+        }
+
+        private void linkInfoRam_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText(linkInfoRam.Text);
         }
 
         public string cmd(string arg)
@@ -1845,53 +1892,68 @@ namespace WindowsSetupTools
             Process.Start("chrome.exe", $"https://www.google.com/search?q={wifiAdapter.Replace(" ", "+")}+driver+download");
         }
 
+        private void checkChangeAll_CheckedChanged(object sender, EventArgs e)
+        {
+            checkShowIconInDesktop.Checked = checkChangeAll.Checked;
+            checkConfigExplorerAndQuickAccess.Checked = checkChangeAll.Checked;
+            checkNeverCombineTaskbar.Checked = checkChangeAll.Checked;
+            checkConfigSearchAndCotana.Checked = checkChangeAll.Checked;
+            checkShowAllIconOnTheTray.Checked = checkChangeAll.Checked;
+            checkOffShowSuggestionsInStart.Checked = checkChangeAll.Checked;
+            checkActivePowerHighPerformance.Checked = checkChangeAll.Checked;
+            checkDisableSleepWhilePluggedIn.Checked = checkChangeAll.Checked;
+            checkDisableOneDrive.Checked = checkChangeAll.Checked;
+            checkDisableUserAccountControl.Checked = checkChangeAll.Checked;
+            checkEnableRemoteDesktopOnLan.Checked = checkChangeAll.Checked;
+        }
+
         private void buttonApplyFavoriteSettings_Click(object sender, EventArgs e)
         {
             if (checkShowIconInDesktop.Checked)
             {
                 // show ThisPC and Control panel in desktop
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\NewStartPanel\" /v \"{20D04FE0-3AEA-1069-A2D8-08002B30309D}\" /t REG_DWORD /d 0 /f");
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\NewStartPanel\" /v \"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\" /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\NewStartPanel\" /v \"{20D04FE0-3AEA-1069-A2D8-08002B30309D}\" /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\NewStartPanel\" /v \"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\" /t REG_DWORD /d 0 /f");
                 // show ThisPC and Control panel in desktop
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\ClassicStartMenu\" /v \"{20D04FE0-3AEA-1069-A2D8-08002B30309D}\" /t REG_DWORD /d 0 /f");
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\ClassicStartMenu\" /v \"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\" /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\ClassicStartMenu\" /v \"{20D04FE0-3AEA-1069-A2D8-08002B30309D}\" /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\HideDesktopIcons\\ClassicStartMenu\" /v \"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\" /t REG_DWORD /d 0 /f");
             }
             if (checkConfigExplorerAndQuickAccess.Checked)
             {
                 // explorer mở mặc định vào This PC
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v LaunchTo /t REG_DWORD /d 1 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v LaunchTo /t REG_DWORD /d 1 /f");
                 // tắt Recent files và Frequent folders trong Quick access
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowRecent /t REG_DWORD /d 0 /f");
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowFrequent /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowRecent /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowFrequent /t REG_DWORD /d 0 /f");
                 // hiển thị các file hệ thống
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v ShowSuperHidden /t REG_DWORD /d 1 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v ShowSuperHidden /t REG_DWORD /d 1 /f");
             }
             if (checkNeverCombineTaskbar.Checked)
             {
                 // taskbar never combine
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarGlomLevel /t REG_DWORD /d 2 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarGlomLevel /t REG_DWORD /d 2 /f");
             }
             if (checkConfigSearchAndCotana.Checked)
             {
                 // turn off cotana
-                reg("ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v AllowCortana /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v AllowCortana /t REG_DWORD /d 0 /f");
                 // show search icon
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v SearchboxTaskbarMode /t REG_DWORD /d 1 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v SearchboxTaskbarMode /t REG_DWORD /d 1 /f");
                 // Windows Search chỉ tìm trên máy tính, không tìm trên web (Bing)
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f");
+                reg("ADD \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f");
             }
             if (checkShowAllIconOnTheTray.Checked)
             {
                 // show all icon on the tray
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray /t REG_DWORD /d 0 /f");
             }
             if (checkOffShowSuggestionsInStart.Checked)
             {
                 // turn off Show suggestions occasionally in start
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f");
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-338388Enabled /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SubscribedContent-338388Enabled /t REG_DWORD /d 0 /f");
                 // Disable automatically installating apps
-                reg("ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SilentInstalledAppsEnabled /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v SilentInstalledAppsEnabled /t REG_DWORD /d 0 /f");
             }
             if (checkActivePowerHighPerformance.Checked)
             {
@@ -1908,14 +1970,25 @@ namespace WindowsSetupTools
                 // kill onedrive
                 taskkill("/f /im OneDrive.exe");
                 // remove startup onedrive
-                reg("DELETE \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"OneDrive\" /f");
+                reg("DELETE \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"OneDrive\" /f");
                 // disable onedrive
-                reg("ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive\" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f");
+                reg("ADD \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive\" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f");
             }
             if (checkDisableUserAccountControl.Checked)
             {
                 // disable UAC
-                reg("ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v EnableLUA /t REG_DWORD /d 0 /f");
+                reg("ADD \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v EnableLUA /t REG_DWORD /d 0 /f");
+            }
+            if (checkEnableRemoteDesktopOnLan.Checked)
+            {
+                // enable remote desktop
+                reg("ADD \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f");
+                // active remote desktop skip password
+                reg("ADD \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\" /v LimitBlankPasswordUse /t REG_DWORD /d 0 /f");
+                // Firewall cho phép cổng RDP 
+                netsh("advfirewall firewall set rule group=\"remote desktop\" new enable=Yes");
+                // on Mouse Keys - ép Windows luôn hiển thị con trỏ chuột trên màn hình
+                reg("ADD \"HKCU\\Control Panel\\Accessibility\\MouseKeys\" /v Flags /t REG_SZ /d 63 /f");
             }
 
             taskkill("/f /im explorer.exe");
@@ -1969,10 +2042,56 @@ namespace WindowsSetupTools
         private void buttonChangePort_Click(object sender, EventArgs e)
         {
             int port = Convert.ToInt32(textChangePort.Text);
-            reg("ADD \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v PortNumber /t REG_DWORD /d " + port + " /f");
+            reg("ADD \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v PortNumber /t REG_DWORD /d " + port + " /f");
             netsh("advfirewall firewall add rule name=\"Remote-Port\" dir=in action=allow protocol=TCP localport=" + port);
             buttonChangePort.ForeColor = Color.Blue;
             shutdown("/r /t 1800");
+        }
+
+        private void buttonStaticLanIP_Click(object sender, EventArgs e)
+        {
+            string ipAddress = textStaticLanIP.Text;
+            string interfaceName = string.Empty;
+            string subnetMask = string.Empty;
+            string gatewayAddress = string.Empty;
+
+            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface adapter in adapters)
+            {
+                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    if (adapter.Name.StartsWith("Wi-Fi") || adapter.Name.StartsWith("Ethernet"))
+                    {
+                        interfaceName = adapter.Name;
+
+                        IPInterfaceProperties properties = adapter.GetIPProperties();
+                        // Subnet Mask (IPv4)
+                        foreach (UnicastIPAddressInformation ip in properties.UnicastAddresses)
+                        {
+                            if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                            {
+                                subnetMask = ip.IPv4Mask.ToString();
+                            }
+                        }
+                        // Default Gateway (IPv4)
+                        foreach (GatewayIPAddressInformation gateway in properties.GatewayAddresses)
+                        {
+                            if (gateway.Address.AddressFamily == AddressFamily.InterNetwork)
+                            {
+                                gatewayAddress = gateway.Address.ToString();
+                            }
+                        }
+                    }
+                }
+            }
+            if (!string.IsNullOrEmpty(interfaceName) && !string.IsNullOrEmpty(ipAddress) && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
+            {
+                string arguments = $"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}";
+                netsh(arguments);
+                buttonStaticLanIP.Text = "Thành công";
+                shutdown("/r /t 1800");
+            }
         }
 
         private void buttonChangeTimezone_Click(object sender, EventArgs e)
@@ -2021,7 +2140,7 @@ namespace WindowsSetupTools
                         break;
                     }
                 }
-                GetCurrentTimezone();
+                GetInfoComputer();
             }
             catch (Exception ex)
             {
@@ -2833,6 +2952,24 @@ namespace WindowsSetupTools
             new string[] {"Fiji Standard Time", "(GMT+12:00) Fiji Islands, Kamchatka, Marshall Islands", "Pacific/Fiji"},
             new string[] {"Tonga Standard Time", "(GMT+13:00) Nuku'alofa", "Pacific/Tongatapu"}
         };
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+        private class MEMORYSTATUSEX
+        {
+            public uint dwLength = (uint)Marshal.SizeOf(typeof(MEMORYSTATUSEX));
+            public uint dwMemoryLoad;
+            public ulong ullTotalPhys;
+            public ulong ullAvailPhys;
+            public ulong ullTotalPageFile;
+            public ulong ullAvailPageFile;
+            public ulong ullTotalVirtual;
+            public ulong ullAvailVirtual;
+            public ulong ullAvailExtendedVirtual;
+        }
+
+        [return: MarshalAs(UnmanagedType.Bool)]
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern bool GlobalMemoryStatusEx([In, Out] MEMORYSTATUSEX lpBuffer);
 
     }
 }
