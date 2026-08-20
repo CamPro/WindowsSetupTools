@@ -223,6 +223,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_eset_online_scanner {
+            get {
+                object obj = ResourceManager.GetObject("icon_eset_online_scanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_everything {
             get {
                 object obj = ResourceManager.GetObject("icon_everything", resourceCulture);
@@ -603,6 +613,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_google_dns {
+            get {
+                object obj = ResourceManager.GetObject("icon_google_dns", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_google_drive {
             get {
                 object obj = ResourceManager.GetObject("icon_google_drive", resourceCulture);
@@ -963,6 +983,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_kaspersky_virus_removal_tool {
+            get {
+                object obj = ResourceManager.GetObject("icon_kaspersky_virus_removal_tool", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_keyboard_test {
             get {
                 object obj = ResourceManager.GetObject("icon_keyboard_test", resourceCulture);
@@ -986,6 +1016,16 @@ namespace WindowsSetupTools.Properties {
         internal static System.Drawing.Bitmap icon_microsoft_activation_scripts {
             get {
                 object obj = ResourceManager.GetObject("icon_microsoft_activation_scripts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_microsoft_safety_scanner {
+            get {
+                object obj = ResourceManager.GetObject("icon_microsoft_safety_scanner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

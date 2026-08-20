@@ -372,6 +372,11 @@ namespace WindowsSetupTools
             buttonSearchWifiDriver.ImageAlign = ContentAlignment.MiddleLeft;
             buttonSearchWifiDriver.TextAlign = ContentAlignment.MiddleCenter;
 
+            buttonSetGoogleDNS.Image = Properties.Resources.icon_google_dns;
+            buttonSetGoogleDNS.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonSetGoogleDNS.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSetGoogleDNS.TextAlign = ContentAlignment.MiddleCenter;
+
             buttonCanonLbp2900.Image = Properties.Resources.icon_print;
             buttonCanonLbp2900.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonCanonLbp2900.ImageAlign = ContentAlignment.MiddleLeft;
@@ -560,6 +565,22 @@ namespace WindowsSetupTools
             buttonWindowsActivateForVPS.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonWindowsActivateForVPS.ImageAlign = ContentAlignment.MiddleLeft;
             buttonWindowsActivateForVPS.TextAlign = ContentAlignment.MiddleCenter;
+
+
+            buttonKasperskyVirusRemovalTool.Image = Properties.Resources.icon_kaspersky_virus_removal_tool;
+            buttonKasperskyVirusRemovalTool.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonKasperskyVirusRemovalTool.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonKasperskyVirusRemovalTool.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonESETOnlineScanner.Image = Properties.Resources.icon_eset_online_scanner;
+            buttonESETOnlineScanner.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonESETOnlineScanner.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonESETOnlineScanner.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonMicrosoftSafetyScanner.Image = Properties.Resources.icon_microsoft_safety_scanner;
+            buttonMicrosoftSafetyScanner.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonMicrosoftSafetyScanner.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonMicrosoftSafetyScanner.TextAlign = ContentAlignment.MiddleCenter;
 
 
             buttonNirsoftChromePassword.Image = Properties.Resources.icon_nirsoft_chrome_password;
@@ -2462,6 +2483,24 @@ namespace WindowsSetupTools
             string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/nirsoft-chrome-password.7z";
             DownCompressAndStart((Button)sender, linkUrl, "ChromePass.exe");
             timerNirsoftStart.Enabled = true;
+        }
+
+        private void buttonKasperskyVirusRemovalTool_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonESETOnlineScanner_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://download.eset.com/com/eset/tools/online_scanner/latest/esetonlinescanner.exe";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonMicrosoftSafetyScanner_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://go.microsoft.com/fwlink/?LinkId=212732";
+            OpenBrowserUrl(linkUrl);
         }
 
         private void buttonNirsoftIEPasswords_Click(object sender, EventArgs e)

@@ -89,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-google-dns.png" />
+    <None Include="Resources\icon-microsoft-safety-scanner.png" />
+    <None Include="Resources\icon-kaspersky-virus-removal-tool.png" />
+    <None Include="Resources\icon-eset-online-scanner.png" />
     <None Include="Resources\icon-download.png" />
     <None Include="Resources\icon-net-framework.png" />
     <None Include="Resources\icon-sordum-fix-print-spooler.png" />

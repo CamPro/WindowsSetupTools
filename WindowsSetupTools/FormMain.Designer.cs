@@ -151,6 +151,10 @@
             this.buttonDefenderControl = new System.Windows.Forms.Button();
             this.buttonWindowsUpdateBlocker = new System.Windows.Forms.Button();
             this.tabPageChuyenDung = new System.Windows.Forms.TabPage();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.buttonMicrosoftSafetyScanner = new System.Windows.Forms.Button();
+            this.buttonESETOnlineScanner = new System.Windows.Forms.Button();
+            this.buttonKasperskyVirusRemovalTool = new System.Windows.Forms.Button();
             this.groupBox55 = new System.Windows.Forms.GroupBox();
             this.buttonWindowsActivateForVPS = new System.Windows.Forms.Button();
             this.buttonActivateAIOTools = new System.Windows.Forms.Button();
@@ -287,6 +291,7 @@
             this.tabPageTienIch.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.tabPageChuyenDung.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.groupBox55.SuspendLayout();
             this.groupBox54.SuspendLayout();
             this.groupBox51.SuspendLayout();
@@ -1630,6 +1635,7 @@
             // 
             // tabPageChuyenDung
             // 
+            this.tabPageChuyenDung.Controls.Add(this.groupBox17);
             this.tabPageChuyenDung.Controls.Add(this.groupBox55);
             this.tabPageChuyenDung.Controls.Add(this.groupBox54);
             this.tabPageChuyenDung.Controls.Add(this.groupBox51);
@@ -1641,6 +1647,48 @@
             this.tabPageChuyenDung.Text = "Công cụ chuyên dụng";
             this.tabPageChuyenDung.UseVisualStyleBackColor = true;
             // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.buttonMicrosoftSafetyScanner);
+            this.groupBox17.Controls.Add(this.buttonESETOnlineScanner);
+            this.groupBox17.Controls.Add(this.buttonKasperskyVirusRemovalTool);
+            this.groupBox17.Location = new System.Drawing.Point(640, 10);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(282, 475);
+            this.groupBox17.TabIndex = 2;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Antivirus";
+            // 
+            // buttonMicrosoftSafetyScanner
+            // 
+            this.buttonMicrosoftSafetyScanner.Location = new System.Drawing.Point(6, 125);
+            this.buttonMicrosoftSafetyScanner.Name = "buttonMicrosoftSafetyScanner";
+            this.buttonMicrosoftSafetyScanner.Size = new System.Drawing.Size(270, 38);
+            this.buttonMicrosoftSafetyScanner.TabIndex = 2;
+            this.buttonMicrosoftSafetyScanner.Text = "Microsoft Safety Scanner";
+            this.buttonMicrosoftSafetyScanner.UseVisualStyleBackColor = true;
+            this.buttonMicrosoftSafetyScanner.Click += new System.EventHandler(this.buttonMicrosoftSafetyScanner_Click);
+            // 
+            // buttonESETOnlineScanner
+            // 
+            this.buttonESETOnlineScanner.Location = new System.Drawing.Point(6, 75);
+            this.buttonESETOnlineScanner.Name = "buttonESETOnlineScanner";
+            this.buttonESETOnlineScanner.Size = new System.Drawing.Size(270, 38);
+            this.buttonESETOnlineScanner.TabIndex = 1;
+            this.buttonESETOnlineScanner.Text = "ESET Online Scanner";
+            this.buttonESETOnlineScanner.UseVisualStyleBackColor = true;
+            this.buttonESETOnlineScanner.Click += new System.EventHandler(this.buttonESETOnlineScanner_Click);
+            // 
+            // buttonKasperskyVirusRemovalTool
+            // 
+            this.buttonKasperskyVirusRemovalTool.Location = new System.Drawing.Point(6, 25);
+            this.buttonKasperskyVirusRemovalTool.Name = "buttonKasperskyVirusRemovalTool";
+            this.buttonKasperskyVirusRemovalTool.Size = new System.Drawing.Size(270, 38);
+            this.buttonKasperskyVirusRemovalTool.TabIndex = 0;
+            this.buttonKasperskyVirusRemovalTool.Text = "Kaspersky Virus Removal Tool";
+            this.buttonKasperskyVirusRemovalTool.UseVisualStyleBackColor = true;
+            this.buttonKasperskyVirusRemovalTool.Click += new System.EventHandler(this.buttonKasperskyVirusRemovalTool_Click);
+            // 
             // groupBox55
             // 
             this.groupBox55.Controls.Add(this.buttonWindowsActivateForVPS);
@@ -1649,7 +1697,7 @@
             this.groupBox55.Controls.Add(this.buttonMicrosoftActivationScriptsOnline);
             this.groupBox55.Location = new System.Drawing.Point(316, 10);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Size = new System.Drawing.Size(606, 475);
+            this.groupBox55.Size = new System.Drawing.Size(318, 475);
             this.groupBox55.TabIndex = 1;
             this.groupBox55.TabStop = false;
             this.groupBox55.Text = "Kích hoạt Windows, Office";
@@ -1706,7 +1754,7 @@
             this.groupBox54.Location = new System.Drawing.Point(928, 10);
             this.groupBox54.Name = "groupBox54";
             this.groupBox54.Size = new System.Drawing.Size(300, 475);
-            this.groupBox54.TabIndex = 2;
+            this.groupBox54.TabIndex = 3;
             this.groupBox54.TabStop = false;
             this.groupBox54.Text = "NirSoft";
             // 
@@ -3192,6 +3240,7 @@
             this.tabPageTienIch.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.tabPageChuyenDung.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
             this.groupBox54.ResumeLayout(false);
             this.groupBox51.ResumeLayout(false);
@@ -3441,6 +3490,10 @@
         private System.Windows.Forms.TextBox textStaticLanIP;
         private System.Windows.Forms.Button buttonSetGoogleDNS;
         private System.Windows.Forms.LinkLabel linkInfoUser;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button buttonKasperskyVirusRemovalTool;
+        private System.Windows.Forms.Button buttonMicrosoftSafetyScanner;
+        private System.Windows.Forms.Button buttonESETOnlineScanner;
     }
 }
 
