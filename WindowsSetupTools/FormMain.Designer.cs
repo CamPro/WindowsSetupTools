@@ -115,6 +115,8 @@
             this.buttonSearchWifiDriver = new System.Windows.Forms.Button();
             this.buttonAddCmdRightMouse = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.buttonStaticLanIP = new System.Windows.Forms.Button();
+            this.textStaticLanIP = new System.Windows.Forms.TextBox();
             this.buttonChangePort = new System.Windows.Forms.Button();
             this.buttonChangeUser = new System.Windows.Forms.Button();
             this.buttonChangePass = new System.Windows.Forms.Button();
@@ -261,8 +263,6 @@
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
-            this.buttonStaticLanIP = new System.Windows.Forms.Button();
-            this.textStaticLanIP = new System.Windows.Forms.TextBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -1249,6 +1249,27 @@
             this.groupBox21.TabIndex = 11;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "VPS";
+            // 
+            // buttonStaticLanIP
+            // 
+            this.buttonStaticLanIP.Enabled = false;
+            this.buttonStaticLanIP.Location = new System.Drawing.Point(220, 243);
+            this.buttonStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStaticLanIP.Name = "buttonStaticLanIP";
+            this.buttonStaticLanIP.Size = new System.Drawing.Size(120, 30);
+            this.buttonStaticLanIP.TabIndex = 27;
+            this.buttonStaticLanIP.Text = "Static LAN IP";
+            this.buttonStaticLanIP.UseVisualStyleBackColor = true;
+            this.buttonStaticLanIP.Click += new System.EventHandler(this.buttonStaticLanIP_Click);
+            // 
+            // textStaticLanIP
+            // 
+            this.textStaticLanIP.Location = new System.Drawing.Point(10, 247);
+            this.textStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
+            this.textStaticLanIP.Name = "textStaticLanIP";
+            this.textStaticLanIP.Size = new System.Drawing.Size(206, 23);
+            this.textStaticLanIP.TabIndex = 26;
+            this.textStaticLanIP.TextChanged += new System.EventHandler(this.textStaticLanIP_TextChanged);
             // 
             // buttonChangePort
             // 
@@ -3061,25 +3082,6 @@
             this.buttonSelfUpdate.Text = "Cập nhật";
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
-            // 
-            // buttonStaticLanIP
-            // 
-            this.buttonStaticLanIP.Location = new System.Drawing.Point(220, 243);
-            this.buttonStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStaticLanIP.Name = "buttonStaticLanIP";
-            this.buttonStaticLanIP.Size = new System.Drawing.Size(120, 30);
-            this.buttonStaticLanIP.TabIndex = 27;
-            this.buttonStaticLanIP.Text = "Static LAN IP";
-            this.buttonStaticLanIP.UseVisualStyleBackColor = true;
-            this.buttonStaticLanIP.Click += new System.EventHandler(this.buttonStaticLanIP_Click);
-            // 
-            // textStaticLanIP
-            // 
-            this.textStaticLanIP.Location = new System.Drawing.Point(10, 247);
-            this.textStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
-            this.textStaticLanIP.Name = "textStaticLanIP";
-            this.textStaticLanIP.Size = new System.Drawing.Size(206, 23);
-            this.textStaticLanIP.TabIndex = 26;
             // 
             // FormMain
             // 

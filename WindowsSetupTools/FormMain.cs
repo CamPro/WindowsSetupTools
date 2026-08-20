@@ -1042,6 +1042,7 @@ namespace WindowsSetupTools
             }
             linkInfoLanIP.Text = infoIpLan;
             textStaticLanIP.Text = infoIpLan;
+            buttonStaticLanIP.Enabled = false;
 
             // CPU
             string infoCpu = string.Empty;
@@ -2035,6 +2036,11 @@ namespace WindowsSetupTools
             buttonChangePort.Enabled = true;
         }
 
+        private void textStaticLanIP_TextChanged(object sender, EventArgs e)
+        {
+            buttonStaticLanIP.Enabled = true;
+        }
+
         private void buttonChangePass_Click(object sender, EventArgs e)
         {
             string pass = textChangePass.Text;
@@ -2110,7 +2116,10 @@ namespace WindowsSetupTools
                     }
                 }
             }
-            if (!string.IsNullOrEmpty(interfaceName) && !string.IsNullOrEmpty(ipAddress) && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
+
+            bool isStrictIPv4 = IPAddress.TryParse(ipAddress, out IPAddress ipv4) && ipv4.AddressFamily == AddressFamily.InterNetwork && ipAddress.Split('.').Length == 4;
+            
+            if (!string.IsNullOrEmpty(interfaceName) && isStrictIPv4 && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
             {
                 string arguments = $"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}";
                 netsh(arguments);
@@ -3002,5 +3011,6 @@ namespace WindowsSetupTools
 
         private const byte VK_NUMLOCK = 0x90; // Mã phím Num Lock
         private const uint KEYEVENTF_KEYUP = 0x0002; // Cờ báo nhả phím
+
     }
 }
