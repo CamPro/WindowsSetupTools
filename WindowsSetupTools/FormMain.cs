@@ -24,6 +24,8 @@ namespace WindowsSetupTools
 
         readonly string appUrl = "https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe";
 
+        WebClient client = new WebClient();
+
         string chromeApp = string.Empty;
         string edgeApp = string.Empty;
 
@@ -38,6 +40,9 @@ namespace WindowsSetupTools
         private void FormMain_Load(object sender, EventArgs e)
         {
             linkInfoComputerName.Text = Environment.MachineName;
+
+            client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36");
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
@@ -1298,7 +1303,7 @@ namespace WindowsSetupTools
         {
             string linkUrl = appUrl;
             string tempFile = Path.GetTempFileName();
-            new System.Net.WebClient().DownloadFile(linkUrl, tempFile);
+            client.DownloadFile(linkUrl, tempFile);
 
             string batchFile = Path.Combine(Path.GetTempPath(), "self-update.bat");
             string script = $"TIMEOUT /T 2 /NOBREAK & COPY /Y \"{tempFile}\" \"{Application.ExecutablePath}\" & DEL /F /S /Q \"{tempFile}\" & DEL /F /S /Q \"{batchFile}\" & START \"\" \"{Application.ExecutablePath}\"";
@@ -1571,7 +1576,7 @@ namespace WindowsSetupTools
             {
                 if (!File.Exists(localPath))
                 {
-                    new System.Net.WebClient().DownloadFile(fileUrl, localPath);
+                    client.DownloadFile(fileUrl, localPath);
                 }
 
                 if (!File.Exists(winrar)) WriteMessage("WinRAR is not installed");
@@ -1637,7 +1642,7 @@ namespace WindowsSetupTools
             {
                 if (!File.Exists(localPath))
                 {
-                    new System.Net.WebClient().DownloadFile(fileUrl, localPath);
+                    client.DownloadFile(fileUrl, localPath);
                 }
 
                 if (!File.Exists(winrar)) WriteMessage("WinRAR is not installed");
@@ -1755,7 +1760,7 @@ namespace WindowsSetupTools
             string linkUrl = "https://www.internetdownloadmanager.com/download.html";
             string fileUrl = string.Empty;
 
-            string htmlCode = new System.Net.WebClient().DownloadString(linkUrl);
+            string htmlCode = client.DownloadString(linkUrl);
 
             foreach (var item in htmlCode.Split('\n'))
             {
@@ -1916,6 +1921,20 @@ namespace WindowsSetupTools
                 }
             }
             Process.Start("chrome.exe", $"https://www.google.com/search?q={wifiAdapter.Replace(" ", "+")}+driver+download");
+        }
+
+        private void buttonSetGoogleDNS_Click(object sender, EventArgs e)
+        {
+            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface adapter in adapters)
+            {
+                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    netsh($"interface ip set dns name=\"{adapter.Name}\" static 8.8.8.8");
+                    netsh($"interface ip add dns name=\"{adapter.Name}\" 8.8.4.4 index=2");
+                }
+            }
         }
 
         private void checkChangeAll_CheckedChanged(object sender, EventArgs e)
@@ -2126,6 +2145,8 @@ namespace WindowsSetupTools
                 buttonStaticLanIP.Text = "Thành công";
                 shutdown("/r /t 1800");
             }
+
+            buttonSetGoogleDNS_Click(null, null);
         }
 
         private void buttonChangeTimezone_Click(object sender, EventArgs e)
@@ -2140,7 +2161,7 @@ namespace WindowsSetupTools
                 string city = "";
                 string ip = "";
                 string timezone = "";
-                string dataJson = new System.Net.WebClient().DownloadString("http://ip-api.com/json");
+                string dataJson = client.DownloadString("http://ip-api.com/json");
                 string[] array = dataJson.Replace("{", "").Replace("}", "").Replace(",", "|").Split('|');
                 foreach (var item in array)
                 {
@@ -2294,7 +2315,7 @@ namespace WindowsSetupTools
         private void buttonFidoScript_Click(object sender, EventArgs e)
         {
             string linkUrl = "https://github.com/pbatard/Fido/raw/refs/heads/master/Fido.ps1";
-            string scriptText = new System.Net.WebClient().DownloadString(linkUrl);
+            string scriptText = client.DownloadString(linkUrl);
 
             string shellFile = Path.Combine(Path.GetTempPath(), "Fido.ps1");
             File.WriteAllText(shellFile, scriptText);
@@ -2419,7 +2440,7 @@ namespace WindowsSetupTools
         private void buttonMicrosoftActivationScriptsOffline_Click(object sender, EventArgs e)
         {
             string linkUrl = "https://github.com/massgravel/Microsoft-Activation-Scripts/raw/refs/heads/master/MAS/All-In-One-Version-KL/MAS_AIO.cmd";
-            string scriptText = new System.Net.WebClient().DownloadString(linkUrl);
+            string scriptText = client.DownloadString(linkUrl);
 
             string batchFile = Path.Combine(Path.GetTempPath(), "MAS.bat");
             File.WriteAllText(batchFile, scriptText);

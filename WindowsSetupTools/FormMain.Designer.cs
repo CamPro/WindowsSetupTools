@@ -263,6 +263,7 @@
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
+            this.buttonSetGoogleDNS = new System.Windows.Forms.Button();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -971,6 +972,7 @@
             // 
             // tabPageCaiDatNhanh
             // 
+            this.tabPageCaiDatNhanh.Controls.Add(this.buttonSetGoogleDNS);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox16);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox13);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox14);
@@ -3083,6 +3085,16 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
+            // buttonSetGoogleDNS
+            // 
+            this.buttonSetGoogleDNS.Location = new System.Drawing.Point(20, 170);
+            this.buttonSetGoogleDNS.Name = "buttonSetGoogleDNS";
+            this.buttonSetGoogleDNS.Size = new System.Drawing.Size(300, 38);
+            this.buttonSetGoogleDNS.TabIndex = 15;
+            this.buttonSetGoogleDNS.Text = "Cài đặt Google DNS";
+            this.buttonSetGoogleDNS.UseVisualStyleBackColor = true;
+            this.buttonSetGoogleDNS.Click += new System.EventHandler(this.buttonSetGoogleDNS_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3412,6 +3424,7 @@
         private System.Windows.Forms.LinkLabel linkInfoRam;
         private System.Windows.Forms.Button buttonStaticLanIP;
         private System.Windows.Forms.TextBox textStaticLanIP;
+        private System.Windows.Forms.Button buttonSetGoogleDNS;
     }
 }
 
