@@ -1015,7 +1015,7 @@
             // 
             // buttonNetworkReset
             // 
-            this.buttonNetworkReset.Location = new System.Drawing.Point(8, 120);
+            this.buttonNetworkReset.Location = new System.Drawing.Point(10, 120);
             this.buttonNetworkReset.Name = "buttonNetworkReset";
             this.buttonNetworkReset.Size = new System.Drawing.Size(250, 38);
             this.buttonNetworkReset.TabIndex = 3;
@@ -1025,7 +1025,7 @@
             // 
             // buttonNetworkStaticIPLan
             // 
-            this.buttonNetworkStaticIPLan.Location = new System.Drawing.Point(158, 26);
+            this.buttonNetworkStaticIPLan.Location = new System.Drawing.Point(160, 26);
             this.buttonNetworkStaticIPLan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNetworkStaticIPLan.Name = "buttonNetworkStaticIPLan";
             this.buttonNetworkStaticIPLan.Size = new System.Drawing.Size(100, 30);
@@ -1036,7 +1036,7 @@
             // 
             // buttonNetworkGoogleDNS
             // 
-            this.buttonNetworkGoogleDNS.Location = new System.Drawing.Point(8, 70);
+            this.buttonNetworkGoogleDNS.Location = new System.Drawing.Point(10, 70);
             this.buttonNetworkGoogleDNS.Name = "buttonNetworkGoogleDNS";
             this.buttonNetworkGoogleDNS.Size = new System.Drawing.Size(250, 38);
             this.buttonNetworkGoogleDNS.TabIndex = 2;
@@ -1046,7 +1046,7 @@
             // 
             // textNetworkStaticIPLan
             // 
-            this.textNetworkStaticIPLan.Location = new System.Drawing.Point(8, 30);
+            this.textNetworkStaticIPLan.Location = new System.Drawing.Point(10, 30);
             this.textNetworkStaticIPLan.Margin = new System.Windows.Forms.Padding(2);
             this.textNetworkStaticIPLan.Name = "textNetworkStaticIPLan";
             this.textNetworkStaticIPLan.Size = new System.Drawing.Size(146, 23);
@@ -1065,9 +1065,9 @@
             // 
             // buttonCanonLbp2900
             // 
-            this.buttonCanonLbp2900.Location = new System.Drawing.Point(15, 30);
+            this.buttonCanonLbp2900.Location = new System.Drawing.Point(10, 25);
             this.buttonCanonLbp2900.Name = "buttonCanonLbp2900";
-            this.buttonCanonLbp2900.Size = new System.Drawing.Size(200, 38);
+            this.buttonCanonLbp2900.Size = new System.Drawing.Size(254, 38);
             this.buttonCanonLbp2900.TabIndex = 0;
             this.buttonCanonLbp2900.Text = "Canon LBP 2900 x64";
             this.buttonCanonLbp2900.UseVisualStyleBackColor = true;
@@ -1091,7 +1091,7 @@
             // 
             this.buttonTimeSyncTaskSchedulerDaily.Location = new System.Drawing.Point(10, 140);
             this.buttonTimeSyncTaskSchedulerDaily.Name = "buttonTimeSyncTaskSchedulerDaily";
-            this.buttonTimeSyncTaskSchedulerDaily.Size = new System.Drawing.Size(409, 38);
+            this.buttonTimeSyncTaskSchedulerDaily.Size = new System.Drawing.Size(406, 38);
             this.buttonTimeSyncTaskSchedulerDaily.TabIndex = 4;
             this.buttonTimeSyncTaskSchedulerDaily.Text = "Tạo TaskScheduler đồng bộ thời gian 6h hàng ngày";
             this.buttonTimeSyncTaskSchedulerDaily.UseVisualStyleBackColor = true;
@@ -1099,7 +1099,7 @@
             // 
             // buttonTimeUpdate
             // 
-            this.buttonTimeUpdate.Location = new System.Drawing.Point(249, 85);
+            this.buttonTimeUpdate.Location = new System.Drawing.Point(246, 85);
             this.buttonTimeUpdate.Name = "buttonTimeUpdate";
             this.buttonTimeUpdate.Size = new System.Drawing.Size(170, 38);
             this.buttonTimeUpdate.TabIndex = 3;

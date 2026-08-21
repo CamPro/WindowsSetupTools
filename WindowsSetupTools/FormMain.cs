@@ -1183,6 +1183,18 @@ namespace WindowsSetupTools
             onetask.Start();
         }
 
+        public void UpdateButtonText(Button buttonSet, string text)
+        {
+            string buttext = buttonSet.Text;
+            buttonSet.Text = text;
+            Task onetask = new Task(() =>
+            {
+                Thread.Sleep(2000);
+                this.Invoke(new Action(() => { buttonSet.Text = buttext; }));
+            });
+            onetask.Start();
+        }
+
         public void GetInfoComputer()
         {
             linkInfoComputerName.Text = Environment.MachineName;
@@ -1257,7 +1269,7 @@ namespace WindowsSetupTools
                 // Cập nhật thời gian
                 net("start w32time");
                 w32tm("/resync /force");
-                messages.Add("Đồng bộ thời gian");
+                messages.Add("Đồng bộ ngày giờ");
 
                 this.Invoke(new Action(() => { labelMsg.Text = string.Join(", ", messages); }));
             });
@@ -2113,6 +2125,8 @@ namespace WindowsSetupTools
 
             taskkill("/f /im explorer.exe");
             Process.Start("explorer.exe");
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void textChangePass_TextChanged(object sender, EventArgs e)
@@ -2142,6 +2156,8 @@ namespace WindowsSetupTools
             buttonChangePass.ForeColor = Color.Blue;
             Clipboard.SetText(pass);
             shutdown("/r /t 1800");
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonChangeUser_Click(object sender, EventArgs e)
@@ -2157,6 +2173,8 @@ namespace WindowsSetupTools
             buttonChangePass.Enabled = false;
             textChangePass.Enabled = false;
             shutdown("/r /t 1800");
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonChangePort_Click(object sender, EventArgs e)
@@ -2166,6 +2184,8 @@ namespace WindowsSetupTools
             netsh("advfirewall firewall add rule name=\"Remote-Port\" dir=in action=allow protocol=TCP localport=" + port);
             buttonChangePort.ForeColor = Color.Blue;
             shutdown("/r /t 1800");
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonTimezoneByIP_Click(object sender, EventArgs e)
@@ -2214,7 +2234,10 @@ namespace WindowsSetupTools
                         break;
                     }
                 }
+
                 GetTimezoneUtc();
+
+                UpdateButtonText((Button)sender, "Thành công");
             }
             catch (Exception ex)
             {
@@ -2226,15 +2249,15 @@ namespace WindowsSetupTools
         {
             net("start w32time");
             w32tm("/resync /force");
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonTimeSyncTaskSchedulerDaily_Click(object sender, EventArgs e)
         {
-            net("start w32time");
-            //w32tm("/config /syncfromflags:manual /manualpeerlist:\"time.windows.com,0x9\" /reliable:YES /update");
-            schtasks("/create /tn \"AutoSyncTimeDaily\" /tr \"cmd.exe /c w32tm /resync\" /sc daily /st 06:00 /rl HIGHEST /f");
+            schtasks("/create /RU Administrators /tn AutoSyncTimeDaily /tr \"cmd.exe /c net start w32time & w32tm /resync\" /sc daily /st 06:00 /rl HIGHEST /f");
 
-            buttonTimeSyncTaskSchedulerDaily.Text = "Thành công";
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonNetworkStaticIPLan_Click(object sender, EventArgs e)
@@ -2280,7 +2303,7 @@ namespace WindowsSetupTools
                 netsh($"interface ip set dns name=\"{interfaceName}\" static 8.8.8.8");
                 netsh($"interface ip add dns name=\"{interfaceName}\" 8.8.4.4 index=2");
 
-                buttonNetworkStaticIPLan.Text = "Thành công";
+                UpdateButtonText((Button)sender, "Thành công");
             }
         }
 
@@ -2299,7 +2322,8 @@ namespace WindowsSetupTools
                 {
                     netsh($"interface ip set dns name=\"{adapter.Name}\" static 8.8.8.8");
                     netsh($"interface ip add dns name=\"{adapter.Name}\" 8.8.4.4 index=2");
-                    buttonNetworkGoogleDNS.Text = "Thành công";
+
+                    UpdateButtonText((Button)sender, "Thành công");
                 }
             }
         }
@@ -2319,7 +2343,8 @@ namespace WindowsSetupTools
             ipconfig("/release");   // Giải phóng IP hiện tại
             ipconfig("/flushdns");  // Xóa bộ nhớ đệm DNS
             ipconfig("/renew"); // Xin cấp lại IP mới từ DHCP
-            buttonNetworkReset.Text = "Thành công";
+
+            UpdateButtonText((Button)sender, "Thành công");
         }
 
         private void buttonCanonLbp2900_Click(object sender, EventArgs e)
