@@ -1011,7 +1011,7 @@ namespace WindowsSetupTools
         private void buttonAutoSelfDelete_Click(object sender, EventArgs e)
         {
             string batchFile = Path.Combine(Path.GetTempPath(), "self-delete.bat");
-            string script = $"TIMEOUT /T 3 /NOBREAK & DEL /F /S /Q {Application.ExecutablePath} & DEL /F /S /Q {batchFile}";
+            string script = $"TIMEOUT /T 1 /NOBREAK & DEL /F /S /Q {Application.ExecutablePath} & DEL /F /S /Q {batchFile}";
             File.WriteAllText(batchFile, script);
             Process process = new Process();
             process.StartInfo.FileName = batchFile;
@@ -1484,12 +1484,13 @@ namespace WindowsSetupTools
 
         private void buttonSelfUpdate_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
             string linkUrl = appUrl;
             string tempFile = Path.GetTempFileName();
             client.DownloadFile(linkUrl, tempFile);
 
             string batchFile = Path.Combine(Path.GetTempPath(), "self-update.bat");
-            string script = $"TIMEOUT /T 2 /NOBREAK & COPY /Y \"{tempFile}\" \"{Application.ExecutablePath}\" & DEL /F /S /Q \"{tempFile}\" & DEL /F /S /Q \"{batchFile}\" & START \"\" \"{Application.ExecutablePath}\"";
+            string script = $"TIMEOUT /T 1 /NOBREAK & COPY /Y \"{tempFile}\" \"{Application.ExecutablePath}\" & DEL /F /S /Q \"{tempFile}\" & DEL /F /S /Q \"{batchFile}\" & START \"\" \"{Application.ExecutablePath}\"";
             File.WriteAllText(batchFile, script);
             Process process = new Process();
             process.StartInfo.FileName = batchFile;
