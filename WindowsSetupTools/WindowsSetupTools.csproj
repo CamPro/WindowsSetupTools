@@ -89,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-services.png" />
+    <None Include="Resources\icon-time-globe.png" />
+    <None Include="Resources\icon-time-earth.png" />
+    <None Include="Resources\icon-date-time.png" />
+    <None Include="Resources\icon-settings2.png" />
+    <None Include="Resources\icon-reset.png" />
     <None Include="Resources\icon-google-dns.png" />
     <None Include="Resources\icon-microsoft-safety-scanner.png" />
     <None Include="Resources\icon-kaspersky-virus-removal-tool.png" />

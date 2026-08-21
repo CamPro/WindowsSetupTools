@@ -60,10 +60,6 @@ namespace WindowsSetupTools
             keyReg = Registry.LocalMachine.OpenSubKey(keyPath) ?? Registry.CurrentUser.OpenSubKey(keyPath);
             edgeApp = keyReg?.GetValue("")?.ToString();
 
-            buttonChangePass.Enabled = false;
-            buttonChangeUser.Enabled = false;
-            buttonChangePort.Enabled = false;
-
             GetInfoComputer();
             GetTimezoneUtc();
             FirstAutoSetup();
@@ -113,6 +109,9 @@ namespace WindowsSetupTools
 
             buttonOpenTaskManager.Image = Properties.Resources.icon_task_manager;
             buttonOpenTaskManager.Text = "";
+
+            buttonOpenServices.Image = Properties.Resources.icon_services;
+            buttonOpenServices.Text = "";
 
             buttonDiskManagement.Image = Properties.Resources.icon_diskmgmt;
             buttonDiskManagement.Text = "";
@@ -372,15 +371,40 @@ namespace WindowsSetupTools
             buttonSearchWifiDriver.ImageAlign = ContentAlignment.MiddleLeft;
             buttonSearchWifiDriver.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttonSetGoogleDNS.Image = Properties.Resources.icon_google_dns;
-            buttonSetGoogleDNS.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonSetGoogleDNS.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetGoogleDNS.TextAlign = ContentAlignment.MiddleCenter;
+            buttonNetworkGoogleDNS.Image = Properties.Resources.icon_google_dns;
+            buttonNetworkGoogleDNS.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetworkGoogleDNS.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetworkGoogleDNS.TextAlign = ContentAlignment.MiddleCenter;
 
             buttonCanonLbp2900.Image = Properties.Resources.icon_print;
             buttonCanonLbp2900.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonCanonLbp2900.ImageAlign = ContentAlignment.MiddleLeft;
             buttonCanonLbp2900.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetworkReset.Image = Properties.Resources.icon_reset;
+            buttonNetworkReset.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetworkReset.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetworkReset.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonTimezoneByIP.Image = Properties.Resources.icon_time_globe;
+            buttonTimezoneByIP.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonTimezoneByIP.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTimezoneByIP.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonTimeUpdate.Image = Properties.Resources.icon_date_time;
+            buttonTimeUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonTimeUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTimeUpdate.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonTimeSyncTaskSchedulerDaily.Image = Properties.Resources.icon_time_earth;
+            buttonTimeSyncTaskSchedulerDaily.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonTimeSyncTaskSchedulerDaily.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTimeSyncTaskSchedulerDaily.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonApplyFavoriteSettings.Image = Properties.Resources.icon_settings2;
+            buttonApplyFavoriteSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonApplyFavoriteSettings.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonApplyFavoriteSettings.TextAlign = ContentAlignment.MiddleCenter;
 
         }
 
@@ -855,6 +879,113 @@ namespace WindowsSetupTools
             linkGlaryUninstaler.ImageAlign = ContentAlignment.MiddleLeft;
         }
 
+        public string cmd(string arg)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = $"/c {arg}",
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+            var process = Process.Start(psi);
+
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+            process.Dispose();
+            return output;
+        }
+
+        public void net(string arg)
+        {
+            var psi = new ProcessStartInfo("net.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void wmic(string arg)
+        {
+            var psi = new ProcessStartInfo("wmic.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void reg(string arg)
+        {
+            var psi = new ProcessStartInfo("reg.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void netsh(string arg)
+        {
+            var psi = new ProcessStartInfo("netsh.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void ipconfig(string arg)
+        {
+            var psi = new ProcessStartInfo("ipconfig.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void shutdown(string arg)
+        {
+            var psi = new ProcessStartInfo("shutdown.exe", "-a") { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit(1000);
+            psi = new ProcessStartInfo("shutdown.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void taskkill(string exe)
+        {
+            var psi = new ProcessStartInfo("taskkill.exe", "/IM " + exe + " /F") { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void tzutil(string zonename)
+        {
+            var psi = new ProcessStartInfo("tzutil.exe", "/s \"" + zonename + "\"") { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void schtasks(string arg)
+        {
+            var psi = new ProcessStartInfo("schtasks.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void cacls(string arg)
+        {
+            var psi = new ProcessStartInfo("cacls.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void takeown(string arg)
+        {
+            var psi = new ProcessStartInfo("takeown.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
+        public void w32tm(string arg)
+        {
+            var psi = new ProcessStartInfo("w32tm.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
+            var process = Process.Start(psi);
+            process.WaitForExit();
+        }
+
         private void checkTopMost_CheckedChanged(object sender, EventArgs e)
         {
             this.TopMost = checkTopMost.Checked;
@@ -1068,8 +1199,7 @@ namespace WindowsSetupTools
                 infoIpLan = endPoint?.Address.ToString();
             }
             linkInfoLanIP.Text = infoIpLan;
-            textStaticLanIP.Text = infoIpLan;
-            buttonStaticLanIP.Enabled = false;
+            textNetworkStaticIPLan.Text = infoIpLan;
 
             // CPU
             string infoCpu = string.Empty;
@@ -1089,6 +1219,10 @@ namespace WindowsSetupTools
                 totalMemory = $"{Math.Round(totalGb, 1)}";
             }
             linkInfoRam.Text = $"RAM: {totalMemory} GB";
+
+            buttonChangePass.Enabled = false;
+            buttonChangeUser.Enabled = false;
+            buttonChangePort.Enabled = false;
         }
 
         public void GetTimezoneUtc()
@@ -1109,14 +1243,23 @@ namespace WindowsSetupTools
         {
             Task onetask = new Task(() =>
             {
+                List<string> messages = new List<string>();
+
                 // Nếu Num Lock đang tắt thì mô phỏng thao tác nhấn phím để bật
                 if (!Console.NumberLock)
                 {
                     keybd_event(VK_NUMLOCK, 0x45, 0, UIntPtr.Zero);                 // Nhấn phím
                     keybd_event(VK_NUMLOCK, 0x45, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Nhả phím
 
-                    this.Invoke(new Action(() => { labelMsg.Text = "Num Lock is On"; }));
+                    messages.Add("Bật Num Lock");
                 }
+
+                // Cập nhật thời gian
+                net("start w32time");
+                w32tm("/resync /force");
+                messages.Add("Đồng bộ thời gian");
+
+                this.Invoke(new Action(() => { labelMsg.Text = string.Join(", ", messages); }));
             });
             onetask.Start();
         }
@@ -1193,6 +1336,12 @@ namespace WindowsSetupTools
         private void buttonOpenTaskManager_Click(object sender, EventArgs e)
         {
             try { Process.Start("taskmgr.exe"); }
+            catch (Exception ex) { WriteMessage(ex.Message); }
+        }
+
+        private void buttonOpenServices_Click(object sender, EventArgs e)
+        {
+            try { Process.Start("services.msc"); }
             catch (Exception ex) { WriteMessage(ex.Message); }
         }
 
@@ -1361,99 +1510,6 @@ namespace WindowsSetupTools
         private void linkInfoRam_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Clipboard.SetText(linkInfoRam.Text);
-        }
-
-        public string cmd(string arg)
-        {
-            var psi = new ProcessStartInfo
-            {
-                FileName = "cmd.exe",
-                Arguments = $"/c {arg}",
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-            var process = Process.Start(psi);
-
-            string output = process.StandardOutput.ReadToEnd();
-            string error = process.StandardError.ReadToEnd();
-            process.WaitForExit();
-            process.Dispose();
-            return output;
-        }
-
-        public void net(string arg)
-        {
-            var psi = new ProcessStartInfo("net.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void wmic(string arg)
-        {
-            var psi = new ProcessStartInfo("wmic.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void reg(string arg)
-        {
-            var psi = new ProcessStartInfo("reg.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void netsh(string arg)
-        {
-            var psi = new ProcessStartInfo("netsh.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void shutdown(string arg)
-        {
-            var psi = new ProcessStartInfo("shutdown.exe", "-a") { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(1000);
-            psi = new ProcessStartInfo("shutdown.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void taskkill(string exe)
-        {
-            var psi = new ProcessStartInfo("taskkill.exe", "/IM " + exe + " /F") { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void tzutil(string zonename)
-        {
-            var psi = new ProcessStartInfo("tzutil.exe", "/s \"" + zonename + "\"") { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void schtasks(string arg)
-        {
-            var psi = new ProcessStartInfo("schtasks.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void cacls(string arg)
-        {
-            var psi = new ProcessStartInfo("cacls.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
-        }
-
-        public void takeown(string arg)
-        {
-            var psi = new ProcessStartInfo("takeown.exe", arg) { CreateNoWindow = true, UseShellExecute = false };
-            var process = Process.Start(psi);
-            process.WaitForExit(5000);
         }
 
         #endregion GLOBAL
@@ -1933,14 +1989,12 @@ namespace WindowsSetupTools
         private void buttonSearchWifiDriver_Click(object sender, EventArgs e)
         {
             string wifiAdapter = string.Empty;
-            // Lấy tất cả các giao diện mạng trên máy tính
             NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
             foreach (NetworkInterface adapter in adapters)
             {
-                // Kiểm tra nếu là card mạng không dây (Wi-Fi)
                 if (adapter.NetworkInterfaceType == NetworkInterfaceType.Wireless80211)
                 {
-                    if (adapter.Name == "Wi-Fi")
+                    if (adapter.Name.StartsWith("Wi-Fi"))
                     {
                         wifiAdapter = adapter.Description;
                         break;
@@ -1948,20 +2002,6 @@ namespace WindowsSetupTools
                 }
             }
             Process.Start("chrome.exe", $"https://www.google.com/search?q={wifiAdapter.Replace(" ", "+")}+driver+download");
-        }
-
-        private void buttonSetGoogleDNS_Click(object sender, EventArgs e)
-        {
-            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
-
-            foreach (NetworkInterface adapter in adapters)
-            {
-                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
-                {
-                    netsh($"interface ip set dns name=\"{adapter.Name}\" static 8.8.8.8");
-                    netsh($"interface ip add dns name=\"{adapter.Name}\" 8.8.4.4 index=2");
-                }
-            }
         }
 
         private void checkChangeAll_CheckedChanged(object sender, EventArgs e)
@@ -1977,6 +2017,14 @@ namespace WindowsSetupTools
             checkDisableOneDrive.Checked = checkChangeAll.Checked;
             checkDisableUserAccountControl.Checked = checkChangeAll.Checked;
             checkEnableRemoteDesktopOnLan.Checked = checkChangeAll.Checked;
+        }
+
+        private void checkActivePowerHighPerformance_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkActivePowerHighPerformance.Checked)
+            {
+                checkDisableSleepWhilePluggedIn.Checked = true;
+            }
         }
 
         private void buttonApplyFavoriteSettings_Click(object sender, EventArgs e)
@@ -2082,11 +2130,6 @@ namespace WindowsSetupTools
             buttonChangePort.Enabled = true;
         }
 
-        private void textStaticLanIP_TextChanged(object sender, EventArgs e)
-        {
-            buttonStaticLanIP.Enabled = true;
-        }
-
         private void buttonChangePass_Click(object sender, EventArgs e)
         {
             string pass = textChangePass.Text;
@@ -2125,56 +2168,7 @@ namespace WindowsSetupTools
             shutdown("/r /t 1800");
         }
 
-        private void buttonStaticLanIP_Click(object sender, EventArgs e)
-        {
-            string ipAddress = textStaticLanIP.Text;
-            string interfaceName = string.Empty;
-            string subnetMask = string.Empty;
-            string gatewayAddress = string.Empty;
-
-            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
-
-            foreach (NetworkInterface adapter in adapters)
-            {
-                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
-                {
-                    interfaceName = adapter.Name;
-
-                    IPInterfaceProperties properties = adapter.GetIPProperties();
-                    // Subnet Mask (IPv4)
-                    foreach (UnicastIPAddressInformation ip in properties.UnicastAddresses)
-                    {
-                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
-                        {
-                            subnetMask = ip.IPv4Mask.ToString();
-                        }
-                    }
-                    // Default Gateway (IPv4)
-                    foreach (GatewayIPAddressInformation gateway in properties.GatewayAddresses)
-                    {
-                        if (gateway.Address.AddressFamily == AddressFamily.InterNetwork)
-                        {
-                            gatewayAddress = gateway.Address.ToString();
-                        }
-                    }
-                }
-            }
-
-            bool isStrictIPv4 = IPAddress.TryParse(ipAddress, out IPAddress ipv4) && ipv4.AddressFamily == AddressFamily.InterNetwork && ipAddress.Split('.').Length == 4;
-            
-            if (!string.IsNullOrEmpty(interfaceName) && isStrictIPv4 && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
-            {
-                netsh($"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}");
-
-                netsh($"interface ip set dns name=\"{interfaceName}\" static 8.8.8.8");
-                netsh($"interface ip add dns name=\"{interfaceName}\" 8.8.4.4 index=2");
-
-                buttonStaticLanIP.Text = "Thành công";
-                shutdown("/r /t 1800");
-            }
-        }
-
-        private void buttonChangeTimezone_Click(object sender, EventArgs e)
+        private void buttonTimezoneByIP_Click(object sender, EventArgs e)
         {
             try
             {
@@ -2228,12 +2222,104 @@ namespace WindowsSetupTools
             }
         }
 
-        private void checkActivePowerHighPerformance_CheckedChanged(object sender, EventArgs e)
+        private void buttonTimeUpdate_Click(object sender, EventArgs e)
         {
-            if (checkActivePowerHighPerformance.Checked)
+            net("start w32time");
+            w32tm("/resync /force");
+        }
+
+        private void buttonTimeSyncTaskSchedulerDaily_Click(object sender, EventArgs e)
+        {
+            net("start w32time");
+            //w32tm("/config /syncfromflags:manual /manualpeerlist:\"time.windows.com,0x9\" /reliable:YES /update");
+            schtasks("/create /tn \"AutoSyncTimeDaily\" /tr \"cmd.exe /c w32tm /resync\" /sc daily /st 06:00 /rl HIGHEST /f");
+
+            buttonTimeSyncTaskSchedulerDaily.Text = "Thành công";
+        }
+
+        private void buttonNetworkStaticIPLan_Click(object sender, EventArgs e)
+        {
+            string ipAddress = textNetworkStaticIPLan.Text;
+            string interfaceName = string.Empty;
+            string subnetMask = string.Empty;
+            string gatewayAddress = string.Empty;
+
+            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface adapter in adapters)
             {
-                checkDisableSleepWhilePluggedIn.Checked = true;
+                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    interfaceName = adapter.Name;
+
+                    IPInterfaceProperties properties = adapter.GetIPProperties();
+                    // Subnet Mask (IPv4)
+                    foreach (UnicastIPAddressInformation ip in properties.UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                        {
+                            subnetMask = ip.IPv4Mask.ToString();
+                        }
+                    }
+                    // Default Gateway (IPv4)
+                    foreach (GatewayIPAddressInformation gateway in properties.GatewayAddresses)
+                    {
+                        if (gateway.Address.AddressFamily == AddressFamily.InterNetwork)
+                        {
+                            gatewayAddress = gateway.Address.ToString();
+                        }
+                    }
+                }
             }
+
+            bool isStrictIPv4 = IPAddress.TryParse(ipAddress, out IPAddress ipv4) && ipv4.AddressFamily == AddressFamily.InterNetwork && ipAddress.Split('.').Length == 4;
+
+            if (!string.IsNullOrEmpty(interfaceName) && isStrictIPv4 && !string.IsNullOrEmpty(subnetMask) && !string.IsNullOrEmpty(gatewayAddress))
+            {
+                netsh($"interface ip set address name=\"{interfaceName}\" static {ipAddress} {subnetMask} {gatewayAddress}");
+                netsh($"interface ip set dns name=\"{interfaceName}\" static 8.8.8.8");
+                netsh($"interface ip add dns name=\"{interfaceName}\" 8.8.4.4 index=2");
+
+                buttonNetworkStaticIPLan.Text = "Thành công";
+            }
+        }
+
+        private void textNetworkStaticIPLan_TextChanged(object sender, EventArgs e)
+        {
+            buttonNetworkStaticIPLan.Enabled = true;
+        }
+
+        private void buttonNetworkGoogleDNS_Click(object sender, EventArgs e)
+        {
+            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface adapter in adapters)
+            {
+                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    netsh($"interface ip set dns name=\"{adapter.Name}\" static 8.8.8.8");
+                    netsh($"interface ip add dns name=\"{adapter.Name}\" 8.8.4.4 index=2");
+                    buttonNetworkGoogleDNS.Text = "Thành công";
+                }
+            }
+        }
+
+        private void buttonNetworkReset_Click(object sender, EventArgs e)
+        {
+            NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+            foreach (NetworkInterface adapter in adapters)
+            {
+                if (adapter.OperationalStatus == OperationalStatus.Up && adapter.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                {
+                    netsh($"interface ip set dns name=\"{adapter.Name}\" dhcp");    // reset DNS về mặc định (DHCP)
+                }
+            }
+            netsh("winsock reset"); // Reset Winsock catalog
+            netsh("int ip reset");  // Reset TCP/IP stack
+            ipconfig("/release");   // Giải phóng IP hiện tại
+            ipconfig("/flushdns");  // Xóa bộ nhớ đệm DNS
+            ipconfig("/renew"); // Xin cấp lại IP mới từ DHCP
+            buttonNetworkReset.Text = "Thành công";
         }
 
         private void buttonCanonLbp2900_Click(object sender, EventArgs e)

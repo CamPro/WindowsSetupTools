@@ -183,6 +183,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_date_time {
+            get {
+                object obj = ResourceManager.GetObject("icon_date_time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_devmgmt {
             get {
                 object obj = ResourceManager.GetObject("icon_devmgmt", resourceCulture);
@@ -1283,6 +1293,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_reset {
+            get {
+                object obj = ResourceManager.GetObject("icon_reset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_restart {
             get {
                 object obj = ResourceManager.GetObject("icon_restart", resourceCulture);
@@ -1303,9 +1323,29 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_services {
+            get {
+                object obj = ResourceManager.GetObject("icon_services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_settings {
             get {
                 object obj = ResourceManager.GetObject("icon_settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_settings2 {
+            get {
+                object obj = ResourceManager.GetObject("icon_settings2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1546,6 +1586,26 @@ namespace WindowsSetupTools.Properties {
         internal static System.Drawing.Bitmap icon_time {
             get {
                 object obj = ResourceManager.GetObject("icon_time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_time_earth {
+            get {
+                object obj = ResourceManager.GetObject("icon_time_earth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_time_globe {
+            get {
+                object obj = ResourceManager.GetObject("icon_time_globe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -92,13 +92,19 @@
             this.buttonSetupSevenZip = new System.Windows.Forms.Button();
             this.buttonSetupWinRAR = new System.Windows.Forms.Button();
             this.tabPageCaiDatNhanh = new System.Windows.Forms.TabPage();
-            this.buttonSetGoogleDNS = new System.Windows.Forms.Button();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.buttonNetworkReset = new System.Windows.Forms.Button();
+            this.buttonNetworkStaticIPLan = new System.Windows.Forms.Button();
+            this.buttonNetworkGoogleDNS = new System.Windows.Forms.Button();
+            this.textNetworkStaticIPLan = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.buttonCanonLbp2900 = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.buttonTimeSyncTaskSchedulerDaily = new System.Windows.Forms.Button();
+            this.buttonTimeUpdate = new System.Windows.Forms.Button();
             this.labelTimezone = new System.Windows.Forms.Label();
             this.labelTimezoneUtc = new System.Windows.Forms.Label();
-            this.buttonChangeTimezone = new System.Windows.Forms.Button();
+            this.buttonTimezoneByIP = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.checkChangeAll = new System.Windows.Forms.CheckBox();
             this.checkEnableRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
@@ -116,8 +122,6 @@
             this.buttonSearchWifiDriver = new System.Windows.Forms.Button();
             this.buttonAddCmdRightMouse = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.buttonStaticLanIP = new System.Windows.Forms.Button();
-            this.textStaticLanIP = new System.Windows.Forms.TextBox();
             this.buttonChangePort = new System.Windows.Forms.Button();
             this.buttonChangeUser = new System.Windows.Forms.Button();
             this.buttonChangePass = new System.Windows.Forms.Button();
@@ -265,6 +269,7 @@
             this.linkInfoCpu = new System.Windows.Forms.LinkLabel();
             this.linkInfoRam = new System.Windows.Forms.LinkLabel();
             this.linkInfoUser = new System.Windows.Forms.LinkLabel();
+            this.buttonOpenServices = new System.Windows.Forms.Button();
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
@@ -284,6 +289,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageCaiDatNhanh.SuspendLayout();
+            this.groupBox18.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -328,7 +334,7 @@
             this.buttonOpenSettings.Location = new System.Drawing.Point(130, 60);
             this.buttonOpenSettings.Name = "buttonOpenSettings";
             this.buttonOpenSettings.Size = new System.Drawing.Size(40, 40);
-            this.buttonOpenSettings.TabIndex = 21;
+            this.buttonOpenSettings.TabIndex = 17;
             this.buttonOpenSettings.Text = "ST";
             this.toolTipSetup.SetToolTip(this.buttonOpenSettings, "Windows Settings");
             this.buttonOpenSettings.UseVisualStyleBackColor = true;
@@ -350,7 +356,7 @@
             this.buttonOpenAppsAndFeatures.Location = new System.Drawing.Point(180, 60);
             this.buttonOpenAppsAndFeatures.Name = "buttonOpenAppsAndFeatures";
             this.buttonOpenAppsAndFeatures.Size = new System.Drawing.Size(40, 40);
-            this.buttonOpenAppsAndFeatures.TabIndex = 22;
+            this.buttonOpenAppsAndFeatures.TabIndex = 18;
             this.buttonOpenAppsAndFeatures.Text = "A F";
             this.toolTipSetup.SetToolTip(this.buttonOpenAppsAndFeatures, "Apps & Features");
             this.buttonOpenAppsAndFeatures.UseVisualStyleBackColor = true;
@@ -372,7 +378,7 @@
             this.buttonOpenPowerShell.Location = new System.Drawing.Point(230, 60);
             this.buttonOpenPowerShell.Name = "buttonOpenPowerShell";
             this.buttonOpenPowerShell.Size = new System.Drawing.Size(40, 40);
-            this.buttonOpenPowerShell.TabIndex = 23;
+            this.buttonOpenPowerShell.TabIndex = 19;
             this.buttonOpenPowerShell.Text = "PS";
             this.toolTipSetup.SetToolTip(this.buttonOpenPowerShell, "Windows PowerShell");
             this.buttonOpenPowerShell.UseVisualStyleBackColor = true;
@@ -978,7 +984,7 @@
             // 
             // tabPageCaiDatNhanh
             // 
-            this.tabPageCaiDatNhanh.Controls.Add(this.buttonSetGoogleDNS);
+            this.tabPageCaiDatNhanh.Controls.Add(this.groupBox18);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox16);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox13);
             this.tabPageCaiDatNhanh.Controls.Add(this.groupBox14);
@@ -994,23 +1000,66 @@
             this.tabPageCaiDatNhanh.Text = "Cài đặt nhanh";
             this.tabPageCaiDatNhanh.UseVisualStyleBackColor = true;
             // 
-            // buttonSetGoogleDNS
+            // groupBox18
             // 
-            this.buttonSetGoogleDNS.Location = new System.Drawing.Point(20, 170);
-            this.buttonSetGoogleDNS.Name = "buttonSetGoogleDNS";
-            this.buttonSetGoogleDNS.Size = new System.Drawing.Size(300, 38);
-            this.buttonSetGoogleDNS.TabIndex = 15;
-            this.buttonSetGoogleDNS.Text = "Cài đặt Google DNS";
-            this.buttonSetGoogleDNS.UseVisualStyleBackColor = true;
-            this.buttonSetGoogleDNS.Click += new System.EventHandler(this.buttonSetGoogleDNS_Click);
+            this.groupBox18.Controls.Add(this.buttonNetworkReset);
+            this.groupBox18.Controls.Add(this.buttonNetworkStaticIPLan);
+            this.groupBox18.Controls.Add(this.buttonNetworkGoogleDNS);
+            this.groupBox18.Controls.Add(this.textNetworkStaticIPLan);
+            this.groupBox18.Location = new System.Drawing.Point(3, 277);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(440, 208);
+            this.groupBox18.TabIndex = 13;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Cấu hình Mạng";
+            // 
+            // buttonNetworkReset
+            // 
+            this.buttonNetworkReset.Location = new System.Drawing.Point(8, 120);
+            this.buttonNetworkReset.Name = "buttonNetworkReset";
+            this.buttonNetworkReset.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetworkReset.TabIndex = 3;
+            this.buttonNetworkReset.Text = "Đặt mạng về mặc định";
+            this.buttonNetworkReset.UseVisualStyleBackColor = true;
+            this.buttonNetworkReset.Click += new System.EventHandler(this.buttonNetworkReset_Click);
+            // 
+            // buttonNetworkStaticIPLan
+            // 
+            this.buttonNetworkStaticIPLan.Location = new System.Drawing.Point(158, 26);
+            this.buttonNetworkStaticIPLan.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonNetworkStaticIPLan.Name = "buttonNetworkStaticIPLan";
+            this.buttonNetworkStaticIPLan.Size = new System.Drawing.Size(100, 30);
+            this.buttonNetworkStaticIPLan.TabIndex = 1;
+            this.buttonNetworkStaticIPLan.Text = "Static LAN IP";
+            this.buttonNetworkStaticIPLan.UseVisualStyleBackColor = true;
+            this.buttonNetworkStaticIPLan.Click += new System.EventHandler(this.buttonNetworkStaticIPLan_Click);
+            // 
+            // buttonNetworkGoogleDNS
+            // 
+            this.buttonNetworkGoogleDNS.Location = new System.Drawing.Point(8, 70);
+            this.buttonNetworkGoogleDNS.Name = "buttonNetworkGoogleDNS";
+            this.buttonNetworkGoogleDNS.Size = new System.Drawing.Size(250, 38);
+            this.buttonNetworkGoogleDNS.TabIndex = 2;
+            this.buttonNetworkGoogleDNS.Text = "Cài đặt Google DNS";
+            this.buttonNetworkGoogleDNS.UseVisualStyleBackColor = true;
+            this.buttonNetworkGoogleDNS.Click += new System.EventHandler(this.buttonNetworkGoogleDNS_Click);
+            // 
+            // textNetworkStaticIPLan
+            // 
+            this.textNetworkStaticIPLan.Location = new System.Drawing.Point(8, 30);
+            this.textNetworkStaticIPLan.Margin = new System.Windows.Forms.Padding(2);
+            this.textNetworkStaticIPLan.Name = "textNetworkStaticIPLan";
+            this.textNetworkStaticIPLan.Size = new System.Drawing.Size(146, 23);
+            this.textNetworkStaticIPLan.TabIndex = 0;
+            this.textNetworkStaticIPLan.TextChanged += new System.EventHandler(this.textNetworkStaticIPLan_TextChanged);
             // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.buttonCanonLbp2900);
-            this.groupBox16.Location = new System.Drawing.Point(6, 321);
+            this.groupBox16.Location = new System.Drawing.Point(601, 164);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(508, 164);
-            this.groupBox16.TabIndex = 14;
+            this.groupBox16.Size = new System.Drawing.Size(273, 107);
+            this.groupBox16.TabIndex = 12;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Máy in";
             // 
@@ -1018,7 +1067,7 @@
             // 
             this.buttonCanonLbp2900.Location = new System.Drawing.Point(15, 30);
             this.buttonCanonLbp2900.Name = "buttonCanonLbp2900";
-            this.buttonCanonLbp2900.Size = new System.Drawing.Size(250, 38);
+            this.buttonCanonLbp2900.Size = new System.Drawing.Size(200, 38);
             this.buttonCanonLbp2900.TabIndex = 0;
             this.buttonCanonLbp2900.Text = "Canon LBP 2900 x64";
             this.buttonCanonLbp2900.UseVisualStyleBackColor = true;
@@ -1026,20 +1075,42 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.buttonTimeSyncTaskSchedulerDaily);
+            this.groupBox13.Controls.Add(this.buttonTimeUpdate);
             this.groupBox13.Controls.Add(this.labelTimezone);
             this.groupBox13.Controls.Add(this.labelTimezoneUtc);
-            this.groupBox13.Controls.Add(this.buttonChangeTimezone);
-            this.groupBox13.Location = new System.Drawing.Point(876, 307);
+            this.groupBox13.Controls.Add(this.buttonTimezoneByIP);
+            this.groupBox13.Location = new System.Drawing.Point(449, 277);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(356, 178);
-            this.groupBox13.TabIndex = 12;
+            this.groupBox13.Size = new System.Drawing.Size(425, 208);
+            this.groupBox13.TabIndex = 14;
             this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Time Zone";
+            this.groupBox13.Text = "Cấu hình Thời Gian";
+            // 
+            // buttonTimeSyncTaskSchedulerDaily
+            // 
+            this.buttonTimeSyncTaskSchedulerDaily.Location = new System.Drawing.Point(10, 140);
+            this.buttonTimeSyncTaskSchedulerDaily.Name = "buttonTimeSyncTaskSchedulerDaily";
+            this.buttonTimeSyncTaskSchedulerDaily.Size = new System.Drawing.Size(409, 38);
+            this.buttonTimeSyncTaskSchedulerDaily.TabIndex = 4;
+            this.buttonTimeSyncTaskSchedulerDaily.Text = "Tạo TaskScheduler đồng bộ thời gian 6h hàng ngày";
+            this.buttonTimeSyncTaskSchedulerDaily.UseVisualStyleBackColor = true;
+            this.buttonTimeSyncTaskSchedulerDaily.Click += new System.EventHandler(this.buttonTimeSyncTaskSchedulerDaily_Click);
+            // 
+            // buttonTimeUpdate
+            // 
+            this.buttonTimeUpdate.Location = new System.Drawing.Point(249, 85);
+            this.buttonTimeUpdate.Name = "buttonTimeUpdate";
+            this.buttonTimeUpdate.Size = new System.Drawing.Size(170, 38);
+            this.buttonTimeUpdate.TabIndex = 3;
+            this.buttonTimeUpdate.Text = "Đồng bộ ngày giờ";
+            this.buttonTimeUpdate.UseVisualStyleBackColor = true;
+            this.buttonTimeUpdate.Click += new System.EventHandler(this.buttonTimeUpdate_Click);
             // 
             // labelTimezone
             // 
             this.labelTimezone.AutoSize = true;
-            this.labelTimezone.Location = new System.Drawing.Point(10, 73);
+            this.labelTimezone.Location = new System.Drawing.Point(10, 55);
             this.labelTimezone.Name = "labelTimezone";
             this.labelTimezone.Size = new System.Drawing.Size(74, 17);
             this.labelTimezone.TabIndex = 1;
@@ -1048,21 +1119,21 @@
             // labelTimezoneUtc
             // 
             this.labelTimezoneUtc.AutoSize = true;
-            this.labelTimezoneUtc.Location = new System.Drawing.Point(10, 33);
+            this.labelTimezoneUtc.Location = new System.Drawing.Point(10, 25);
             this.labelTimezoneUtc.Name = "labelTimezoneUtc";
             this.labelTimezoneUtc.Size = new System.Drawing.Size(40, 17);
             this.labelTimezoneUtc.TabIndex = 0;
             this.labelTimezoneUtc.Text = "UTC:";
             // 
-            // buttonChangeTimezone
+            // buttonTimezoneByIP
             // 
-            this.buttonChangeTimezone.Location = new System.Drawing.Point(10, 113);
-            this.buttonChangeTimezone.Name = "buttonChangeTimezone";
-            this.buttonChangeTimezone.Size = new System.Drawing.Size(330, 38);
-            this.buttonChangeTimezone.TabIndex = 2;
-            this.buttonChangeTimezone.Text = "Thiếp lập Timezone theo IP";
-            this.buttonChangeTimezone.UseVisualStyleBackColor = true;
-            this.buttonChangeTimezone.Click += new System.EventHandler(this.buttonChangeTimezone_Click);
+            this.buttonTimezoneByIP.Location = new System.Drawing.Point(10, 85);
+            this.buttonTimezoneByIP.Name = "buttonTimezoneByIP";
+            this.buttonTimezoneByIP.Size = new System.Drawing.Size(170, 38);
+            this.buttonTimezoneByIP.TabIndex = 2;
+            this.buttonTimezoneByIP.Text = "Timezone theo IP";
+            this.buttonTimezoneByIP.UseVisualStyleBackColor = true;
+            this.buttonTimezoneByIP.Click += new System.EventHandler(this.buttonTimezoneByIP_Click);
             // 
             // groupBox14
             // 
@@ -1079,10 +1150,10 @@
             this.groupBox14.Controls.Add(this.checkShowAllIconOnTheTray);
             this.groupBox14.Controls.Add(this.buttonApplyFavoriteSettings);
             this.groupBox14.Controls.Add(this.checkDisableSleepWhilePluggedIn);
-            this.groupBox14.Location = new System.Drawing.Point(520, 10);
+            this.groupBox14.Location = new System.Drawing.Point(880, 10);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(350, 475);
-            this.groupBox14.TabIndex = 10;
+            this.groupBox14.TabIndex = 15;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Cài đặt trải nghiệm";
             // 
@@ -1102,7 +1173,7 @@
             this.checkEnableRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 380);
             this.checkEnableRemoteDesktopOnLan.Name = "checkEnableRemoteDesktopOnLan";
             this.checkEnableRemoteDesktopOnLan.Size = new System.Drawing.Size(291, 21);
-            this.checkEnableRemoteDesktopOnLan.TabIndex = 11;
+            this.checkEnableRemoteDesktopOnLan.TabIndex = 10;
             this.checkEnableRemoteDesktopOnLan.Text = "Bật remote desktop trong LAN (skip pass)";
             this.checkEnableRemoteDesktopOnLan.UseVisualStyleBackColor = true;
             // 
@@ -1211,10 +1282,10 @@
             // 
             // buttonApplyFavoriteSettings
             // 
-            this.buttonApplyFavoriteSettings.Location = new System.Drawing.Point(26, 429);
+            this.buttonApplyFavoriteSettings.Location = new System.Drawing.Point(15, 430);
             this.buttonApplyFavoriteSettings.Name = "buttonApplyFavoriteSettings";
-            this.buttonApplyFavoriteSettings.Size = new System.Drawing.Size(300, 38);
-            this.buttonApplyFavoriteSettings.TabIndex = 10;
+            this.buttonApplyFavoriteSettings.Size = new System.Drawing.Size(200, 38);
+            this.buttonApplyFavoriteSettings.TabIndex = 11;
             this.buttonApplyFavoriteSettings.Text = "Áp dụng cài đặt";
             this.buttonApplyFavoriteSettings.UseVisualStyleBackColor = true;
             this.buttonApplyFavoriteSettings.Click += new System.EventHandler(this.buttonApplyFavoriteSettings_Click);
@@ -1235,9 +1306,9 @@
             // 
             this.buttonSearchWifiDriver.Location = new System.Drawing.Point(20, 20);
             this.buttonSearchWifiDriver.Name = "buttonSearchWifiDriver";
-            this.buttonSearchWifiDriver.Size = new System.Drawing.Size(300, 38);
+            this.buttonSearchWifiDriver.Size = new System.Drawing.Size(250, 38);
             this.buttonSearchWifiDriver.TabIndex = 1;
-            this.buttonSearchWifiDriver.Text = "Tìm tải xuống driver wifi";
+            this.buttonSearchWifiDriver.Text = "Tìm kiếm driver wifi";
             this.buttonSearchWifiDriver.UseVisualStyleBackColor = true;
             this.buttonSearchWifiDriver.Click += new System.EventHandler(this.buttonSearchWifiDriver_Click);
             // 
@@ -1245,78 +1316,56 @@
             // 
             this.buttonAddCmdRightMouse.Location = new System.Drawing.Point(20, 120);
             this.buttonAddCmdRightMouse.Name = "buttonAddCmdRightMouse";
-            this.buttonAddCmdRightMouse.Size = new System.Drawing.Size(300, 38);
+            this.buttonAddCmdRightMouse.Size = new System.Drawing.Size(250, 38);
             this.buttonAddCmdRightMouse.TabIndex = 3;
-            this.buttonAddCmdRightMouse.Text = "Thêm CMD vào menu chuột phải";
+            this.buttonAddCmdRightMouse.Text = "Thêm cmd menu chuột phải";
             this.buttonAddCmdRightMouse.UseVisualStyleBackColor = true;
             this.buttonAddCmdRightMouse.Click += new System.EventHandler(this.buttonAddCmdRightMouse_Click);
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.buttonStaticLanIP);
-            this.groupBox21.Controls.Add(this.textStaticLanIP);
             this.groupBox21.Controls.Add(this.buttonChangePort);
             this.groupBox21.Controls.Add(this.buttonChangeUser);
             this.groupBox21.Controls.Add(this.buttonChangePass);
             this.groupBox21.Controls.Add(this.textChangePort);
             this.groupBox21.Controls.Add(this.textChangeUser);
             this.groupBox21.Controls.Add(this.textChangePass);
-            this.groupBox21.Location = new System.Drawing.Point(878, 10);
+            this.groupBox21.Location = new System.Drawing.Point(601, 10);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(350, 291);
+            this.groupBox21.Size = new System.Drawing.Size(273, 148);
             this.groupBox21.TabIndex = 11;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "VPS";
             // 
-            // buttonStaticLanIP
-            // 
-            this.buttonStaticLanIP.Location = new System.Drawing.Point(220, 243);
-            this.buttonStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStaticLanIP.Name = "buttonStaticLanIP";
-            this.buttonStaticLanIP.Size = new System.Drawing.Size(120, 30);
-            this.buttonStaticLanIP.TabIndex = 27;
-            this.buttonStaticLanIP.Text = "Static LAN IP";
-            this.buttonStaticLanIP.UseVisualStyleBackColor = true;
-            this.buttonStaticLanIP.Click += new System.EventHandler(this.buttonStaticLanIP_Click);
-            // 
-            // textStaticLanIP
-            // 
-            this.textStaticLanIP.Location = new System.Drawing.Point(10, 247);
-            this.textStaticLanIP.Margin = new System.Windows.Forms.Padding(2);
-            this.textStaticLanIP.Name = "textStaticLanIP";
-            this.textStaticLanIP.Size = new System.Drawing.Size(206, 23);
-            this.textStaticLanIP.TabIndex = 26;
-            this.textStaticLanIP.TextChanged += new System.EventHandler(this.textStaticLanIP_TextChanged);
-            // 
             // buttonChangePort
             // 
-            this.buttonChangePort.Location = new System.Drawing.Point(220, 101);
+            this.buttonChangePort.Location = new System.Drawing.Point(164, 101);
             this.buttonChangePort.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangePort.Name = "buttonChangePort";
-            this.buttonChangePort.Size = new System.Drawing.Size(120, 30);
-            this.buttonChangePort.TabIndex = 25;
+            this.buttonChangePort.Size = new System.Drawing.Size(100, 30);
+            this.buttonChangePort.TabIndex = 5;
             this.buttonChangePort.Text = "Change Port";
             this.buttonChangePort.UseVisualStyleBackColor = true;
             this.buttonChangePort.Click += new System.EventHandler(this.buttonChangePort_Click);
             // 
             // buttonChangeUser
             // 
-            this.buttonChangeUser.Location = new System.Drawing.Point(220, 61);
+            this.buttonChangeUser.Location = new System.Drawing.Point(164, 61);
             this.buttonChangeUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangeUser.Name = "buttonChangeUser";
-            this.buttonChangeUser.Size = new System.Drawing.Size(120, 30);
-            this.buttonChangeUser.TabIndex = 23;
+            this.buttonChangeUser.Size = new System.Drawing.Size(100, 30);
+            this.buttonChangeUser.TabIndex = 3;
             this.buttonChangeUser.Text = "Change User";
             this.buttonChangeUser.UseVisualStyleBackColor = true;
             this.buttonChangeUser.Click += new System.EventHandler(this.buttonChangeUser_Click);
             // 
             // buttonChangePass
             // 
-            this.buttonChangePass.Location = new System.Drawing.Point(220, 21);
+            this.buttonChangePass.Location = new System.Drawing.Point(164, 21);
             this.buttonChangePass.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangePass.Name = "buttonChangePass";
-            this.buttonChangePass.Size = new System.Drawing.Size(120, 30);
-            this.buttonChangePass.TabIndex = 21;
+            this.buttonChangePass.Size = new System.Drawing.Size(100, 30);
+            this.buttonChangePass.TabIndex = 1;
             this.buttonChangePass.Text = "Change Pass";
             this.buttonChangePass.UseVisualStyleBackColor = true;
             this.buttonChangePass.Click += new System.EventHandler(this.buttonChangePass_Click);
@@ -1326,8 +1375,8 @@
             this.textChangePort.Location = new System.Drawing.Point(10, 105);
             this.textChangePort.Margin = new System.Windows.Forms.Padding(2);
             this.textChangePort.Name = "textChangePort";
-            this.textChangePort.Size = new System.Drawing.Size(206, 23);
-            this.textChangePort.TabIndex = 24;
+            this.textChangePort.Size = new System.Drawing.Size(150, 23);
+            this.textChangePort.TabIndex = 4;
             this.textChangePort.TextChanged += new System.EventHandler(this.textChangePort_TextChanged);
             // 
             // textChangeUser
@@ -1335,8 +1384,8 @@
             this.textChangeUser.Location = new System.Drawing.Point(10, 65);
             this.textChangeUser.Margin = new System.Windows.Forms.Padding(2);
             this.textChangeUser.Name = "textChangeUser";
-            this.textChangeUser.Size = new System.Drawing.Size(206, 23);
-            this.textChangeUser.TabIndex = 22;
+            this.textChangeUser.Size = new System.Drawing.Size(150, 23);
+            this.textChangeUser.TabIndex = 2;
             this.textChangeUser.TextChanged += new System.EventHandler(this.textChangeUser_TextChanged);
             // 
             // textChangePass
@@ -1344,15 +1393,15 @@
             this.textChangePass.Location = new System.Drawing.Point(10, 25);
             this.textChangePass.Margin = new System.Windows.Forms.Padding(2);
             this.textChangePass.Name = "textChangePass";
-            this.textChangePass.Size = new System.Drawing.Size(206, 23);
-            this.textChangePass.TabIndex = 20;
+            this.textChangePass.Size = new System.Drawing.Size(150, 23);
+            this.textChangePass.TabIndex = 0;
             this.textChangePass.TextChanged += new System.EventHandler(this.textChangePass_TextChanged);
             // 
             // buttonOffRealTimeProtection
             // 
             this.buttonOffRealTimeProtection.Location = new System.Drawing.Point(20, 70);
             this.buttonOffRealTimeProtection.Name = "buttonOffRealTimeProtection";
-            this.buttonOffRealTimeProtection.Size = new System.Drawing.Size(300, 38);
+            this.buttonOffRealTimeProtection.Size = new System.Drawing.Size(250, 38);
             this.buttonOffRealTimeProtection.TabIndex = 2;
             this.buttonOffRealTimeProtection.Text = "Tắt bảo vệ thời gian thực";
             this.buttonOffRealTimeProtection.UseVisualStyleBackColor = true;
@@ -2834,10 +2883,10 @@
             // 
             // buttonDiskManagement
             // 
-            this.buttonDiskManagement.Location = new System.Drawing.Point(530, 10);
+            this.buttonDiskManagement.Location = new System.Drawing.Point(580, 10);
             this.buttonDiskManagement.Name = "buttonDiskManagement";
             this.buttonDiskManagement.Size = new System.Drawing.Size(40, 40);
-            this.buttonDiskManagement.TabIndex = 9;
+            this.buttonDiskManagement.TabIndex = 10;
             this.buttonDiskManagement.Text = "Dk";
             this.toolTipSetup.SetToolTip(this.buttonDiskManagement, "Disk Management (diskmgmt)");
             this.buttonDiskManagement.UseVisualStyleBackColor = true;
@@ -2845,10 +2894,10 @@
             // 
             // buttonDeviceManager
             // 
-            this.buttonDeviceManager.Location = new System.Drawing.Point(580, 10);
+            this.buttonDeviceManager.Location = new System.Drawing.Point(630, 10);
             this.buttonDeviceManager.Name = "buttonDeviceManager";
             this.buttonDeviceManager.Size = new System.Drawing.Size(40, 40);
-            this.buttonDeviceManager.TabIndex = 10;
+            this.buttonDeviceManager.TabIndex = 11;
             this.buttonDeviceManager.Text = "Dv";
             this.toolTipSetup.SetToolTip(this.buttonDeviceManager, "Device Manager (devmgmt)");
             this.buttonDeviceManager.UseVisualStyleBackColor = true;
@@ -2856,10 +2905,10 @@
             // 
             // buttonRegistryEditor
             // 
-            this.buttonRegistryEditor.Location = new System.Drawing.Point(630, 10);
+            this.buttonRegistryEditor.Location = new System.Drawing.Point(680, 10);
             this.buttonRegistryEditor.Name = "buttonRegistryEditor";
             this.buttonRegistryEditor.Size = new System.Drawing.Size(40, 40);
-            this.buttonRegistryEditor.TabIndex = 11;
+            this.buttonRegistryEditor.TabIndex = 12;
             this.buttonRegistryEditor.Text = "R";
             this.toolTipSetup.SetToolTip(this.buttonRegistryEditor, "Registry Editor");
             this.buttonRegistryEditor.UseVisualStyleBackColor = true;
@@ -2867,10 +2916,10 @@
             // 
             // buttonSystemProtection
             // 
-            this.buttonSystemProtection.Location = new System.Drawing.Point(680, 10);
+            this.buttonSystemProtection.Location = new System.Drawing.Point(730, 10);
             this.buttonSystemProtection.Name = "buttonSystemProtection";
             this.buttonSystemProtection.Size = new System.Drawing.Size(40, 40);
-            this.buttonSystemProtection.TabIndex = 12;
+            this.buttonSystemProtection.TabIndex = 13;
             this.buttonSystemProtection.Text = "SP";
             this.toolTipSetup.SetToolTip(this.buttonSystemProtection, "System Protection (restore point)");
             this.buttonSystemProtection.UseVisualStyleBackColor = true;
@@ -2878,10 +2927,10 @@
             // 
             // buttonMicrosoftDirectXDiagnosticTool
             // 
-            this.buttonMicrosoftDirectXDiagnosticTool.Location = new System.Drawing.Point(730, 10);
+            this.buttonMicrosoftDirectXDiagnosticTool.Location = new System.Drawing.Point(780, 10);
             this.buttonMicrosoftDirectXDiagnosticTool.Name = "buttonMicrosoftDirectXDiagnosticTool";
             this.buttonMicrosoftDirectXDiagnosticTool.Size = new System.Drawing.Size(40, 40);
-            this.buttonMicrosoftDirectXDiagnosticTool.TabIndex = 13;
+            this.buttonMicrosoftDirectXDiagnosticTool.TabIndex = 14;
             this.buttonMicrosoftDirectXDiagnosticTool.Text = "Dx";
             this.toolTipSetup.SetToolTip(this.buttonMicrosoftDirectXDiagnosticTool, "Microsoft DirectX Diagnostic Tool (dxdiag)");
             this.buttonMicrosoftDirectXDiagnosticTool.UseVisualStyleBackColor = true;
@@ -2889,10 +2938,10 @@
             // 
             // buttonSystemInformation
             // 
-            this.buttonSystemInformation.Location = new System.Drawing.Point(780, 10);
+            this.buttonSystemInformation.Location = new System.Drawing.Point(830, 10);
             this.buttonSystemInformation.Name = "buttonSystemInformation";
             this.buttonSystemInformation.Size = new System.Drawing.Size(40, 40);
-            this.buttonSystemInformation.TabIndex = 14;
+            this.buttonSystemInformation.TabIndex = 15;
             this.buttonSystemInformation.Text = "SI";
             this.toolTipSetup.SetToolTip(this.buttonSystemInformation, "System Information (msinfo32)");
             this.buttonSystemInformation.UseVisualStyleBackColor = true;
@@ -2900,10 +2949,10 @@
             // 
             // buttonAdvancedUserAccounts
             // 
-            this.buttonAdvancedUserAccounts.Location = new System.Drawing.Point(830, 10);
+            this.buttonAdvancedUserAccounts.Location = new System.Drawing.Point(880, 10);
             this.buttonAdvancedUserAccounts.Name = "buttonAdvancedUserAccounts";
             this.buttonAdvancedUserAccounts.Size = new System.Drawing.Size(40, 40);
-            this.buttonAdvancedUserAccounts.TabIndex = 15;
+            this.buttonAdvancedUserAccounts.TabIndex = 16;
             this.buttonAdvancedUserAccounts.Text = "UA";
             this.toolTipSetup.SetToolTip(this.buttonAdvancedUserAccounts, "Advanced User Accounts (netplwiz)");
             this.buttonAdvancedUserAccounts.UseVisualStyleBackColor = true;
@@ -2911,10 +2960,10 @@
             // 
             // buttonSystemProperties
             // 
-            this.buttonSystemProperties.Location = new System.Drawing.Point(880, 10);
+            this.buttonSystemProperties.Location = new System.Drawing.Point(430, 60);
             this.buttonSystemProperties.Name = "buttonSystemProperties";
             this.buttonSystemProperties.Size = new System.Drawing.Size(40, 40);
-            this.buttonSystemProperties.TabIndex = 16;
+            this.buttonSystemProperties.TabIndex = 22;
             this.buttonSystemProperties.Text = "SP";
             this.toolTipSetup.SetToolTip(this.buttonSystemProperties, "System Properties (sysdm.cpl)");
             this.buttonSystemProperties.UseVisualStyleBackColor = true;
@@ -2925,7 +2974,7 @@
             this.buttonTrustedPlatformModule.Location = new System.Drawing.Point(480, 60);
             this.buttonTrustedPlatformModule.Name = "buttonTrustedPlatformModule";
             this.buttonTrustedPlatformModule.Size = new System.Drawing.Size(40, 40);
-            this.buttonTrustedPlatformModule.TabIndex = 17;
+            this.buttonTrustedPlatformModule.TabIndex = 23;
             this.buttonTrustedPlatformModule.Text = "TP";
             this.toolTipSetup.SetToolTip(this.buttonTrustedPlatformModule, "Trusted Platform Module (TPM)");
             this.buttonTrustedPlatformModule.UseVisualStyleBackColor = true;
@@ -2969,7 +3018,7 @@
             this.buttonPowerOptions.Location = new System.Drawing.Point(280, 60);
             this.buttonPowerOptions.Name = "buttonPowerOptions";
             this.buttonPowerOptions.Size = new System.Drawing.Size(40, 40);
-            this.buttonPowerOptions.TabIndex = 24;
+            this.buttonPowerOptions.TabIndex = 20;
             this.buttonPowerOptions.Text = "P";
             this.toolTipSetup.SetToolTip(this.buttonPowerOptions, "Power Options (power - sleep)");
             this.buttonPowerOptions.UseVisualStyleBackColor = true;
@@ -2980,7 +3029,7 @@
             this.buttonAboutWindows.Location = new System.Drawing.Point(630, 60);
             this.buttonAboutWindows.Name = "buttonAboutWindows";
             this.buttonAboutWindows.Size = new System.Drawing.Size(40, 40);
-            this.buttonAboutWindows.TabIndex = 20;
+            this.buttonAboutWindows.TabIndex = 26;
             this.buttonAboutWindows.Text = "W";
             this.toolTipSetup.SetToolTip(this.buttonAboutWindows, "About Windows (winver)");
             this.buttonAboutWindows.UseVisualStyleBackColor = true;
@@ -2991,7 +3040,7 @@
             this.buttonCheckActiveWindows.Location = new System.Drawing.Point(580, 60);
             this.buttonCheckActiveWindows.Name = "buttonCheckActiveWindows";
             this.buttonCheckActiveWindows.Size = new System.Drawing.Size(40, 40);
-            this.buttonCheckActiveWindows.TabIndex = 19;
+            this.buttonCheckActiveWindows.TabIndex = 25;
             this.buttonCheckActiveWindows.Text = "A";
             this.toolTipSetup.SetToolTip(this.buttonCheckActiveWindows, "Check Active Windows (slmgr.vbs /xpr)");
             this.buttonCheckActiveWindows.UseVisualStyleBackColor = true;
@@ -3002,7 +3051,7 @@
             this.buttonIPConfigurationUtility.Location = new System.Drawing.Point(530, 60);
             this.buttonIPConfigurationUtility.Name = "buttonIPConfigurationUtility";
             this.buttonIPConfigurationUtility.Size = new System.Drawing.Size(40, 40);
-            this.buttonIPConfigurationUtility.TabIndex = 18;
+            this.buttonIPConfigurationUtility.TabIndex = 24;
             this.buttonIPConfigurationUtility.Text = "IP";
             this.toolTipSetup.SetToolTip(this.buttonIPConfigurationUtility, "IP Configuration Utility (ipconfig)");
             this.buttonIPConfigurationUtility.UseVisualStyleBackColor = true;
@@ -3035,7 +3084,7 @@
             this.buttonDateAndTime.Location = new System.Drawing.Point(330, 60);
             this.buttonDateAndTime.Name = "buttonDateAndTime";
             this.buttonDateAndTime.Size = new System.Drawing.Size(40, 40);
-            this.buttonDateAndTime.TabIndex = 25;
+            this.buttonDateAndTime.TabIndex = 21;
             this.buttonDateAndTime.Text = "D";
             this.toolTipSetup.SetToolTip(this.buttonDateAndTime, "Time and Date");
             this.buttonDateAndTime.UseVisualStyleBackColor = true;
@@ -3122,6 +3171,17 @@
             this.toolTipSetup.SetToolTip(this.linkInfoUser, "Click to Copy");
             this.linkInfoUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInfoUser_LinkClicked);
             // 
+            // buttonOpenServices
+            // 
+            this.buttonOpenServices.Location = new System.Drawing.Point(530, 10);
+            this.buttonOpenServices.Name = "buttonOpenServices";
+            this.buttonOpenServices.Size = new System.Drawing.Size(40, 40);
+            this.buttonOpenServices.TabIndex = 9;
+            this.buttonOpenServices.Text = "SV";
+            this.toolTipSetup.SetToolTip(this.buttonOpenServices, "Services");
+            this.buttonOpenServices.UseVisualStyleBackColor = true;
+            this.buttonOpenServices.Click += new System.EventHandler(this.buttonOpenServices_Click);
+            // 
             // timerNirsoftStart
             // 
             this.timerNirsoftStart.Interval = 1000;
@@ -3162,6 +3222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.buttonOpenServices);
             this.Controls.Add(this.linkInfoUser);
             this.Controls.Add(this.linkInfoRam);
             this.Controls.Add(this.linkInfoCpu);
@@ -3230,6 +3291,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tabPageCaiDatNhanh.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
@@ -3449,7 +3512,7 @@
         private System.Windows.Forms.TextBox textChangePort;
         private System.Windows.Forms.TextBox textChangeUser;
         private System.Windows.Forms.TextBox textChangePass;
-        private System.Windows.Forms.Button buttonChangeTimezone;
+        private System.Windows.Forms.Button buttonTimezoneByIP;
         private System.Windows.Forms.CheckBox checkDisableSleepWhilePluggedIn;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Button buttonApplyFavoriteSettings;
@@ -3486,14 +3549,19 @@
         private System.Windows.Forms.LinkLabel linkInfoLanIP;
         private System.Windows.Forms.LinkLabel linkInfoCpu;
         private System.Windows.Forms.LinkLabel linkInfoRam;
-        private System.Windows.Forms.Button buttonStaticLanIP;
-        private System.Windows.Forms.TextBox textStaticLanIP;
-        private System.Windows.Forms.Button buttonSetGoogleDNS;
+        private System.Windows.Forms.Button buttonNetworkStaticIPLan;
+        private System.Windows.Forms.TextBox textNetworkStaticIPLan;
+        private System.Windows.Forms.Button buttonNetworkGoogleDNS;
         private System.Windows.Forms.LinkLabel linkInfoUser;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.Button buttonKasperskyVirusRemovalTool;
         private System.Windows.Forms.Button buttonMicrosoftSafetyScanner;
         private System.Windows.Forms.Button buttonESETOnlineScanner;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Button buttonNetworkReset;
+        private System.Windows.Forms.Button buttonTimeUpdate;
+        private System.Windows.Forms.Button buttonTimeSyncTaskSchedulerDaily;
+        private System.Windows.Forms.Button buttonOpenServices;
     }
 }
 
