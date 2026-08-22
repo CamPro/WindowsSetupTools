@@ -1093,7 +1093,7 @@
             this.buttonTimeSyncTaskSchedulerDaily.Name = "buttonTimeSyncTaskSchedulerDaily";
             this.buttonTimeSyncTaskSchedulerDaily.Size = new System.Drawing.Size(406, 38);
             this.buttonTimeSyncTaskSchedulerDaily.TabIndex = 4;
-            this.buttonTimeSyncTaskSchedulerDaily.Text = "Tạo TaskScheduler đồng bộ thời gian 6h hàng ngày";
+            this.buttonTimeSyncTaskSchedulerDaily.Text = "Tạo TaskScheduler đồng bộ thời gian mỗi 6h";
             this.buttonTimeSyncTaskSchedulerDaily.UseVisualStyleBackColor = true;
             this.buttonTimeSyncTaskSchedulerDaily.Click += new System.EventHandler(this.buttonTimeSyncTaskSchedulerDaily_Click);
             // 

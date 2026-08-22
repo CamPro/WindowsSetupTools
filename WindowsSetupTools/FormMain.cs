@@ -2256,7 +2256,7 @@ namespace WindowsSetupTools
 
         private void buttonTimeSyncTaskSchedulerDaily_Click(object sender, EventArgs e)
         {
-            schtasks("/create /RU Administrators /tn AutoSyncTimeDaily /tr \"cmd.exe /c net start w32time & w32tm /resync\" /sc daily /st 06:00 /rl HIGHEST /f");
+            schtasks("/create /rl HIGHEST /ru Administrators /tn AutoSyncTimeDaily /tr \"cmd.exe /c net start w32time & w32tm /resync\" /sc daily /st 06:00 /ri 360 /du 24:00 /f");
 
             UpdateButtonText((Button)sender, "Thành công");
         }
