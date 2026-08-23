@@ -1484,7 +1484,6 @@ namespace WindowsSetupTools
 
         private void buttonSelfUpdate_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
             string linkUrl = appUrl + $"?t={new Random().Next(10, 90)}";
             string tempFile = Path.GetTempFileName();
             client.DownloadFile(linkUrl, tempFile);
