@@ -1284,7 +1284,7 @@
             // 
             this.buttonApplyFavoriteSettings.Location = new System.Drawing.Point(15, 430);
             this.buttonApplyFavoriteSettings.Name = "buttonApplyFavoriteSettings";
-            this.buttonApplyFavoriteSettings.Size = new System.Drawing.Size(200, 38);
+            this.buttonApplyFavoriteSettings.Size = new System.Drawing.Size(323, 38);
             this.buttonApplyFavoriteSettings.TabIndex = 11;
             this.buttonApplyFavoriteSettings.Text = "Áp dụng cài đặt";
             this.buttonApplyFavoriteSettings.UseVisualStyleBackColor = true;
