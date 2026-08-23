@@ -22,7 +22,7 @@ namespace WindowsSetupTools
 
         readonly string winrar = @"C:\Program Files\WinRAR\WinRAR.exe";
 
-        readonly string appUrl = "https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe";
+        readonly string appUrl = $"https://github.com/CamPro/WindowsSetupTools/raw/refs/heads/main/WindowsSetupTools/bin/Release/WindowsSetupTools.exe?t={new Random().Next(10, 90)}";
 
         WebClient client = new WebClient();
 
@@ -1484,7 +1484,7 @@ namespace WindowsSetupTools
 
         private void buttonSelfUpdate_Click(object sender, EventArgs e)
         {
-            string linkUrl = appUrl + $"?t={new Random().Next(10, 90)}";
+            string linkUrl = appUrl;
             string tempFile = Path.GetTempFileName();
             client.DownloadFile(linkUrl, tempFile);
 
