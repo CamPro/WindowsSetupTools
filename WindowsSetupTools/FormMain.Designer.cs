@@ -274,6 +274,7 @@
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
+            this.checkConfigRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -1137,6 +1138,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.checkConfigRemoteDesktopOnLan);
             this.groupBox14.Controls.Add(this.checkChangeAll);
             this.groupBox14.Controls.Add(this.checkEnableRemoteDesktopOnLan);
             this.groupBox14.Controls.Add(this.checkDisableOneDrive);
@@ -1170,11 +1172,11 @@
             // checkEnableRemoteDesktopOnLan
             // 
             this.checkEnableRemoteDesktopOnLan.AutoSize = true;
-            this.checkEnableRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 380);
+            this.checkEnableRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 330);
             this.checkEnableRemoteDesktopOnLan.Name = "checkEnableRemoteDesktopOnLan";
-            this.checkEnableRemoteDesktopOnLan.Size = new System.Drawing.Size(291, 21);
+            this.checkEnableRemoteDesktopOnLan.Size = new System.Drawing.Size(287, 21);
             this.checkEnableRemoteDesktopOnLan.TabIndex = 10;
-            this.checkEnableRemoteDesktopOnLan.Text = "Bật remote desktop trong LAN (skip pass)";
+            this.checkEnableRemoteDesktopOnLan.Text = "Cài remote desktop trong LAN (máy đích)";
             this.checkEnableRemoteDesktopOnLan.UseVisualStyleBackColor = true;
             // 
             // checkDisableOneDrive
@@ -1182,7 +1184,7 @@
             this.checkDisableOneDrive.AutoSize = true;
             this.checkDisableOneDrive.Checked = true;
             this.checkDisableOneDrive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisableOneDrive.Location = new System.Drawing.Point(15, 310);
+            this.checkDisableOneDrive.Location = new System.Drawing.Point(15, 270);
             this.checkDisableOneDrive.Name = "checkDisableOneDrive";
             this.checkDisableOneDrive.Size = new System.Drawing.Size(138, 21);
             this.checkDisableOneDrive.TabIndex = 8;
@@ -1194,7 +1196,7 @@
             this.checkConfigExplorerAndQuickAccess.AutoSize = true;
             this.checkConfigExplorerAndQuickAccess.Checked = true;
             this.checkConfigExplorerAndQuickAccess.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkConfigExplorerAndQuickAccess.Location = new System.Drawing.Point(15, 65);
+            this.checkConfigExplorerAndQuickAccess.Location = new System.Drawing.Point(15, 60);
             this.checkConfigExplorerAndQuickAccess.Name = "checkConfigExplorerAndQuickAccess";
             this.checkConfigExplorerAndQuickAccess.Size = new System.Drawing.Size(216, 21);
             this.checkConfigExplorerAndQuickAccess.TabIndex = 1;
@@ -1218,7 +1220,7 @@
             this.checkConfigSearchAndCotana.AutoSize = true;
             this.checkConfigSearchAndCotana.Checked = true;
             this.checkConfigSearchAndCotana.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkConfigSearchAndCotana.Location = new System.Drawing.Point(15, 135);
+            this.checkConfigSearchAndCotana.Location = new System.Drawing.Point(15, 120);
             this.checkConfigSearchAndCotana.Name = "checkConfigSearchAndCotana";
             this.checkConfigSearchAndCotana.Size = new System.Drawing.Size(190, 21);
             this.checkConfigSearchAndCotana.TabIndex = 3;
@@ -1228,7 +1230,7 @@
             // checkActivePowerHighPerformance
             // 
             this.checkActivePowerHighPerformance.AutoSize = true;
-            this.checkActivePowerHighPerformance.Location = new System.Drawing.Point(15, 240);
+            this.checkActivePowerHighPerformance.Location = new System.Drawing.Point(15, 210);
             this.checkActivePowerHighPerformance.Name = "checkActivePowerHighPerformance";
             this.checkActivePowerHighPerformance.Size = new System.Drawing.Size(233, 21);
             this.checkActivePowerHighPerformance.TabIndex = 6;
@@ -1241,7 +1243,7 @@
             this.checkNeverCombineTaskbar.AutoSize = true;
             this.checkNeverCombineTaskbar.Checked = true;
             this.checkNeverCombineTaskbar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkNeverCombineTaskbar.Location = new System.Drawing.Point(15, 100);
+            this.checkNeverCombineTaskbar.Location = new System.Drawing.Point(15, 90);
             this.checkNeverCombineTaskbar.Name = "checkNeverCombineTaskbar";
             this.checkNeverCombineTaskbar.Size = new System.Drawing.Size(175, 21);
             this.checkNeverCombineTaskbar.TabIndex = 2;
@@ -1253,7 +1255,7 @@
             this.checkOffShowSuggestionsInStart.AutoSize = true;
             this.checkOffShowSuggestionsInStart.Checked = true;
             this.checkOffShowSuggestionsInStart.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkOffShowSuggestionsInStart.Location = new System.Drawing.Point(15, 205);
+            this.checkOffShowSuggestionsInStart.Location = new System.Drawing.Point(15, 180);
             this.checkOffShowSuggestionsInStart.Name = "checkOffShowSuggestionsInStart";
             this.checkOffShowSuggestionsInStart.Size = new System.Drawing.Size(213, 21);
             this.checkOffShowSuggestionsInStart.TabIndex = 5;
@@ -1263,7 +1265,7 @@
             // checkDisableUserAccountControl
             // 
             this.checkDisableUserAccountControl.AutoSize = true;
-            this.checkDisableUserAccountControl.Location = new System.Drawing.Point(15, 345);
+            this.checkDisableUserAccountControl.Location = new System.Drawing.Point(15, 300);
             this.checkDisableUserAccountControl.Name = "checkDisableUserAccountControl";
             this.checkDisableUserAccountControl.Size = new System.Drawing.Size(249, 21);
             this.checkDisableUserAccountControl.TabIndex = 9;
@@ -1273,7 +1275,7 @@
             // checkShowAllIconOnTheTray
             // 
             this.checkShowAllIconOnTheTray.AutoSize = true;
-            this.checkShowAllIconOnTheTray.Location = new System.Drawing.Point(15, 170);
+            this.checkShowAllIconOnTheTray.Location = new System.Drawing.Point(15, 150);
             this.checkShowAllIconOnTheTray.Name = "checkShowAllIconOnTheTray";
             this.checkShowAllIconOnTheTray.Size = new System.Drawing.Size(223, 21);
             this.checkShowAllIconOnTheTray.TabIndex = 4;
@@ -1295,7 +1297,7 @@
             this.checkDisableSleepWhilePluggedIn.AutoSize = true;
             this.checkDisableSleepWhilePluggedIn.Checked = true;
             this.checkDisableSleepWhilePluggedIn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisableSleepWhilePluggedIn.Location = new System.Drawing.Point(15, 275);
+            this.checkDisableSleepWhilePluggedIn.Location = new System.Drawing.Point(15, 240);
             this.checkDisableSleepWhilePluggedIn.Name = "checkDisableSleepWhilePluggedIn";
             this.checkDisableSleepWhilePluggedIn.Size = new System.Drawing.Size(242, 21);
             this.checkDisableSleepWhilePluggedIn.TabIndex = 7;
@@ -3217,6 +3219,16 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
+            // checkConfigRemoteDesktopOnLan
+            // 
+            this.checkConfigRemoteDesktopOnLan.AutoSize = true;
+            this.checkConfigRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 360);
+            this.checkConfigRemoteDesktopOnLan.Name = "checkConfigRemoteDesktopOnLan";
+            this.checkConfigRemoteDesktopOnLan.Size = new System.Drawing.Size(295, 21);
+            this.checkConfigRemoteDesktopOnLan.TabIndex = 13;
+            this.checkConfigRemoteDesktopOnLan.Text = "Cài remote desktop trong LAN (máy chính)";
+            this.checkConfigRemoteDesktopOnLan.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3562,6 +3574,7 @@
         private System.Windows.Forms.Button buttonTimeUpdate;
         private System.Windows.Forms.Button buttonTimeSyncTaskSchedulerDaily;
         private System.Windows.Forms.Button buttonOpenServices;
+        private System.Windows.Forms.CheckBox checkConfigRemoteDesktopOnLan;
     }
 }
 

@@ -2122,6 +2122,11 @@ namespace WindowsSetupTools
                 // on Mouse Keys - ép Windows luôn hiển thị con trỏ chuột trên màn hình
                 reg("ADD \"HKCU\\Control Panel\\Accessibility\\MouseKeys\" /v Flags /t REG_SZ /d 63 /f");
             }
+            if (checkConfigRemoteDesktopOnLan.Checked)
+            {
+                // tắt cơ chế kiểm tra chứng thực chứng chỉ (Revocation Check)
+                reg("ADD \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SystemCertificates\\ChainEngine\" /v Options /t REG_DWORD /d 256 /f");
+            }
 
             taskkill("/f /im explorer.exe");
             Process.Start("explorer.exe");
