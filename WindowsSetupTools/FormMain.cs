@@ -2029,6 +2029,7 @@ namespace WindowsSetupTools
             checkDisableOneDrive.Checked = checkChangeAll.Checked;
             checkDisableUserAccountControl.Checked = checkChangeAll.Checked;
             checkEnableRemoteDesktopOnLan.Checked = checkChangeAll.Checked;
+            checkConfigRemoteDesktopOnLan.Checked = checkChangeAll.Checked;
         }
 
         private void checkActivePowerHighPerformance_CheckedChanged(object sender, EventArgs e)
