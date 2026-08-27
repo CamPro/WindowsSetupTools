@@ -106,6 +106,7 @@
             this.labelTimezoneUtc = new System.Windows.Forms.Label();
             this.buttonTimezoneByIP = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.checkConfigRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
             this.checkChangeAll = new System.Windows.Forms.CheckBox();
             this.checkEnableRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
             this.checkDisableOneDrive = new System.Windows.Forms.CheckBox();
@@ -270,11 +271,11 @@
             this.linkInfoRam = new System.Windows.Forms.LinkLabel();
             this.linkInfoUser = new System.Windows.Forms.LinkLabel();
             this.buttonOpenServices = new System.Windows.Forms.Button();
+            this.buttonRestartAdvancedStartup = new System.Windows.Forms.Button();
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
-            this.checkConfigRemoteDesktopOnLan = new System.Windows.Forms.CheckBox();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -1158,6 +1159,16 @@
             this.groupBox14.TabIndex = 15;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Cài đặt trải nghiệm";
+            // 
+            // checkConfigRemoteDesktopOnLan
+            // 
+            this.checkConfigRemoteDesktopOnLan.AutoSize = true;
+            this.checkConfigRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 360);
+            this.checkConfigRemoteDesktopOnLan.Name = "checkConfigRemoteDesktopOnLan";
+            this.checkConfigRemoteDesktopOnLan.Size = new System.Drawing.Size(295, 21);
+            this.checkConfigRemoteDesktopOnLan.TabIndex = 13;
+            this.checkConfigRemoteDesktopOnLan.Text = "Cài remote desktop trong LAN (máy chính)";
+            this.checkConfigRemoteDesktopOnLan.UseVisualStyleBackColor = true;
             // 
             // checkChangeAll
             // 
@@ -3184,6 +3195,17 @@
             this.buttonOpenServices.UseVisualStyleBackColor = true;
             this.buttonOpenServices.Click += new System.EventHandler(this.buttonOpenServices_Click);
             // 
+            // buttonRestartAdvancedStartup
+            // 
+            this.buttonRestartAdvancedStartup.Location = new System.Drawing.Point(190, 635);
+            this.buttonRestartAdvancedStartup.Name = "buttonRestartAdvancedStartup";
+            this.buttonRestartAdvancedStartup.Size = new System.Drawing.Size(170, 40);
+            this.buttonRestartAdvancedStartup.TabIndex = 110;
+            this.buttonRestartAdvancedStartup.Text = "Advanced Startup";
+            this.toolTipSetup.SetToolTip(this.buttonRestartAdvancedStartup, "Khởi động lại vào Advanced Startup");
+            this.buttonRestartAdvancedStartup.UseVisualStyleBackColor = true;
+            this.buttonRestartAdvancedStartup.Click += new System.EventHandler(this.buttonRestartAdvancedStartup_Click);
+            // 
             // timerNirsoftStart
             // 
             this.timerNirsoftStart.Interval = 1000;
@@ -3203,7 +3225,7 @@
             // labelMsg
             // 
             this.labelMsg.AutoSize = true;
-            this.labelMsg.Location = new System.Drawing.Point(317, 647);
+            this.labelMsg.Location = new System.Drawing.Point(503, 647);
             this.labelMsg.Name = "labelMsg";
             this.labelMsg.Size = new System.Drawing.Size(34, 17);
             this.labelMsg.TabIndex = 105;
@@ -3211,7 +3233,7 @@
             // 
             // buttonSelfUpdate
             // 
-            this.buttonSelfUpdate.Location = new System.Drawing.Point(190, 635);
+            this.buttonSelfUpdate.Location = new System.Drawing.Point(376, 635);
             this.buttonSelfUpdate.Name = "buttonSelfUpdate";
             this.buttonSelfUpdate.Size = new System.Drawing.Size(120, 40);
             this.buttonSelfUpdate.TabIndex = 103;
@@ -3219,21 +3241,12 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
-            // checkConfigRemoteDesktopOnLan
-            // 
-            this.checkConfigRemoteDesktopOnLan.AutoSize = true;
-            this.checkConfigRemoteDesktopOnLan.Location = new System.Drawing.Point(15, 360);
-            this.checkConfigRemoteDesktopOnLan.Name = "checkConfigRemoteDesktopOnLan";
-            this.checkConfigRemoteDesktopOnLan.Size = new System.Drawing.Size(295, 21);
-            this.checkConfigRemoteDesktopOnLan.TabIndex = 13;
-            this.checkConfigRemoteDesktopOnLan.Text = "Cài remote desktop trong LAN (máy chính)";
-            this.checkConfigRemoteDesktopOnLan.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.buttonRestartAdvancedStartup);
             this.Controls.Add(this.buttonOpenServices);
             this.Controls.Add(this.linkInfoUser);
             this.Controls.Add(this.linkInfoRam);
@@ -3575,6 +3588,7 @@
         private System.Windows.Forms.Button buttonTimeSyncTaskSchedulerDaily;
         private System.Windows.Forms.Button buttonOpenServices;
         private System.Windows.Forms.CheckBox checkConfigRemoteDesktopOnLan;
+        private System.Windows.Forms.Button buttonRestartAdvancedStartup;
     }
 }
 

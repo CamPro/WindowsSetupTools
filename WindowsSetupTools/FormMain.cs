@@ -179,6 +179,11 @@ namespace WindowsSetupTools
             buttonRestart.Image = Properties.Resources.icon_restart;
             buttonRestart.Text = "";
 
+            buttonRestartAdvancedStartup.Image = Properties.Resources.icon_restart;
+            buttonRestartAdvancedStartup.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonRestartAdvancedStartup.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonRestartAdvancedStartup.TextAlign = ContentAlignment.MiddleCenter;
+
             buttonSelfUpdate.Image = Properties.Resources.icon_download;
             buttonSelfUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonSelfUpdate.ImageAlign = ContentAlignment.MiddleLeft;
@@ -1473,6 +1478,12 @@ namespace WindowsSetupTools
         private void buttonRestart_Click(object sender, EventArgs e)
         {
             shutdown("/r /t 0");
+            Application.Exit();
+        }
+
+        private void buttonRestartAdvancedStartup_Click(object sender, EventArgs e)
+        {
+            shutdown("/r /o /t 0");
             Application.Exit();
         }
 
