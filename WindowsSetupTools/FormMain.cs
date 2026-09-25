@@ -357,6 +357,31 @@ namespace WindowsSetupTools
             buttonSetupVMwareWorkstation.ImageAlign = ContentAlignment.MiddleLeft;
             buttonSetupVMwareWorkstation.TextAlign = ContentAlignment.MiddleCenter;
 
+            buttonNetFramework48.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework48.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework48.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework48.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework47.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework47.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework47.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework47.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework46.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework46.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework46.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework46.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonNetFramework35.Image = Properties.Resources.icon_net_framework;
+            buttonNetFramework35.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonNetFramework35.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNetFramework35.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonSetupFramework35Iso.Image = Properties.Resources.icon_terminal;
+            buttonSetupFramework35Iso.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonSetupFramework35Iso.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSetupFramework35Iso.TextAlign = ContentAlignment.MiddleCenter;
+
         }
 
         public void SetupUITabCaiDatNhanh()
@@ -405,6 +430,11 @@ namespace WindowsSetupTools
             buttonTimeSyncTaskSchedulerDaily.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonTimeSyncTaskSchedulerDaily.ImageAlign = ContentAlignment.MiddleLeft;
             buttonTimeSyncTaskSchedulerDaily.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonTimeFormat.Image = Properties.Resources.icon_date_time;
+            buttonTimeFormat.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonTimeFormat.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTimeFormat.TextAlign = ContentAlignment.MiddleCenter;
 
             buttonApplyFavoriteSettings.Image = Properties.Resources.icon_settings2;
             buttonApplyFavoriteSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -505,30 +535,15 @@ namespace WindowsSetupTools
             buttonOfficeToolPlus.ImageAlign = ContentAlignment.MiddleLeft;
             buttonOfficeToolPlus.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttonNetFramework48.Image = Properties.Resources.icon_net_framework;
-            buttonNetFramework48.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonNetFramework48.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonNetFramework48.TextAlign = ContentAlignment.MiddleCenter;
+            buttonGoodbyeDPI.Image = Properties.Resources.icon_terminal;
+            buttonGoodbyeDPI.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonGoodbyeDPI.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonGoodbyeDPI.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttonNetFramework47.Image = Properties.Resources.icon_net_framework;
-            buttonNetFramework47.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonNetFramework47.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonNetFramework47.TextAlign = ContentAlignment.MiddleCenter;
-
-            buttonNetFramework46.Image = Properties.Resources.icon_net_framework;
-            buttonNetFramework46.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonNetFramework46.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonNetFramework46.TextAlign = ContentAlignment.MiddleCenter;
-
-            buttonNetFramework35.Image = Properties.Resources.icon_net_framework;
-            buttonNetFramework35.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonNetFramework35.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonNetFramework35.TextAlign = ContentAlignment.MiddleCenter;
-
-            buttonSetupFramework35Iso.Image = Properties.Resources.icon_terminal;
-            buttonSetupFramework35Iso.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonSetupFramework35Iso.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetupFramework35Iso.TextAlign = ContentAlignment.MiddleCenter;
+            buttonIObitUnlocker.Image = Properties.Resources.icon_iobit_unlocker;
+            buttonIObitUnlocker.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonIObitUnlocker.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonIObitUnlocker.TextAlign = ContentAlignment.MiddleCenter;
 
         }
 
@@ -564,15 +579,30 @@ namespace WindowsSetupTools
             buttonKeyboardTest.ImageAlign = ContentAlignment.MiddleLeft;
             buttonKeyboardTest.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttonIsMyLcdOK.Image = Properties.Resources.icon_ismylcdok;
-            buttonIsMyLcdOK.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonIsMyLcdOK.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonIsMyLcdOK.TextAlign = ContentAlignment.MiddleCenter;
+            buttonKeyboardTestUtility.Image = Properties.Resources.icon_keyboard_test_utility;
+            buttonKeyboardTestUtility.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonKeyboardTestUtility.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonKeyboardTestUtility.TextAlign = ContentAlignment.MiddleCenter;
 
-            buttontLCDtest.Image = Properties.Resources.icon_tlcdtest;
-            buttontLCDtest.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttontLCDtest.ImageAlign = ContentAlignment.MiddleLeft;
-            buttontLCDtest.TextAlign = ContentAlignment.MiddleCenter;
+            buttonTestDisplayLCD.Image = Properties.Resources.icon_tlcdtest;
+            buttonTestDisplayLCD.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonTestDisplayLCD.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTestDisplayLCD.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonMicrophoneTest.Image = Properties.Resources.icon_microphone_test;
+            buttonMicrophoneTest.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonMicrophoneTest.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonMicrophoneTest.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonCameraCapture.Image = Properties.Resources.icon_camera_capture;
+            buttonCameraCapture.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonCameraCapture.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCameraCapture.TextAlign = ContentAlignment.MiddleCenter;
+
+            buttonFurMark.Image = Properties.Resources.icon_fur_mark;
+            buttonFurMark.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonFurMark.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonFurMark.TextAlign = ContentAlignment.MiddleCenter;
 
 
             buttonMicrosoftActivationScriptsOnline.Image = Properties.Resources.icon_microsoft_activation_scripts;
@@ -1274,7 +1304,7 @@ namespace WindowsSetupTools
                 // Cập nhật thời gian
                 net("start w32time");
                 w32tm("/resync /force");
-                messages.Add("Đồng bộ ngày giờ");
+                messages.Add("Đồng bộ thời gian");
 
                 this.Invoke(new Action(() => { labelMsg.Text = string.Join(", ", messages); }));
             });
@@ -1972,6 +2002,56 @@ namespace WindowsSetupTools
             OpenBrowserUrl(linkUrl);
         }
 
+        private void buttonSetup3uTools_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://www.3u.com";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonNetFramework48_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-offline-installer";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonNetFramework47_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net472-offline-installer";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonNetFramework46_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net462-offline-installer";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonNetFramework35_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net35-sp1-offline-installer";
+            OpenBrowserUrl(linkUrl);
+        }
+
+        private void buttonSetupFramework35Iso_Click(object sender, EventArgs e)
+        {
+            string[] disks = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+            string diskIso = string.Empty;
+
+            foreach (string disk in disks)
+            {
+                string folderIso = $@"{disk}:\sources\sxs";
+                if (Directory.Exists(folderIso))
+                {
+                    diskIso = disk;
+                    break;
+                }
+            }
+            if (!string.IsNullOrEmpty(diskIso))
+            {
+                Process.Start("dism.exe", $@"/online /enable-feature /featurename:NetFX3 /All /Source:{diskIso}:\sources\sxs /LimitAccess");
+            }
+        }
+
         #endregion CAI DAT PHAN MEM
 
 
@@ -2140,8 +2220,9 @@ namespace WindowsSetupTools
                 reg("ADD \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SystemCertificates\\ChainEngine\" /v Options /t REG_DWORD /d 256 /f");
             }
 
-            taskkill("/f /im explorer.exe");
-            Process.Start("explorer.exe");
+            // Thông báo cho Windows biết Registry đã thay đổi
+            IntPtr result;
+            SendMessageTimeout((IntPtr)HWND_BROADCAST, WM_SETTINGCHANGE, IntPtr.Zero, "intl", SMTO_ABORTIFHUNG, 5000, out result);
 
             UpdateButtonText((Button)sender, "Thành công");
         }
@@ -2275,6 +2356,15 @@ namespace WindowsSetupTools
             schtasks("/create /rl HIGHEST /ru Administrators /tn AutoSyncTimeDaily /tr \"cmd.exe /c net start w32time & w32tm /resync\" /sc daily /st 06:00 /ri 360 /du 24:00 /f");
 
             UpdateButtonText((Button)sender, "Thành công");
+        }
+
+        private void buttonTimeFormat_Click(object sender, EventArgs e)
+        {
+            reg("ADD \"HKCU\\Control Panel\\International\" /v sShortDate /t REG_SZ /d \"dd-MM-yyyy\" /f");
+
+            // Thông báo cho Windows biết Registry đã thay đổi
+            IntPtr result;
+            SendMessageTimeout((IntPtr)HWND_BROADCAST, WM_SETTINGCHANGE, IntPtr.Zero, "intl", SMTO_ABORTIFHUNG, 5000, out result);
         }
 
         private void buttonNetworkStaticIPLan_Click(object sender, EventArgs e)
@@ -2488,48 +2578,16 @@ namespace WindowsSetupTools
             DownCompressAndStart((Button)sender, linkUrl, @"Office Tool\Office Tool Plus.exe");
         }
 
-        private void buttonNetFramework48_Click(object sender, EventArgs e)
+        private void buttonGoodbyeDPI_Click(object sender, EventArgs e)
         {
-            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-offline-installer";
-            OpenBrowserUrl(linkUrl);
+            string linkUrl = "https://github.com/ValdikSS/GoodbyeDPI/releases/download/0.2.2/goodbyedpi-0.2.2.zip";
+            DownCompressAndStart((Button)sender, linkUrl, @"goodbyedpi-0.2.2\2_any_country_dnsredir.cmd");
         }
 
-        private void buttonNetFramework47_Click(object sender, EventArgs e)
+        private void buttonIObitUnlocker_Click(object sender, EventArgs e)
         {
-            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net472-offline-installer";
-            OpenBrowserUrl(linkUrl);
-        }
-
-        private void buttonNetFramework46_Click(object sender, EventArgs e)
-        {
-            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net462-offline-installer";
-            OpenBrowserUrl(linkUrl);
-        }
-
-        private void buttonNetFramework35_Click(object sender, EventArgs e)
-        {
-            string linkUrl = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net35-sp1-offline-installer";
-            OpenBrowserUrl(linkUrl);
-        }
-
-        private void buttonSetupFramework35Iso_Click(object sender, EventArgs e)
-        {
-            string[] disks = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-            string diskIso = string.Empty;
-
-            foreach (string disk in disks)
-            {
-                string folderIso = $@"{disk}:\sources\sxs";
-                if (Directory.Exists(folderIso))
-                {
-                    diskIso = disk;
-                    break;
-                }
-            }
-            if (!string.IsNullOrEmpty(diskIso))
-            {
-                Process.Start("dism.exe", $@"/online /enable-feature /featurename:NetFX3 /All /Source:{diskIso}:\sources\sxs /LimitAccess");
-            }
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/iobit-unlocker.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "IObitUnlockerPortable.exe");
         }
 
         #endregion CONG CU TIEN ICH
@@ -2573,16 +2631,34 @@ namespace WindowsSetupTools
             DownCompressAndStart((Button)sender, linkUrl, "KeyboardTest.exe");
         }
 
-        private void buttonIsMyLcdOK_Click(object sender, EventArgs e)
+        private void buttonKeyboardTestUtility_Click(object sender, EventArgs e)
         {
-            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/is-my-lcd-ok.7z";
-            DownCompressAndStart((Button)sender, linkUrl, "IsMyLcdOK.exe");
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/keyboard-test-utility.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "KeyboardTestUtility.exe");
         }
 
-        private void buttontLCDtest_Click(object sender, EventArgs e)
+        private void buttonTestDisplayLCD_Click(object sender, EventArgs e)
         {
-            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/t-lcd-test.7z";
-            DownCompressAndStart((Button)sender, linkUrl, "tLCDtest.exe");
+            FormScreenPixelTester form = new FormScreenPixelTester();
+            form.ShowDialog();
+        }
+
+        private void buttonMicrophoneTest_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/microphone-test.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "MicrophoneTest.exe");
+        }
+
+        private void buttonCameraCapture_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/camera-capture.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "CameraCapture.exe");
+        }
+
+        private void buttonFurMark_Click(object sender, EventArgs e)
+        {
+            string linkUrl = "https://github.com/disksave/software/raw/refs/heads/main/fur-mark-win64.7z";
+            DownCompressAndStart((Button)sender, linkUrl, "FurMark_GUI.exe");
         }
 
         private void buttonMicrosoftActivationScriptsOnline_Click(object sender, EventArgs e)
@@ -3203,6 +3279,17 @@ namespace WindowsSetupTools
 
         private const byte VK_NUMLOCK = 0x90; // Mã phím Num Lock
         private const uint KEYEVENTF_KEYUP = 0x0002; // Cờ báo nhả phím
+        
+        // Gọi API của Windows để cập nhật ngay lập tức không cần khởi động lại
+        [DllImport("user32.dll", EntryPoint = "GetSystemMetrics")]
+        public static extern int GetSystemMetrics(int abc);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int SendMessageTimeout(IntPtr hWnd, int Msg, IntPtr wParam, string lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
+
+        const int HWND_BROADCAST = 0xffff;
+        const int WM_SETTINGCHANGE = 0x001A;
+        const uint SMTO_ABORTIFHUNG = 0x0002;
 
     }
 }

@@ -103,6 +103,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_camera_capture {
+            get {
+                object obj = ResourceManager.GetObject("icon_camera_capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_ccleaner {
             get {
                 object obj = ResourceManager.GetObject("icon_ccleaner", resourceCulture);
@@ -346,6 +356,16 @@ namespace WindowsSetupTools.Properties {
         internal static System.Drawing.Bitmap icon_foxit_reader {
             get {
                 object obj = ResourceManager.GetObject("icon_foxit_reader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_fur_mark {
+            get {
+                object obj = ResourceManager.GetObject("icon_fur_mark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -963,6 +983,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_iobit_unlocker {
+            get {
+                object obj = ResourceManager.GetObject("icon_iobit_unlocker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_iobit_win_fix {
             get {
                 object obj = ResourceManager.GetObject("icon_iobit_win_fix", resourceCulture);
@@ -976,16 +1006,6 @@ namespace WindowsSetupTools.Properties {
         internal static System.Drawing.Bitmap icon_ipconfig {
             get {
                 object obj = ResourceManager.GetObject("icon_ipconfig", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_ismylcdok {
-            get {
-                object obj = ResourceManager.GetObject("icon_ismylcdok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1013,9 +1033,29 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_keyboard_test_utility {
+            get {
+                object obj = ResourceManager.GetObject("icon_keyboard_test_utility", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_lightshot {
             get {
                 object obj = ResourceManager.GetObject("icon_lightshot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_microphone_test {
+            get {
+                object obj = ResourceManager.GetObject("icon_microphone_test", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

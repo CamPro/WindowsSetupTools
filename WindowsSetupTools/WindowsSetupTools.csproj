@@ -58,6 +58,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormScreenPixelTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreenPixelTester.Designer.cs">
+      <DependentUpon>FormScreenPixelTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
@@ -89,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-microphone-test.png" />
+    <None Include="Resources\icon-keyboard-test-utility.png" />
+    <None Include="Resources\icon-fur-mark.png" />
+    <None Include="Resources\icon-camera-capture.png" />
+    <None Include="Resources\icon-iobit-unlocker.png" />
     <None Include="Resources\icon-services.png" />
     <None Include="Resources\icon-time-globe.png" />
     <None Include="Resources\icon-time-earth.png" />
