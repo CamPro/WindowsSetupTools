@@ -52,6 +52,7 @@
             this.buttonNetFramework47 = new System.Windows.Forms.Button();
             this.buttonNetFramework48 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.buttonSetup3uTools = new System.Windows.Forms.Button();
             this.buttonSetupGoogleDrive = new System.Windows.Forms.Button();
             this.buttonSetupVMwareWorkstation = new System.Windows.Forms.Button();
             this.buttonSetupWandriver = new System.Windows.Forms.Button();
@@ -278,11 +279,11 @@
             this.linkInfoUser = new System.Windows.Forms.LinkLabel();
             this.buttonOpenServices = new System.Windows.Forms.Button();
             this.buttonRestartAdvancedStartup = new System.Windows.Forms.Button();
+            this.buttonOpenBitLocker = new System.Windows.Forms.Button();
             this.timerNirsoftStart = new System.Windows.Forms.Timer(this.components);
             this.checkAutoStartup = new System.Windows.Forms.CheckBox();
             this.labelMsg = new System.Windows.Forms.Label();
             this.buttonSelfUpdate = new System.Windows.Forms.Button();
-            this.buttonSetup3uTools = new System.Windows.Forms.Button();
             this.tabControlGlobal.SuspendLayout();
             this.tabPageCaiDatPhanMem.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -572,6 +573,16 @@
             this.groupBox12.TabIndex = 62;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Khác";
+            // 
+            // buttonSetup3uTools
+            // 
+            this.buttonSetup3uTools.Location = new System.Drawing.Point(146, 65);
+            this.buttonSetup3uTools.Name = "buttonSetup3uTools";
+            this.buttonSetup3uTools.Size = new System.Drawing.Size(140, 30);
+            this.buttonSetup3uTools.TabIndex = 3;
+            this.buttonSetup3uTools.Text = "3uTools*";
+            this.buttonSetup3uTools.UseVisualStyleBackColor = true;
+            this.buttonSetup3uTools.Click += new System.EventHandler(this.buttonSetup3uTools_Click);
             // 
             // buttonSetupGoogleDrive
             // 
@@ -3051,7 +3062,7 @@
             this.buttonSystemProperties.Location = new System.Drawing.Point(430, 50);
             this.buttonSystemProperties.Name = "buttonSystemProperties";
             this.buttonSystemProperties.Size = new System.Drawing.Size(30, 30);
-            this.buttonSystemProperties.TabIndex = 22;
+            this.buttonSystemProperties.TabIndex = 23;
             this.buttonSystemProperties.Text = "SP";
             this.toolTipSetup.SetToolTip(this.buttonSystemProperties, "System Properties (sysdm.cpl)");
             this.buttonSystemProperties.UseVisualStyleBackColor = true;
@@ -3062,7 +3073,7 @@
             this.buttonTrustedPlatformModule.Location = new System.Drawing.Point(480, 50);
             this.buttonTrustedPlatformModule.Name = "buttonTrustedPlatformModule";
             this.buttonTrustedPlatformModule.Size = new System.Drawing.Size(30, 30);
-            this.buttonTrustedPlatformModule.TabIndex = 23;
+            this.buttonTrustedPlatformModule.TabIndex = 24;
             this.buttonTrustedPlatformModule.Text = "TP";
             this.toolTipSetup.SetToolTip(this.buttonTrustedPlatformModule, "Trusted Platform Module (TPM)");
             this.buttonTrustedPlatformModule.UseVisualStyleBackColor = true;
@@ -3117,7 +3128,7 @@
             this.buttonAboutWindows.Location = new System.Drawing.Point(630, 50);
             this.buttonAboutWindows.Name = "buttonAboutWindows";
             this.buttonAboutWindows.Size = new System.Drawing.Size(30, 30);
-            this.buttonAboutWindows.TabIndex = 26;
+            this.buttonAboutWindows.TabIndex = 27;
             this.buttonAboutWindows.Text = "W";
             this.toolTipSetup.SetToolTip(this.buttonAboutWindows, "About Windows (winver)");
             this.buttonAboutWindows.UseVisualStyleBackColor = true;
@@ -3128,7 +3139,7 @@
             this.buttonCheckActiveWindows.Location = new System.Drawing.Point(580, 50);
             this.buttonCheckActiveWindows.Name = "buttonCheckActiveWindows";
             this.buttonCheckActiveWindows.Size = new System.Drawing.Size(30, 30);
-            this.buttonCheckActiveWindows.TabIndex = 25;
+            this.buttonCheckActiveWindows.TabIndex = 26;
             this.buttonCheckActiveWindows.Text = "A";
             this.toolTipSetup.SetToolTip(this.buttonCheckActiveWindows, "Check Active Windows (slmgr.vbs /xpr)");
             this.buttonCheckActiveWindows.UseVisualStyleBackColor = true;
@@ -3139,7 +3150,7 @@
             this.buttonIPConfigurationUtility.Location = new System.Drawing.Point(530, 50);
             this.buttonIPConfigurationUtility.Name = "buttonIPConfigurationUtility";
             this.buttonIPConfigurationUtility.Size = new System.Drawing.Size(30, 30);
-            this.buttonIPConfigurationUtility.TabIndex = 24;
+            this.buttonIPConfigurationUtility.TabIndex = 25;
             this.buttonIPConfigurationUtility.Text = "IP";
             this.toolTipSetup.SetToolTip(this.buttonIPConfigurationUtility, "IP Configuration Utility (ipconfig)");
             this.buttonIPConfigurationUtility.UseVisualStyleBackColor = true;
@@ -3281,6 +3292,17 @@
             this.buttonRestartAdvancedStartup.UseVisualStyleBackColor = true;
             this.buttonRestartAdvancedStartup.Click += new System.EventHandler(this.buttonRestartAdvancedStartup_Click);
             // 
+            // buttonOpenBitLocker
+            // 
+            this.buttonOpenBitLocker.Location = new System.Drawing.Point(380, 50);
+            this.buttonOpenBitLocker.Name = "buttonOpenBitLocker";
+            this.buttonOpenBitLocker.Size = new System.Drawing.Size(30, 30);
+            this.buttonOpenBitLocker.TabIndex = 22;
+            this.buttonOpenBitLocker.Text = "B";
+            this.toolTipSetup.SetToolTip(this.buttonOpenBitLocker, "BitLocker Drive Encryption");
+            this.buttonOpenBitLocker.UseVisualStyleBackColor = true;
+            this.buttonOpenBitLocker.Click += new System.EventHandler(this.buttonOpenBitLocker_Click);
+            // 
             // timerNirsoftStart
             // 
             this.timerNirsoftStart.Interval = 1000;
@@ -3316,21 +3338,12 @@
             this.buttonSelfUpdate.UseVisualStyleBackColor = true;
             this.buttonSelfUpdate.Click += new System.EventHandler(this.buttonSelfUpdate_Click);
             // 
-            // buttonSetup3uTools
-            // 
-            this.buttonSetup3uTools.Location = new System.Drawing.Point(146, 65);
-            this.buttonSetup3uTools.Name = "buttonSetup3uTools";
-            this.buttonSetup3uTools.Size = new System.Drawing.Size(140, 30);
-            this.buttonSetup3uTools.TabIndex = 3;
-            this.buttonSetup3uTools.Text = "3uTools*";
-            this.buttonSetup3uTools.UseVisualStyleBackColor = true;
-            this.buttonSetup3uTools.Click += new System.EventHandler(this.buttonSetup3uTools_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.buttonOpenBitLocker);
             this.Controls.Add(this.buttonRestartAdvancedStartup);
             this.Controls.Add(this.buttonOpenServices);
             this.Controls.Add(this.linkInfoUser);
@@ -3681,6 +3694,7 @@
         private System.Windows.Forms.Button buttonCameraCapture;
         private System.Windows.Forms.Button buttonTimeFormat;
         private System.Windows.Forms.Button buttonSetup3uTools;
+        private System.Windows.Forms.Button buttonOpenBitLocker;
     }
 }
 

@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon-windows.ico" />
+    <None Include="Resources\icon-bitlocker.png" />
     <None Include="Resources\icon-microphone-test.png" />
     <None Include="Resources\icon-keyboard-test-utility.png" />
     <None Include="Resources\icon-fur-mark.png" />

@@ -131,6 +131,9 @@ namespace WindowsSetupTools
             buttonMicrosoftDirectXDiagnosticTool.Image = Properties.Resources.icon_dxdiag;
             buttonMicrosoftDirectXDiagnosticTool.Text = "";
 
+            buttonOpenBitLocker.Image = Properties.Resources.icon_bitlocker;
+            buttonOpenBitLocker.Text = "";
+
             buttonSystemInformation.Image = Properties.Resources.icon_msinfo32;
             buttonSystemInformation.Text = "";
 
@@ -1432,6 +1435,12 @@ namespace WindowsSetupTools
         private void buttonDateAndTime_Click(object sender, EventArgs e)
         {
             Process.Start("ms-settings:dateandtime");
+        }
+
+        private void buttonOpenBitLocker_Click(object sender, EventArgs e)
+        {
+            try { Process.Start("control.exe", "/name Microsoft.BitLockerDriveEncryption"); }
+            catch (Exception ex) { WriteMessage(ex.Message); }
         }
 
         private void buttonDiskManagement_Click(object sender, EventArgs e)

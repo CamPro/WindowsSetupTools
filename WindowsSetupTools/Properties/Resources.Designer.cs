@@ -93,6 +93,16 @@ namespace WindowsSetupTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bitlocker {
+            get {
+                object obj = ResourceManager.GetObject("icon_bitlocker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_bkav_show_hidden_files {
             get {
                 object obj = ResourceManager.GetObject("icon_bkav_show_hidden_files", resourceCulture);
