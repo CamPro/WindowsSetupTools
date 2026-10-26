@@ -452,7 +452,7 @@
             // checkTopMost
             // 
             this.checkTopMost.AutoSize = true;
-            this.checkTopMost.Location = new System.Drawing.Point(1127, 651);
+            this.checkTopMost.Location = new System.Drawing.Point(1127, 615);
             this.checkTopMost.Name = "checkTopMost";
             this.checkTopMost.Size = new System.Drawing.Size(123, 21);
             this.checkTopMost.TabIndex = 109;
@@ -470,7 +470,7 @@
             this.tabControlGlobal.Location = new System.Drawing.Point(8, 92);
             this.tabControlGlobal.Name = "tabControlGlobal";
             this.tabControlGlobal.SelectedIndex = 0;
-            this.tabControlGlobal.Size = new System.Drawing.Size(1246, 548);
+            this.tabControlGlobal.Size = new System.Drawing.Size(1246, 516);
             this.tabControlGlobal.TabIndex = 50;
             this.tabControlGlobal.SelectedIndexChanged += new System.EventHandler(this.tabControlGlobal_SelectedIndexChanged);
             // 
@@ -492,7 +492,7 @@
             this.tabPageCaiDatPhanMem.Location = new System.Drawing.Point(4, 25);
             this.tabPageCaiDatPhanMem.Name = "tabPageCaiDatPhanMem";
             this.tabPageCaiDatPhanMem.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCaiDatPhanMem.Size = new System.Drawing.Size(1238, 519);
+            this.tabPageCaiDatPhanMem.Size = new System.Drawing.Size(1238, 487);
             this.tabPageCaiDatPhanMem.TabIndex = 0;
             this.tabPageCaiDatPhanMem.Text = "Cài đặt phần mềm";
             this.tabPageCaiDatPhanMem.UseVisualStyleBackColor = true;
@@ -504,9 +504,9 @@
             this.groupBox15.Controls.Add(this.buttonNetFramework46);
             this.groupBox15.Controls.Add(this.buttonNetFramework47);
             this.groupBox15.Controls.Add(this.buttonNetFramework48);
-            this.groupBox15.Location = new System.Drawing.Point(10, 346);
+            this.groupBox15.Location = new System.Drawing.Point(10, 340);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(421, 139);
+            this.groupBox15.Size = new System.Drawing.Size(421, 119);
             this.groupBox15.TabIndex = 63;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = ".NET Framework";
@@ -567,7 +567,7 @@
             this.groupBox12.Controls.Add(this.buttonSetupGoogleDrive);
             this.groupBox12.Controls.Add(this.buttonSetupVMwareWorkstation);
             this.groupBox12.Controls.Add(this.buttonSetupWandriver);
-            this.groupBox12.Location = new System.Drawing.Point(928, 234);
+            this.groupBox12.Location = new System.Drawing.Point(928, 230);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(300, 105);
             this.groupBox12.TabIndex = 62;
@@ -621,7 +621,7 @@
             // 
             this.groupBox11.Controls.Add(this.buttonSetupZalo);
             this.groupBox11.Controls.Add(this.buttonSetupTelegram);
-            this.groupBox11.Location = new System.Drawing.Point(622, 234);
+            this.groupBox11.Location = new System.Drawing.Point(622, 230);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(300, 105);
             this.groupBox11.TabIndex = 61;
@@ -656,7 +656,7 @@
             this.groupBox10.Controls.Add(this.buttonSetupShareX);
             this.groupBox10.Controls.Add(this.buttonSetupLightshot);
             this.groupBox10.Controls.Add(this.buttonSetupOBSStudio);
-            this.groupBox10.Location = new System.Drawing.Point(316, 234);
+            this.groupBox10.Location = new System.Drawing.Point(316, 230);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(300, 105);
             this.groupBox10.TabIndex = 60;
@@ -709,7 +709,7 @@
             this.groupBox8.Controls.Add(this.buttonSetupCCleaner);
             this.groupBox8.Controls.Add(this.buttonSetupEverything);
             this.groupBox8.Controls.Add(this.buttonSetupIDM);
-            this.groupBox8.Location = new System.Drawing.Point(928, 122);
+            this.groupBox8.Location = new System.Drawing.Point(928, 120);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(300, 105);
             this.groupBox8.TabIndex = 58;
@@ -752,7 +752,7 @@
             // 
             this.groupBox9.Controls.Add(this.buttonSetupSublimeText);
             this.groupBox9.Controls.Add(this.buttonSetupVisualStudioCommunity);
-            this.groupBox9.Location = new System.Drawing.Point(10, 234);
+            this.groupBox9.Location = new System.Drawing.Point(10, 230);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(300, 105);
             this.groupBox9.TabIndex = 59;
@@ -827,7 +827,7 @@
             this.groupBox7.Controls.Add(this.buttonSetupVLC);
             this.groupBox7.Controls.Add(this.buttonSetupImageGlass);
             this.groupBox7.Controls.Add(this.buttonSetupPotPlayer);
-            this.groupBox7.Location = new System.Drawing.Point(622, 122);
+            this.groupBox7.Location = new System.Drawing.Point(622, 120);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(300, 105);
             this.groupBox7.TabIndex = 57;
@@ -899,7 +899,7 @@
             // 
             this.groupBox6.Controls.Add(this.buttonSetupSumatraPDF);
             this.groupBox6.Controls.Add(this.buttonSetupFoxitReader);
-            this.groupBox6.Location = new System.Drawing.Point(316, 122);
+            this.groupBox6.Location = new System.Drawing.Point(316, 120);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 105);
             this.groupBox6.TabIndex = 56;
@@ -975,7 +975,7 @@
             this.groupBox5.Controls.Add(this.linkSetupOfficeToolPlus);
             this.groupBox5.Controls.Add(this.buttonMicrosoftOfficeTwo);
             this.groupBox5.Controls.Add(this.buttonMicrosoftOfficeOne);
-            this.groupBox5.Location = new System.Drawing.Point(10, 122);
+            this.groupBox5.Location = new System.Drawing.Point(10, 120);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(300, 105);
             this.groupBox5.TabIndex = 55;
@@ -1081,7 +1081,7 @@
             this.tabPageCaiDatNhanh.Location = new System.Drawing.Point(4, 25);
             this.tabPageCaiDatNhanh.Name = "tabPageCaiDatNhanh";
             this.tabPageCaiDatNhanh.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCaiDatNhanh.Size = new System.Drawing.Size(1238, 519);
+            this.tabPageCaiDatNhanh.Size = new System.Drawing.Size(1238, 487);
             this.tabPageCaiDatNhanh.TabIndex = 1;
             this.tabPageCaiDatNhanh.Text = "Cài đặt nhanh";
             this.tabPageCaiDatNhanh.UseVisualStyleBackColor = true;
@@ -1092,9 +1092,9 @@
             this.groupBox18.Controls.Add(this.buttonNetworkStaticIPLan);
             this.groupBox18.Controls.Add(this.buttonNetworkGoogleDNS);
             this.groupBox18.Controls.Add(this.textNetworkStaticIPLan);
-            this.groupBox18.Location = new System.Drawing.Point(3, 330);
+            this.groupBox18.Location = new System.Drawing.Point(3, 262);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(440, 183);
+            this.groupBox18.Size = new System.Drawing.Size(440, 213);
             this.groupBox18.TabIndex = 13;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Cấu hình Mạng";
@@ -1144,7 +1144,7 @@
             this.groupBox16.Controls.Add(this.buttonCanonLbp2900);
             this.groupBox16.Location = new System.Drawing.Point(601, 164);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(273, 107);
+            this.groupBox16.Size = new System.Drawing.Size(273, 91);
             this.groupBox16.TabIndex = 12;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Máy in";
@@ -1167,16 +1167,16 @@
             this.groupBox13.Controls.Add(this.labelTimezone);
             this.groupBox13.Controls.Add(this.labelTimezoneUtc);
             this.groupBox13.Controls.Add(this.buttonTimezoneByIP);
-            this.groupBox13.Location = new System.Drawing.Point(449, 277);
+            this.groupBox13.Location = new System.Drawing.Point(449, 261);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(425, 236);
+            this.groupBox13.Size = new System.Drawing.Size(425, 214);
             this.groupBox13.TabIndex = 14;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Cấu hình Thời Gian";
             // 
             // buttonTimeFormat
             // 
-            this.buttonTimeFormat.Location = new System.Drawing.Point(10, 176);
+            this.buttonTimeFormat.Location = new System.Drawing.Point(10, 169);
             this.buttonTimeFormat.Name = "buttonTimeFormat";
             this.buttonTimeFormat.Size = new System.Drawing.Size(250, 30);
             this.buttonTimeFormat.TabIndex = 5;
@@ -1186,7 +1186,7 @@
             // 
             // buttonTimeSyncTaskSchedulerDaily
             // 
-            this.buttonTimeSyncTaskSchedulerDaily.Location = new System.Drawing.Point(10, 140);
+            this.buttonTimeSyncTaskSchedulerDaily.Location = new System.Drawing.Point(10, 127);
             this.buttonTimeSyncTaskSchedulerDaily.Name = "buttonTimeSyncTaskSchedulerDaily";
             this.buttonTimeSyncTaskSchedulerDaily.Size = new System.Drawing.Size(250, 30);
             this.buttonTimeSyncTaskSchedulerDaily.TabIndex = 4;
@@ -1250,7 +1250,7 @@
             this.groupBox14.Controls.Add(this.checkDisableSleepWhilePluggedIn);
             this.groupBox14.Location = new System.Drawing.Point(880, 10);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(350, 503);
+            this.groupBox14.Size = new System.Drawing.Size(350, 465);
             this.groupBox14.TabIndex = 15;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Cài đặt trải nghiệm";
@@ -1390,7 +1390,7 @@
             // 
             // buttonApplyFavoriteSettings
             // 
-            this.buttonApplyFavoriteSettings.Location = new System.Drawing.Point(15, 460);
+            this.buttonApplyFavoriteSettings.Location = new System.Drawing.Point(15, 423);
             this.buttonApplyFavoriteSettings.Name = "buttonApplyFavoriteSettings";
             this.buttonApplyFavoriteSettings.Size = new System.Drawing.Size(323, 30);
             this.buttonApplyFavoriteSettings.TabIndex = 11;
@@ -1537,10 +1537,10 @@
             this.tabPageTienIch.Controls.Add(this.buttonDnsJumper);
             this.tabPageTienIch.Controls.Add(this.buttonDefenderControl);
             this.tabPageTienIch.Controls.Add(this.buttonWindowsUpdateBlocker);
-            this.tabPageTienIch.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTienIch.Location = new System.Drawing.Point(4, 22);
             this.tabPageTienIch.Name = "tabPageTienIch";
             this.tabPageTienIch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTienIch.Size = new System.Drawing.Size(1238, 519);
+            this.tabPageTienIch.Size = new System.Drawing.Size(1238, 490);
             this.tabPageTienIch.TabIndex = 3;
             this.tabPageTienIch.Text = "Công cụ tiện ích";
             this.tabPageTienIch.UseVisualStyleBackColor = true;
@@ -1568,7 +1568,7 @@
             // 
             // buttonFixPrintSpooler
             // 
-            this.buttonFixPrintSpooler.Location = new System.Drawing.Point(298, 70);
+            this.buttonFixPrintSpooler.Location = new System.Drawing.Point(296, 120);
             this.buttonFixPrintSpooler.Name = "buttonFixPrintSpooler";
             this.buttonFixPrintSpooler.Size = new System.Drawing.Size(250, 30);
             this.buttonFixPrintSpooler.TabIndex = 11;
@@ -1640,7 +1640,7 @@
             // 
             // buttonWin11ClassicContextMenu
             // 
-            this.buttonWin11ClassicContextMenu.Location = new System.Drawing.Point(300, 20);
+            this.buttonWin11ClassicContextMenu.Location = new System.Drawing.Point(298, 70);
             this.buttonWin11ClassicContextMenu.Name = "buttonWin11ClassicContextMenu";
             this.buttonWin11ClassicContextMenu.Size = new System.Drawing.Size(250, 30);
             this.buttonWin11ClassicContextMenu.TabIndex = 10;
@@ -1650,7 +1650,7 @@
             // 
             // buttonRestartExplorer
             // 
-            this.buttonRestartExplorer.Location = new System.Drawing.Point(20, 470);
+            this.buttonRestartExplorer.Location = new System.Drawing.Point(296, 20);
             this.buttonRestartExplorer.Name = "buttonRestartExplorer";
             this.buttonRestartExplorer.Size = new System.Drawing.Size(250, 30);
             this.buttonRestartExplorer.TabIndex = 9;
@@ -1754,10 +1754,10 @@
             this.tabPageChuyenDung.Controls.Add(this.groupBox55);
             this.tabPageChuyenDung.Controls.Add(this.groupBox54);
             this.tabPageChuyenDung.Controls.Add(this.groupBox51);
-            this.tabPageChuyenDung.Location = new System.Drawing.Point(4, 25);
+            this.tabPageChuyenDung.Location = new System.Drawing.Point(4, 22);
             this.tabPageChuyenDung.Name = "tabPageChuyenDung";
             this.tabPageChuyenDung.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChuyenDung.Size = new System.Drawing.Size(1238, 519);
+            this.tabPageChuyenDung.Size = new System.Drawing.Size(1238, 490);
             this.tabPageChuyenDung.TabIndex = 4;
             this.tabPageChuyenDung.Text = "Công cụ chuyên dụng";
             this.tabPageChuyenDung.UseVisualStyleBackColor = true;
@@ -1769,7 +1769,7 @@
             this.groupBox17.Controls.Add(this.buttonKasperskyVirusRemovalTool);
             this.groupBox17.Location = new System.Drawing.Point(640, 10);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(282, 503);
+            this.groupBox17.Size = new System.Drawing.Size(282, 467);
             this.groupBox17.TabIndex = 2;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Antivirus";
@@ -1812,7 +1812,7 @@
             this.groupBox55.Controls.Add(this.buttonMicrosoftActivationScriptsOnline);
             this.groupBox55.Location = new System.Drawing.Point(316, 10);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Size = new System.Drawing.Size(318, 503);
+            this.groupBox55.Size = new System.Drawing.Size(318, 467);
             this.groupBox55.TabIndex = 1;
             this.groupBox55.TabStop = false;
             this.groupBox55.Text = "Kích hoạt Windows, Office";
@@ -1868,7 +1868,7 @@
             this.groupBox54.Controls.Add(this.buttonNirsoftChromePassword);
             this.groupBox54.Location = new System.Drawing.Point(928, 10);
             this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Size = new System.Drawing.Size(300, 503);
+            this.groupBox54.Size = new System.Drawing.Size(300, 467);
             this.groupBox54.TabIndex = 3;
             this.groupBox54.TabStop = false;
             this.groupBox54.Text = "NirSoft";
@@ -1958,7 +1958,7 @@
             this.groupBox51.Controls.Add(this.buttonCpuZ);
             this.groupBox51.Location = new System.Drawing.Point(10, 10);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(300, 503);
+            this.groupBox51.Size = new System.Drawing.Size(300, 467);
             this.groupBox51.TabIndex = 0;
             this.groupBox51.TabStop = false;
             this.groupBox51.Text = "Kiểm tra máy tính";
@@ -2077,10 +2077,10 @@
             // 
             this.tabPageCongCu.Controls.Add(this.groupBox62);
             this.tabPageCongCu.Controls.Add(this.groupBox61);
-            this.tabPageCongCu.Location = new System.Drawing.Point(4, 25);
+            this.tabPageCongCu.Location = new System.Drawing.Point(4, 22);
             this.tabPageCongCu.Name = "tabPageCongCu";
             this.tabPageCongCu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCongCu.Size = new System.Drawing.Size(1238, 519);
+            this.tabPageCongCu.Size = new System.Drawing.Size(1238, 490);
             this.tabPageCongCu.TabIndex = 5;
             this.tabPageCongCu.Text = "Hộp công cụ";
             this.tabPageCongCu.UseVisualStyleBackColor = true;
@@ -2116,7 +2116,7 @@
             this.groupBox62.Controls.Add(this.linkGlaryCheckDisk);
             this.groupBox62.Location = new System.Drawing.Point(617, 10);
             this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Size = new System.Drawing.Size(615, 503);
+            this.groupBox62.Size = new System.Drawing.Size(615, 473);
             this.groupBox62.TabIndex = 1;
             this.groupBox62.TabStop = false;
             this.groupBox62.Text = "Glary Utilities";
@@ -2127,7 +2127,7 @@
             this.linkGlaryFileUndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryFileUndelete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryFileUndelete.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryFileUndelete.Location = new System.Drawing.Point(345, 360);
+            this.linkGlaryFileUndelete.Location = new System.Drawing.Point(345, 358);
             this.linkGlaryFileUndelete.Name = "linkGlaryFileUndelete";
             this.linkGlaryFileUndelete.Size = new System.Drawing.Size(104, 17);
             this.linkGlaryFileUndelete.TabIndex = 26;
@@ -2141,7 +2141,7 @@
             this.linkGlaryUninstaler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryUninstaler.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryUninstaler.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryUninstaler.Location = new System.Drawing.Point(345, 330);
+            this.linkGlaryUninstaler.Location = new System.Drawing.Point(345, 328);
             this.linkGlaryUninstaler.Name = "linkGlaryUninstaler";
             this.linkGlaryUninstaler.Size = new System.Drawing.Size(82, 17);
             this.linkGlaryUninstaler.TabIndex = 25;
@@ -2155,7 +2155,7 @@
             this.linkGlaryTracksEraser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryTracksEraser.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryTracksEraser.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryTracksEraser.Location = new System.Drawing.Point(345, 300);
+            this.linkGlaryTracksEraser.Location = new System.Drawing.Point(345, 298);
             this.linkGlaryTracksEraser.Name = "linkGlaryTracksEraser";
             this.linkGlaryTracksEraser.Size = new System.Drawing.Size(110, 17);
             this.linkGlaryTracksEraser.TabIndex = 24;
@@ -2169,7 +2169,7 @@
             this.linkGlarySystemInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlarySystemInformation.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlarySystemInformation.LinkColor = System.Drawing.Color.Black;
-            this.linkGlarySystemInformation.Location = new System.Drawing.Point(345, 270);
+            this.linkGlarySystemInformation.Location = new System.Drawing.Point(345, 268);
             this.linkGlarySystemInformation.Name = "linkGlarySystemInformation";
             this.linkGlarySystemInformation.Size = new System.Drawing.Size(146, 17);
             this.linkGlarySystemInformation.TabIndex = 23;
@@ -2183,7 +2183,7 @@
             this.linkGlaryStartupManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryStartupManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryStartupManager.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryStartupManager.Location = new System.Drawing.Point(345, 240);
+            this.linkGlaryStartupManager.Location = new System.Drawing.Point(345, 238);
             this.linkGlaryStartupManager.Name = "linkGlaryStartupManager";
             this.linkGlaryStartupManager.Size = new System.Drawing.Size(129, 17);
             this.linkGlaryStartupManager.TabIndex = 22;
@@ -2197,7 +2197,7 @@
             this.linkGlarySoftwareUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlarySoftwareUpdate.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlarySoftwareUpdate.LinkColor = System.Drawing.Color.Black;
-            this.linkGlarySoftwareUpdate.Location = new System.Drawing.Point(345, 210);
+            this.linkGlarySoftwareUpdate.Location = new System.Drawing.Point(345, 208);
             this.linkGlarySoftwareUpdate.Name = "linkGlarySoftwareUpdate";
             this.linkGlarySoftwareUpdate.Size = new System.Drawing.Size(128, 17);
             this.linkGlarySoftwareUpdate.TabIndex = 21;
@@ -2211,7 +2211,7 @@
             this.linkGlaryFileShredder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryFileShredder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryFileShredder.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryFileShredder.Location = new System.Drawing.Point(345, 180);
+            this.linkGlaryFileShredder.Location = new System.Drawing.Point(345, 178);
             this.linkGlaryFileShredder.Name = "linkGlaryFileShredder";
             this.linkGlaryFileShredder.Size = new System.Drawing.Size(106, 17);
             this.linkGlaryFileShredder.TabIndex = 20;
@@ -2225,7 +2225,7 @@
             this.linkGlaryShortcutFixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryShortcutFixer.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryShortcutFixer.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryShortcutFixer.Location = new System.Drawing.Point(345, 150);
+            this.linkGlaryShortcutFixer.Location = new System.Drawing.Point(345, 148);
             this.linkGlaryShortcutFixer.Name = "linkGlaryShortcutFixer";
             this.linkGlaryShortcutFixer.Size = new System.Drawing.Size(109, 17);
             this.linkGlaryShortcutFixer.TabIndex = 19;
@@ -2239,7 +2239,7 @@
             this.linkGlaryRestoreCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryRestoreCenter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryRestoreCenter.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryRestoreCenter.Location = new System.Drawing.Point(345, 120);
+            this.linkGlaryRestoreCenter.Location = new System.Drawing.Point(345, 118);
             this.linkGlaryRestoreCenter.Name = "linkGlaryRestoreCenter";
             this.linkGlaryRestoreCenter.Size = new System.Drawing.Size(118, 17);
             this.linkGlaryRestoreCenter.TabIndex = 18;
@@ -2253,7 +2253,7 @@
             this.linkGlaryRegistryCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryRegistryCleaner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryRegistryCleaner.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryRegistryCleaner.Location = new System.Drawing.Point(345, 90);
+            this.linkGlaryRegistryCleaner.Location = new System.Drawing.Point(345, 88);
             this.linkGlaryRegistryCleaner.Name = "linkGlaryRegistryCleaner";
             this.linkGlaryRegistryCleaner.Size = new System.Drawing.Size(129, 17);
             this.linkGlaryRegistryCleaner.TabIndex = 17;
@@ -2267,7 +2267,7 @@
             this.linkGlaryRegistryDefrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryRegistryDefrag.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryRegistryDefrag.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryRegistryDefrag.Location = new System.Drawing.Point(345, 60);
+            this.linkGlaryRegistryDefrag.Location = new System.Drawing.Point(345, 58);
             this.linkGlaryRegistryDefrag.Name = "linkGlaryRegistryDefrag";
             this.linkGlaryRegistryDefrag.Size = new System.Drawing.Size(122, 17);
             this.linkGlaryRegistryDefrag.TabIndex = 16;
@@ -2281,7 +2281,7 @@
             this.linkGlaryQuickSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryQuickSearch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryQuickSearch.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryQuickSearch.Location = new System.Drawing.Point(345, 30);
+            this.linkGlaryQuickSearch.Location = new System.Drawing.Point(345, 28);
             this.linkGlaryQuickSearch.Name = "linkGlaryQuickSearch";
             this.linkGlaryQuickSearch.Size = new System.Drawing.Size(105, 17);
             this.linkGlaryQuickSearch.TabIndex = 15;
@@ -2295,7 +2295,7 @@
             this.linkGlaryProcessManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryProcessManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryProcessManager.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryProcessManager.Location = new System.Drawing.Point(20, 450);
+            this.linkGlaryProcessManager.Location = new System.Drawing.Point(20, 448);
             this.linkGlaryProcessManager.Name = "linkGlaryProcessManager";
             this.linkGlaryProcessManager.Size = new System.Drawing.Size(134, 17);
             this.linkGlaryProcessManager.TabIndex = 14;
@@ -2309,7 +2309,7 @@
             this.linkGlaryMemoryDefrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryMemoryDefrag.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryMemoryDefrag.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryMemoryDefrag.Location = new System.Drawing.Point(20, 420);
+            this.linkGlaryMemoryDefrag.Location = new System.Drawing.Point(20, 418);
             this.linkGlaryMemoryDefrag.Name = "linkGlaryMemoryDefrag";
             this.linkGlaryMemoryDefrag.Size = new System.Drawing.Size(118, 17);
             this.linkGlaryMemoryDefrag.TabIndex = 13;
@@ -2323,7 +2323,7 @@
             this.linkGlaryJoinExe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryJoinExe.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryJoinExe.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryJoinExe.Location = new System.Drawing.Point(20, 390);
+            this.linkGlaryJoinExe.Location = new System.Drawing.Point(20, 388);
             this.linkGlaryJoinExe.Name = "linkGlaryJoinExe";
             this.linkGlaryJoinExe.Size = new System.Drawing.Size(69, 17);
             this.linkGlaryJoinExe.TabIndex = 12;
@@ -2337,7 +2337,7 @@
             this.linkGlaryIEHelper.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryIEHelper.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryIEHelper.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryIEHelper.Location = new System.Drawing.Point(20, 360);
+            this.linkGlaryIEHelper.Location = new System.Drawing.Point(20, 358);
             this.linkGlaryIEHelper.Name = "linkGlaryIEHelper";
             this.linkGlaryIEHelper.Size = new System.Drawing.Size(75, 17);
             this.linkGlaryIEHelper.TabIndex = 11;
@@ -2351,7 +2351,7 @@
             this.linkGlaryFileSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryFileSplitter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryFileSplitter.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryFileSplitter.Location = new System.Drawing.Point(20, 330);
+            this.linkGlaryFileSplitter.Location = new System.Drawing.Point(20, 328);
             this.linkGlaryFileSplitter.Name = "linkGlaryFileSplitter";
             this.linkGlaryFileSplitter.Size = new System.Drawing.Size(91, 17);
             this.linkGlaryFileSplitter.TabIndex = 10;
@@ -2365,7 +2365,7 @@
             this.linkGlaryFileEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryFileEncrypt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryFileEncrypt.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryFileEncrypt.Location = new System.Drawing.Point(20, 300);
+            this.linkGlaryFileEncrypt.Location = new System.Drawing.Point(20, 298);
             this.linkGlaryFileEncrypt.Name = "linkGlaryFileEncrypt";
             this.linkGlaryFileEncrypt.Size = new System.Drawing.Size(94, 17);
             this.linkGlaryFileEncrypt.TabIndex = 9;
@@ -2379,7 +2379,7 @@
             this.linkGlaryEncryptExe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryEncryptExe.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryEncryptExe.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryEncryptExe.Location = new System.Drawing.Point(20, 270);
+            this.linkGlaryEncryptExe.Location = new System.Drawing.Point(20, 268);
             this.linkGlaryEncryptExe.Name = "linkGlaryEncryptExe";
             this.linkGlaryEncryptExe.Size = new System.Drawing.Size(94, 17);
             this.linkGlaryEncryptExe.TabIndex = 8;
@@ -2393,7 +2393,7 @@
             this.linkGlaryEmptyFolderFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryEmptyFolderFinder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryEmptyFolderFinder.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryEmptyFolderFinder.Location = new System.Drawing.Point(20, 240);
+            this.linkGlaryEmptyFolderFinder.Location = new System.Drawing.Point(20, 238);
             this.linkGlaryEmptyFolderFinder.Name = "linkGlaryEmptyFolderFinder";
             this.linkGlaryEmptyFolderFinder.Size = new System.Drawing.Size(154, 17);
             this.linkGlaryEmptyFolderFinder.TabIndex = 7;
@@ -2407,7 +2407,7 @@
             this.linkGlaryDuplicateFileFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryDuplicateFileFinder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryDuplicateFileFinder.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryDuplicateFileFinder.Location = new System.Drawing.Point(20, 210);
+            this.linkGlaryDuplicateFileFinder.Location = new System.Drawing.Point(20, 208);
             this.linkGlaryDuplicateFileFinder.Name = "linkGlaryDuplicateFileFinder";
             this.linkGlaryDuplicateFileFinder.Size = new System.Drawing.Size(158, 17);
             this.linkGlaryDuplicateFileFinder.TabIndex = 6;
@@ -2421,7 +2421,7 @@
             this.linkGlaryDriverBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryDriverBackup.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryDriverBackup.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryDriverBackup.Location = new System.Drawing.Point(20, 180);
+            this.linkGlaryDriverBackup.Location = new System.Drawing.Point(20, 178);
             this.linkGlaryDriverBackup.Name = "linkGlaryDriverBackup";
             this.linkGlaryDriverBackup.Size = new System.Drawing.Size(110, 17);
             this.linkGlaryDriverBackup.TabIndex = 5;
@@ -2435,7 +2435,7 @@
             this.linkGlaryDiskDefrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryDiskDefrag.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryDiskDefrag.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryDiskDefrag.Location = new System.Drawing.Point(20, 150);
+            this.linkGlaryDiskDefrag.Location = new System.Drawing.Point(20, 148);
             this.linkGlaryDiskDefrag.Name = "linkGlaryDiskDefrag";
             this.linkGlaryDiskDefrag.Size = new System.Drawing.Size(93, 17);
             this.linkGlaryDiskDefrag.TabIndex = 4;
@@ -2449,7 +2449,7 @@
             this.linkGlaryDiskCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryDiskCleaner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryDiskCleaner.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryDiskCleaner.Location = new System.Drawing.Point(20, 120);
+            this.linkGlaryDiskCleaner.Location = new System.Drawing.Point(20, 118);
             this.linkGlaryDiskCleaner.Name = "linkGlaryDiskCleaner";
             this.linkGlaryDiskCleaner.Size = new System.Drawing.Size(100, 17);
             this.linkGlaryDiskCleaner.TabIndex = 3;
@@ -2463,7 +2463,7 @@
             this.linkGlaryDiskAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryDiskAnalysis.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryDiskAnalysis.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryDiskAnalysis.Location = new System.Drawing.Point(20, 90);
+            this.linkGlaryDiskAnalysis.Location = new System.Drawing.Point(20, 88);
             this.linkGlaryDiskAnalysis.Name = "linkGlaryDiskAnalysis";
             this.linkGlaryDiskAnalysis.Size = new System.Drawing.Size(104, 17);
             this.linkGlaryDiskAnalysis.TabIndex = 2;
@@ -2477,7 +2477,7 @@
             this.linkGlaryContextMenuManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryContextMenuManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryContextMenuManager.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryContextMenuManager.Location = new System.Drawing.Point(20, 60);
+            this.linkGlaryContextMenuManager.Location = new System.Drawing.Point(20, 58);
             this.linkGlaryContextMenuManager.Name = "linkGlaryContextMenuManager";
             this.linkGlaryContextMenuManager.Size = new System.Drawing.Size(174, 17);
             this.linkGlaryContextMenuManager.TabIndex = 1;
@@ -2491,7 +2491,7 @@
             this.linkGlaryCheckDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkGlaryCheckDisk.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkGlaryCheckDisk.LinkColor = System.Drawing.Color.Black;
-            this.linkGlaryCheckDisk.Location = new System.Drawing.Point(20, 30);
+            this.linkGlaryCheckDisk.Location = new System.Drawing.Point(20, 28);
             this.linkGlaryCheckDisk.Name = "linkGlaryCheckDisk";
             this.linkGlaryCheckDisk.Size = new System.Drawing.Size(88, 17);
             this.linkGlaryCheckDisk.TabIndex = 0;
@@ -2533,7 +2533,7 @@
             this.groupBox61.Controls.Add(this.linkIObitDefaultProgram);
             this.groupBox61.Location = new System.Drawing.Point(10, 10);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Size = new System.Drawing.Size(586, 503);
+            this.groupBox61.Size = new System.Drawing.Size(586, 473);
             this.groupBox61.TabIndex = 0;
             this.groupBox61.TabStop = false;
             this.groupBox61.Text = "IObit Toolsbox";
@@ -2544,7 +2544,7 @@
             this.linkIObitContextMenuManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitContextMenuManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitContextMenuManager.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitContextMenuManager.Location = new System.Drawing.Point(15, 60);
+            this.linkIObitContextMenuManager.Location = new System.Drawing.Point(15, 58);
             this.linkIObitContextMenuManager.Name = "linkIObitContextMenuManager";
             this.linkIObitContextMenuManager.Size = new System.Drawing.Size(174, 17);
             this.linkIObitContextMenuManager.TabIndex = 1;
@@ -2558,7 +2558,7 @@
             this.linkIObitClonedFilesScanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitClonedFilesScanner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitClonedFilesScanner.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitClonedFilesScanner.Location = new System.Drawing.Point(15, 30);
+            this.linkIObitClonedFilesScanner.Location = new System.Drawing.Point(15, 28);
             this.linkIObitClonedFilesScanner.Name = "linkIObitClonedFilesScanner";
             this.linkIObitClonedFilesScanner.Size = new System.Drawing.Size(162, 17);
             this.linkIObitClonedFilesScanner.TabIndex = 0;
@@ -2572,7 +2572,7 @@
             this.linkIObitWinFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitWinFix.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitWinFix.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitWinFix.Location = new System.Drawing.Point(327, 450);
+            this.linkIObitWinFix.Location = new System.Drawing.Point(327, 448);
             this.linkIObitWinFix.Name = "linkIObitWinFix";
             this.linkIObitWinFix.Size = new System.Drawing.Size(60, 17);
             this.linkIObitWinFix.TabIndex = 29;
@@ -2586,7 +2586,7 @@
             this.linkIObitUndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitUndelete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitUndelete.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitUndelete.Location = new System.Drawing.Point(327, 420);
+            this.linkIObitUndelete.Location = new System.Drawing.Point(327, 418);
             this.linkIObitUndelete.Name = "linkIObitUndelete";
             this.linkIObitUndelete.Size = new System.Drawing.Size(73, 17);
             this.linkIObitUndelete.TabIndex = 28;
@@ -2600,7 +2600,7 @@
             this.linkIObitSystemInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitSystemInformation.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitSystemInformation.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitSystemInformation.Location = new System.Drawing.Point(327, 390);
+            this.linkIObitSystemInformation.Location = new System.Drawing.Point(327, 388);
             this.linkIObitSystemInformation.Name = "linkIObitSystemInformation";
             this.linkIObitSystemInformation.Size = new System.Drawing.Size(146, 17);
             this.linkIObitSystemInformation.TabIndex = 27;
@@ -2614,7 +2614,7 @@
             this.linkIObitSystemControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitSystemControl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitSystemControl.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitSystemControl.Location = new System.Drawing.Point(327, 360);
+            this.linkIObitSystemControl.Location = new System.Drawing.Point(327, 358);
             this.linkIObitSystemControl.Name = "linkIObitSystemControl";
             this.linkIObitSystemControl.Size = new System.Drawing.Size(117, 17);
             this.linkIObitSystemControl.TabIndex = 26;
@@ -2628,7 +2628,7 @@
             this.linkIObitStartupManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitStartupManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitStartupManager.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitStartupManager.Location = new System.Drawing.Point(327, 330);
+            this.linkIObitStartupManager.Location = new System.Drawing.Point(327, 328);
             this.linkIObitStartupManager.Name = "linkIObitStartupManager";
             this.linkIObitStartupManager.Size = new System.Drawing.Size(129, 17);
             this.linkIObitStartupManager.TabIndex = 25;
@@ -2642,7 +2642,7 @@
             this.linkIObitSmartRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitSmartRAM.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitSmartRAM.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitSmartRAM.Location = new System.Drawing.Point(327, 300);
+            this.linkIObitSmartRAM.Location = new System.Drawing.Point(327, 298);
             this.linkIObitSmartRAM.Name = "linkIObitSmartRAM";
             this.linkIObitSmartRAM.Size = new System.Drawing.Size(88, 17);
             this.linkIObitSmartRAM.TabIndex = 24;
@@ -2656,7 +2656,7 @@
             this.linkIObitShortcutFixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitShortcutFixer.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitShortcutFixer.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitShortcutFixer.Location = new System.Drawing.Point(327, 270);
+            this.linkIObitShortcutFixer.Location = new System.Drawing.Point(327, 268);
             this.linkIObitShortcutFixer.Name = "linkIObitShortcutFixer";
             this.linkIObitShortcutFixer.Size = new System.Drawing.Size(109, 17);
             this.linkIObitShortcutFixer.TabIndex = 23;
@@ -2670,7 +2670,7 @@
             this.linkIObitScreenShot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitScreenShot.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitScreenShot.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitScreenShot.Location = new System.Drawing.Point(327, 240);
+            this.linkIObitScreenShot.Location = new System.Drawing.Point(327, 238);
             this.linkIObitScreenShot.Name = "linkIObitScreenShot";
             this.linkIObitScreenShot.Size = new System.Drawing.Size(97, 17);
             this.linkIObitScreenShot.TabIndex = 22;
@@ -2684,7 +2684,7 @@
             this.linkIObitRescueCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitRescueCenter.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitRescueCenter.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitRescueCenter.Location = new System.Drawing.Point(327, 210);
+            this.linkIObitRescueCenter.Location = new System.Drawing.Point(327, 208);
             this.linkIObitRescueCenter.Name = "linkIObitRescueCenter";
             this.linkIObitRescueCenter.Size = new System.Drawing.Size(115, 17);
             this.linkIObitRescueCenter.TabIndex = 21;
@@ -2698,7 +2698,7 @@
             this.linkIObitReinforce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitReinforce.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitReinforce.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitReinforce.Location = new System.Drawing.Point(327, 180);
+            this.linkIObitReinforce.Location = new System.Drawing.Point(327, 178);
             this.linkIObitReinforce.Name = "linkIObitReinforce";
             this.linkIObitReinforce.Size = new System.Drawing.Size(78, 17);
             this.linkIObitReinforce.TabIndex = 20;
@@ -2712,7 +2712,7 @@
             this.linkIObitRegistryDefrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitRegistryDefrag.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitRegistryDefrag.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitRegistryDefrag.Location = new System.Drawing.Point(327, 150);
+            this.linkIObitRegistryDefrag.Location = new System.Drawing.Point(327, 148);
             this.linkIObitRegistryDefrag.Name = "linkIObitRegistryDefrag";
             this.linkIObitRegistryDefrag.Size = new System.Drawing.Size(122, 17);
             this.linkIObitRegistryDefrag.TabIndex = 19;
@@ -2726,7 +2726,7 @@
             this.linkIObitRegistryCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitRegistryCleaner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitRegistryCleaner.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitRegistryCleaner.Location = new System.Drawing.Point(327, 120);
+            this.linkIObitRegistryCleaner.Location = new System.Drawing.Point(327, 118);
             this.linkIObitRegistryCleaner.Name = "linkIObitRegistryCleaner";
             this.linkIObitRegistryCleaner.Size = new System.Drawing.Size(129, 17);
             this.linkIObitRegistryCleaner.TabIndex = 18;
@@ -2740,7 +2740,7 @@
             this.linkIObitProgramDeactivator.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitProgramDeactivator.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitProgramDeactivator.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitProgramDeactivator.Location = new System.Drawing.Point(327, 90);
+            this.linkIObitProgramDeactivator.Location = new System.Drawing.Point(327, 88);
             this.linkIObitProgramDeactivator.Name = "linkIObitProgramDeactivator";
             this.linkIObitProgramDeactivator.Size = new System.Drawing.Size(157, 17);
             this.linkIObitProgramDeactivator.TabIndex = 17;
@@ -2754,7 +2754,7 @@
             this.linkIObitProcessManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitProcessManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitProcessManager.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitProcessManager.Location = new System.Drawing.Point(327, 60);
+            this.linkIObitProcessManager.Location = new System.Drawing.Point(327, 58);
             this.linkIObitProcessManager.Name = "linkIObitProcessManager";
             this.linkIObitProcessManager.Size = new System.Drawing.Size(134, 17);
             this.linkIObitProcessManager.TabIndex = 16;
@@ -2768,7 +2768,7 @@
             this.linkIObitMyWin10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitMyWin10.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitMyWin10.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitMyWin10.Location = new System.Drawing.Point(327, 30);
+            this.linkIObitMyWin10.Location = new System.Drawing.Point(327, 28);
             this.linkIObitMyWin10.Name = "linkIObitMyWin10";
             this.linkIObitMyWin10.Size = new System.Drawing.Size(78, 17);
             this.linkIObitMyWin10.TabIndex = 15;
@@ -2782,7 +2782,7 @@
             this.linkIObitMonitor19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitMonitor19.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitMonitor19.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitMonitor19.Location = new System.Drawing.Point(15, 450);
+            this.linkIObitMonitor19.Location = new System.Drawing.Point(15, 448);
             this.linkIObitMonitor19.Name = "linkIObitMonitor19";
             this.linkIObitMonitor19.Size = new System.Drawing.Size(85, 17);
             this.linkIObitMonitor19.TabIndex = 14;
@@ -2796,7 +2796,7 @@
             this.linkIObitMonitor8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitMonitor8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitMonitor8.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitMonitor8.Location = new System.Drawing.Point(15, 420);
+            this.linkIObitMonitor8.Location = new System.Drawing.Point(15, 418);
             this.linkIObitMonitor8.Name = "linkIObitMonitor8";
             this.linkIObitMonitor8.Size = new System.Drawing.Size(76, 17);
             this.linkIObitMonitor8.TabIndex = 13;
@@ -2810,7 +2810,7 @@
             this.linkIObitLargeFileFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitLargeFileFinder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitLargeFileFinder.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitLargeFileFinder.Location = new System.Drawing.Point(15, 390);
+            this.linkIObitLargeFileFinder.Location = new System.Drawing.Point(15, 388);
             this.linkIObitLargeFileFinder.Name = "linkIObitLargeFileFinder";
             this.linkIObitLargeFileFinder.Size = new System.Drawing.Size(132, 17);
             this.linkIObitLargeFileFinder.TabIndex = 12;
@@ -2824,7 +2824,7 @@
             this.linkIObitInternetBooster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitInternetBooster.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitInternetBooster.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitInternetBooster.Location = new System.Drawing.Point(15, 360);
+            this.linkIObitInternetBooster.Location = new System.Drawing.Point(15, 358);
             this.linkIObitInternetBooster.Name = "linkIObitInternetBooster";
             this.linkIObitInternetBooster.Size = new System.Drawing.Size(125, 17);
             this.linkIObitInternetBooster.TabIndex = 11;
@@ -2838,7 +2838,7 @@
             this.linkIObitIEHelper.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitIEHelper.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitIEHelper.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitIEHelper.Location = new System.Drawing.Point(15, 330);
+            this.linkIObitIEHelper.Location = new System.Drawing.Point(15, 328);
             this.linkIObitIEHelper.Name = "linkIObitIEHelper";
             this.linkIObitIEHelper.Size = new System.Drawing.Size(75, 17);
             this.linkIObitIEHelper.TabIndex = 10;
@@ -2852,7 +2852,7 @@
             this.linkIObitFileShredder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitFileShredder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitFileShredder.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitFileShredder.Location = new System.Drawing.Point(15, 300);
+            this.linkIObitFileShredder.Location = new System.Drawing.Point(15, 298);
             this.linkIObitFileShredder.Name = "linkIObitFileShredder";
             this.linkIObitFileShredder.Size = new System.Drawing.Size(106, 17);
             this.linkIObitFileShredder.TabIndex = 9;
@@ -2866,7 +2866,7 @@
             this.linkIObitEmptyFolderScanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitEmptyFolderScanner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitEmptyFolderScanner.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitEmptyFolderScanner.Location = new System.Drawing.Point(15, 270);
+            this.linkIObitEmptyFolderScanner.Location = new System.Drawing.Point(15, 268);
             this.linkIObitEmptyFolderScanner.Name = "linkIObitEmptyFolderScanner";
             this.linkIObitEmptyFolderScanner.Size = new System.Drawing.Size(168, 17);
             this.linkIObitEmptyFolderScanner.TabIndex = 8;
@@ -2880,7 +2880,7 @@
             this.linkIObitDuplicateFileFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDuplicateFileFinder.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDuplicateFileFinder.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDuplicateFileFinder.Location = new System.Drawing.Point(15, 240);
+            this.linkIObitDuplicateFileFinder.Location = new System.Drawing.Point(15, 238);
             this.linkIObitDuplicateFileFinder.Name = "linkIObitDuplicateFileFinder";
             this.linkIObitDuplicateFileFinder.Size = new System.Drawing.Size(158, 17);
             this.linkIObitDuplicateFileFinder.TabIndex = 7;
@@ -2894,7 +2894,7 @@
             this.linkIObitDriverManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDriverManager.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDriverManager.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDriverManager.Location = new System.Drawing.Point(15, 210);
+            this.linkIObitDriverManager.Location = new System.Drawing.Point(15, 208);
             this.linkIObitDriverManager.Name = "linkIObitDriverManager";
             this.linkIObitDriverManager.Size = new System.Drawing.Size(120, 17);
             this.linkIObitDriverManager.TabIndex = 6;
@@ -2908,7 +2908,7 @@
             this.linkIObitDiskExplorer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDiskExplorer.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDiskExplorer.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDiskExplorer.Location = new System.Drawing.Point(15, 180);
+            this.linkIObitDiskExplorer.Location = new System.Drawing.Point(15, 178);
             this.linkIObitDiskExplorer.Name = "linkIObitDiskExplorer";
             this.linkIObitDiskExplorer.Size = new System.Drawing.Size(104, 17);
             this.linkIObitDiskExplorer.TabIndex = 5;
@@ -2922,7 +2922,7 @@
             this.linkIObitDiskDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDiskDoctor.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDiskDoctor.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDiskDoctor.Location = new System.Drawing.Point(15, 150);
+            this.linkIObitDiskDoctor.Location = new System.Drawing.Point(15, 148);
             this.linkIObitDiskDoctor.Name = "linkIObitDiskDoctor";
             this.linkIObitDiskDoctor.Size = new System.Drawing.Size(92, 17);
             this.linkIObitDiskDoctor.TabIndex = 4;
@@ -2936,7 +2936,7 @@
             this.linkIObitDiskCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDiskCleaner.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDiskCleaner.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDiskCleaner.Location = new System.Drawing.Point(15, 120);
+            this.linkIObitDiskCleaner.Location = new System.Drawing.Point(15, 118);
             this.linkIObitDiskCleaner.Name = "linkIObitDiskCleaner";
             this.linkIObitDiskCleaner.Size = new System.Drawing.Size(100, 17);
             this.linkIObitDiskCleaner.TabIndex = 3;
@@ -2950,7 +2950,7 @@
             this.linkIObitDefaultProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkIObitDefaultProgram.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkIObitDefaultProgram.LinkColor = System.Drawing.Color.Black;
-            this.linkIObitDefaultProgram.Location = new System.Drawing.Point(15, 90);
+            this.linkIObitDefaultProgram.Location = new System.Drawing.Point(15, 88);
             this.linkIObitDefaultProgram.Name = "linkIObitDefaultProgram";
             this.linkIObitDefaultProgram.Size = new System.Drawing.Size(126, 17);
             this.linkIObitDefaultProgram.TabIndex = 2;
@@ -2960,7 +2960,7 @@
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(10, 646);
+            this.buttonRestart.Location = new System.Drawing.Point(10, 610);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(30, 30);
             this.buttonRestart.TabIndex = 100;
@@ -2971,7 +2971,7 @@
             // 
             // buttonShutdown
             // 
-            this.buttonShutdown.Location = new System.Drawing.Point(70, 646);
+            this.buttonShutdown.Location = new System.Drawing.Point(70, 610);
             this.buttonShutdown.Name = "buttonShutdown";
             this.buttonShutdown.Size = new System.Drawing.Size(30, 30);
             this.buttonShutdown.TabIndex = 101;
@@ -3191,7 +3191,7 @@
             // 
             // buttonAutoSelfDelete
             // 
-            this.buttonAutoSelfDelete.Location = new System.Drawing.Point(130, 646);
+            this.buttonAutoSelfDelete.Location = new System.Drawing.Point(130, 610);
             this.buttonAutoSelfDelete.Name = "buttonAutoSelfDelete";
             this.buttonAutoSelfDelete.Size = new System.Drawing.Size(30, 30);
             this.buttonAutoSelfDelete.TabIndex = 102;
@@ -3283,7 +3283,7 @@
             // 
             // buttonRestartAdvancedStartup
             // 
-            this.buttonRestartAdvancedStartup.Location = new System.Drawing.Point(190, 646);
+            this.buttonRestartAdvancedStartup.Location = new System.Drawing.Point(190, 610);
             this.buttonRestartAdvancedStartup.Name = "buttonRestartAdvancedStartup";
             this.buttonRestartAdvancedStartup.Size = new System.Drawing.Size(170, 30);
             this.buttonRestartAdvancedStartup.TabIndex = 110;
@@ -3311,7 +3311,7 @@
             // checkAutoStartup
             // 
             this.checkAutoStartup.AutoSize = true;
-            this.checkAutoStartup.Location = new System.Drawing.Point(920, 651);
+            this.checkAutoStartup.Location = new System.Drawing.Point(920, 615);
             this.checkAutoStartup.Name = "checkAutoStartup";
             this.checkAutoStartup.Size = new System.Drawing.Size(186, 21);
             this.checkAutoStartup.TabIndex = 108;
@@ -3322,7 +3322,7 @@
             // labelMsg
             // 
             this.labelMsg.AutoSize = true;
-            this.labelMsg.Location = new System.Drawing.Point(502, 653);
+            this.labelMsg.Location = new System.Drawing.Point(502, 617);
             this.labelMsg.Name = "labelMsg";
             this.labelMsg.Size = new System.Drawing.Size(34, 17);
             this.labelMsg.TabIndex = 105;
@@ -3330,7 +3330,7 @@
             // 
             // buttonSelfUpdate
             // 
-            this.buttonSelfUpdate.Location = new System.Drawing.Point(376, 646);
+            this.buttonSelfUpdate.Location = new System.Drawing.Point(376, 610);
             this.buttonSelfUpdate.Name = "buttonSelfUpdate";
             this.buttonSelfUpdate.Size = new System.Drawing.Size(120, 30);
             this.buttonSelfUpdate.TabIndex = 103;
@@ -3342,7 +3342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.buttonOpenBitLocker);
             this.Controls.Add(this.buttonRestartAdvancedStartup);
             this.Controls.Add(this.buttonOpenServices);

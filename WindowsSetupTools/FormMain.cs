@@ -1049,7 +1049,7 @@ namespace WindowsSetupTools
         private void buttonAutoSelfDelete_Click(object sender, EventArgs e)
         {
             string batchFile = Path.Combine(Path.GetTempPath(), "self-delete.bat");
-            string script = $"TIMEOUT /T 1 /NOBREAK & DEL /F /S /Q {Application.ExecutablePath} & DEL /F /S /Q {batchFile}";
+            string script = $"TIMEOUT /T 1 /NOBREAK & DEL /F /S /Q \"{Application.ExecutablePath}\" & DEL /F /S /Q {batchFile}";
             File.WriteAllText(batchFile, script);
             Process process = new Process();
             process.StartInfo.FileName = batchFile;
